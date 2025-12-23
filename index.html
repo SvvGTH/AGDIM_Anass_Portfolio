@@ -10,14 +10,11 @@
     :root{
       --bg: #0b1220;
       --panel: rgba(255,255,255,.06);
-      --panel-2: rgba(255,255,255,.09);
       --text: rgba(255,255,255,.92);
       --muted: rgba(255,255,255,.70);
-      --soft: rgba(255,255,255,.12);
       --line: rgba(255,255,255,.16);
       --brand: #37b6ff;
       --brand-2: #19d3c5;
-      --accent: #ffb020;
       --ok: #62e6a7;
       --shadow: 0 16px 44px rgba(0,0,0,.35);
       --radius: 18px;
@@ -129,7 +126,6 @@
       background: radial-gradient(700px 360px at 20% 30%, rgba(55,182,255,.22), transparent 55%),
                   radial-gradient(520px 300px at 85% 15%, rgba(25,211,197,.18), transparent 55%),
                   radial-gradient(620px 360px at 60% 110%, rgba(255,176,32,.12), transparent 60%);
-      filter: blur(0px);
       opacity: .85;
       pointer-events: none;
     }
@@ -224,20 +220,19 @@
     }
     .section-sub{ margin: 0; color: var(--muted); }
 
-    /* Project cards */
+    /* Grid */
     .grid{
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       gap: 14px;
     }
     .col-12{ grid-column: span 12; }
-    .col-8{ grid-column: span 8; }
     .col-6{ grid-column: span 6; }
-    .col-4{ grid-column: span 4; }
     @media (max-width: 920px){
-      .col-8, .col-6, .col-4{ grid-column: span 12; }
+      .col-6{ grid-column: span 12; }
     }
 
+    /* Project cards */
     .project{
       padding: 18px;
       border-radius: var(--radius);
@@ -281,20 +276,6 @@
       margin: 8px 0 0;
       padding-left: 18px;
       color: var(--muted);
-    }
-
-    figure{
-      margin: 12px 0 0;
-      border-radius: 14px;
-      overflow: hidden;
-      border: 1px dashed rgba(255,255,255,.22);
-      background: rgba(0,0,0,.12);
-    }
-    figure .ph{
-      padding: 14px;
-      font-family: var(--mono);
-      font-size: .86rem;
-      color: rgba(255,255,255,.70);
     }
 
     /* Simple list cards */
@@ -354,7 +335,6 @@
          PAGE DE COUVERTURE
          ========================= -->
     <section id="couverture" class="card hero" aria-label="Page de couverture">
-      <!-- Informations issues du CV [file:2] -->
       <div class="kicker">
         <span class="dot" aria-hidden="true"></span>
         <span>Portfolio • ESIEA Paris • Recherche stage 4 mois (dès avril 2026)</span>
@@ -374,7 +354,6 @@
           </p>
 
           <div class="pill-row" aria-label="Mots-clés">
-            <!-- Compétences principales issues du CV [file:2] -->
             <span class="pill">Embarqué (ESP32 / Raspberry Pi)</span>
             <span class="pill">C / Arduino</span>
             <span class="pill">Python</span>
@@ -394,13 +373,11 @@
 
         <aside class="card" style="margin:0; background: rgba(255,255,255,.04); box-shadow:none;">
           <h2 class="section-title">Objectif</h2>
-          <!-- Profil issu du CV [file:2] -->
           <p class="section-sub">
             Concevoir, développer et maintenir des solutions logicielles innovantes pour l’embarqué, en m’appuyant sur une approche rigoureuse et orientée résultats.
           </p>
 
           <div style="margin-top: 12px; border-top:1px solid var(--line); padding-top: 12px;">
-            <!-- Langues issues du CV [file:2] -->
             <p style="margin:0; color:var(--muted);">
               Langues : Français (courant) • Anglais (C1 – TOEIC 915/990)
             </p>
@@ -433,7 +410,6 @@
          ========================= -->
     <section id="introduction" class="card" style="margin-top:14px;" aria-label="Introduction">
       <h2 class="section-title">Introduction</h2>
-      <!-- Pitch basé sur le profil du CV [file:2] -->
       <p class="section-sub">
         Étudiant en cycle ingénieur à l’ESIEA Paris, je me spécialise dans les systèmes embarqués autonomes. <br/>
         Mon objectif est de transformer des contraintes terrain (énergie, capteurs, communications) en solutions fiables et maintenables. <br/>
@@ -454,7 +430,7 @@
         </p>
 
         <div class="grid" style="margin-top: 14px;">
-          <!-- Projet 1: CAP 4A (ajout) -->
+          <!-- Projet: CAP 4A -->
           <article class="project col-12" aria-label="Projet CAP 4A">
             <h3>Projet CAP 4A – Lampadaire urbain autonome piézoélectrique</h3>
             <p class="meta">
@@ -508,19 +484,10 @@
                 </ul>
               </div>
             </div>
-
-            <figure aria-label="Visuel CAP 4A">
-              <div class="ph">
-                Visuel : ajoutez ici une photo du prototype, un schéma d’architecture (capteurs → ESP32 → passerelle → serveur), ou des captures du dashboard.
-              </div>
-            </figure>
-
-            <!-- Contenu CAP 4A saisi depuis votre capture fournie (fichier image) -->
           </article>
 
-          <!-- Projet 2: Escape Game Numérique -->
+          <!-- Projet: Escape Game Numérique -->
           <article class="project col-12" aria-label="Escape Game Numérique">
-            <!-- Détails issus du CV [file:2] -->
             <h3>Projet Scientifique et Technique – Escape Game Numérique (analyse vocale)</h3>
             <p class="meta">
               <span class="tag">Sept. 2023 → Juin 2024</span>
@@ -547,16 +514,10 @@
                 </ul>
               </div>
             </div>
-            <figure aria-label="Visuel Escape Game">
-              <div class="ph">
-                Visuel : capture console / architecture (audio → traitement → validation) / photo du montage Raspberry Pi.
-              </div>
-            </figure>
           </article>
 
-          <!-- Projet 3: Collier connecté -->
+          <!-- Projet: Collier connecté -->
           <article class="project col-12" aria-label="Collier connecté">
-            <!-- Détails issus du CV [file:2] -->
             <h3>Projet Scientifique et Technique – Collier Connecté (suivi d’animaux)</h3>
             <p class="meta">
               <span class="tag">Sept. 2022 → Juin 2023</span>
@@ -583,16 +544,10 @@
                 </ul>
               </div>
             </div>
-            <figure aria-label="Visuel Collier connecté">
-              <div class="ph">
-                Visuel : captures de l’application (carte, position, historique), schéma bloc du système.
-              </div>
-            </figure>
           </article>
 
-          <!-- Projet 4: Design Sprint -->
+          <!-- Projet: Design Sprint -->
           <article class="project col-12" aria-label="Design Sprint Teach Up">
-            <!-- Détails issus du CV [file:2] -->
             <h3>Design Sprint – Teach Up (prototype UX/UI)</h3>
             <p class="meta">
               <span class="tag">Depuis janv. 2025</span>
@@ -619,16 +574,10 @@
                 </ul>
               </div>
             </div>
-            <figure aria-label="Visuel Teach Up">
-              <div class="ph">
-                Visuel : captures Figma (wireframes, flow, prototype), ou lien vers prototype (si public).
-              </div>
-            </figure>
           </article>
 
-          <!-- Projet 5: Huma'Népal -->
+          <!-- Projet: Huma'Népal -->
           <article class="project col-12" aria-label="Huma'Népal">
-            <!-- Détails issus du CV [file:2] -->
             <h3>Projet de Formation Humaine – Huma'Népal (association)</h3>
             <p class="meta">
               <span class="tag">Sept. 2021 → Juin 2023</span>
@@ -655,11 +604,6 @@
                 </ul>
               </div>
             </div>
-            <figure aria-label="Visuel Huma'Népal">
-              <div class="ph">
-                Visuel : photo d’événements, affiche, indicateurs (dons, matériel, actions menées).
-              </div>
-            </figure>
           </article>
         </div>
       </div>
@@ -670,13 +614,12 @@
          ========================= -->
     <section id="parcours" class="card" style="margin-top:14px;" aria-label="Parcours">
       <h2 class="section-title">Parcours & expériences</h2>
-      <p class="section-sub">Synthèse des expériences significatives (industrie + opérations) et de la formation.</p>
+      <p class="section-sub">Synthèse des expériences significatives et de la formation.</p>
 
       <div class="grid" style="margin-top: 12px;">
         <div class="mini col-6">
           <h3>Expériences professionnelles</h3>
           <ul>
-            <!-- Expériences issues du CV [file:2] -->
             <li>Stage de découverte – Développeur junior (YOURPACKAGING, Rabat) : application Python de gestion analytique (calcul de coûts de revient).</li>
             <li>Équipier polyvalent (McDonald’s Laval) : travail en équipe, respect de protocoles qualité, gestion des flux.</li>
           </ul>
@@ -685,7 +628,6 @@
         <div class="mini col-6">
           <h3>Formation</h3>
           <ul>
-            <!-- Formation issue du CV [file:2] -->
             <li>ESIEA Paris – Formation Ingénieur Informatique (M1), 2e année cycle ingénieur (depuis septembre 2021).</li>
             <li>Baccalauréat Sciences Mathématiques (LSS Rabat, 2020–2021).</li>
           </ul>
@@ -703,19 +645,16 @@
       <div class="grid" style="margin-top: 12px;">
         <div class="mini col-6">
           <h3>Langages</h3>
-          <!-- Liste issue du CV [file:2] -->
           <p>Python • Java • C • JavaScript • HTML • CSS • SQL • R</p>
         </div>
 
         <div class="mini col-6">
           <h3>Outils & environnements</h3>
-          <!-- Liste issue du CV [file:2] -->
           <p>VS Code • Git/GitHub • Cisco • Django • Flask • React • Pack Office • Canva • Trello</p>
         </div>
 
         <div class="mini col-12">
-          <h3>Soft skills (roue des soft skills)</h3>
-          <!-- Soft skills issues du CV [file:2] -->
+          <h3>Soft skills</h3>
           <ul>
             <li>Autonomie : avancer efficacement sur firmware, intégration et résolution de problèmes.</li>
             <li>Adaptabilité : passer du matériel au logiciel (et du technique à l’UX) selon les besoins.</li>
@@ -759,12 +698,11 @@
          ========================= -->
     <section id="contact" class="card" style="margin-top:14px;" aria-label="Contact">
       <h2 class="section-title">Contact</h2>
-      <p class="section-sub">Liens et informations utiles pour un recruteur.</p>
+      <p class="section-sub">Informations utiles pour un recruteur.</p>
 
       <div class="grid" style="margin-top: 12px;">
         <div class="mini col-6">
           <h3>Coordonnées</h3>
-          <!-- Coordonnées issues du CV [file:2] -->
           <ul>
             <li>Email : <a href="mailto:anassproagdim@gmail.com">anassproagdim@gmail.com</a></li>
             <li>Téléphone : <a href="tel:+33758220505">+33 7 58 22 05 05</a></li>
@@ -774,14 +712,9 @@
 
         <div class="mini col-6">
           <h3>Réseaux</h3>
-          <!-- LinkedIn mentionné dans le CV (sans URL explicite) [file:2] -->
           <ul>
             <li>LinkedIn : Anass Agdim (ajoutez votre lien public ici)</li>
-            <li>GitHub : (ajoutez votre lien GitHub ici)</li>
           </ul>
-          <p style="margin-top:10px; color:var(--muted);">
-            Astuce GitHub Pages : dépôt <span style="font-family:var(--mono);">username.github.io</span> ou Pages via la branche <span style="font-family:var(--mono);">main</span> (dossier root).
-          </p>
         </div>
       </div>
     </section>
