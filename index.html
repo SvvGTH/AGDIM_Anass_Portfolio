@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anass AGDIM - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        
+        .contact-info a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-info a:hover {
+            color: #764ba2;
+        }
+        
+        section {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin-bottom: 2rem;
+        }
+        
+        h2 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .project-card h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-card .date {
+            color: #999;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+        
+        .skill-tag {
+            background: #667eea;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .experience-item {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+        
+        .experience-item h3 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .experience-item .role {
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .experience-item .date {
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Anass AGDIM</h1>
+            <p class="subtitle">Ingénieur Systèmes Embarqués | Étudiant M1 ESIEA Paris</p>
+            <div class="contact-info">
+                <a href="mailto:anassproagdim@gmail.com">✉️ anassproagdim@gmail.com</a>
+                <a href="tel:+33758220505">📱 +33 7 58 22 05 05</a>
+                <a href="https://github.com/SvvGTH" target="_blank">💻 GitHub</a>
+                <a href="https://www.linkedin.com/in/anass-agdim" target="_blank">🔗 LinkedIn</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>🎯 À propos</h2>
+            <p>Étudiant en M1 à l'ESIEA Paris, spécialisé en <strong>Systèmes Embarqués Autonomes</strong>. Passionné par la conception, le développement et la maintenance de solutions logicielles innovantes pour l'embarqué. Fort d'une expérience en programmation Python, Java, C et VHDL, je recherche un stage de 4 mois à partir d'avril 2026.</p>
+        </section>
+
+        <section>
+            <h2>🚀 Projets Principaux</h2>
+            
+            <div class="project-card">
+                <h3>Escape Game Numérique - Analyse Vocale</h3>
+                <p class="date">Septembre 2023 - Juin 2024</p>
+                <p>Conception d'une épreuve d'analyse vocale pour un escape game en équipe. Développement en Python avec intégration Raspberry Pi pour l'électronique embarquée.</p>
+                <div class="skills">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Raspberry Pi</span>
+                    <span class="skill-tag">Électronique</span>
+                    <span class="skill-tag">Travail d'équipe</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Collier Connecté pour Animaux</h3>
+                <p class="date">Septembre 2022 - Juin 2023</p>
+                <p>Conception d'un collier domestique facilitant la surveillance des animaux de compagnie avec application mobile Java permettant le suivi en temps réel de la localisation.</p>
+                <div class="skills">
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">Android</span>
+                    <span class="skill-tag">IoT</span>
+                    <span class="skill-tag">GPS</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Design Sprint - Teach Up</h3>
+                <p class="date">Janvier 2025 - Présent</p>
+                <p>Participation à un sprint de conception sur Figma pour améliorer l'expérience utilisateur. Collaboration avec Teach Up lors de réunions clients, analyse de problématiques et développement de prototypes interactifs.</p>
+                <div class="skills">
+                    <span class="skill-tag">UX/UI Design</span>
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">Prototypage</span>
+                    <span class="skill-tag">Design Thinking</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Projet Associatif - HumaNépal</h3>
+                <p class="date">Septembre 2021 - Juin 2023</p>
+                <p>Vice-Président de l'association (Trophée du Bénévolat Associatif Esprit d'Équipe 2022). Projet solidaire de scolarisation, informatisation et enseignement avec échanges culturels franco-népalais.</p>
+                <div class="skills">
+                    <span class="skill-tag">Leadership</span>
+                    <span class="skill-tag">Gestion de projet</span>
+                    <span class="skill-tag">Solidarité</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>💼 Expériences Professionnelles</h2>
+            
+            <div class="experience-item">
+                <h3>Stage de Développeur Junior</h3>
+                <p class="role">YOURPACKAGING, Rabat (Maroc)</p>
+                <p class="date">Juillet - Août 2022</p>
+                <p>Développement d'une application Python de gestion analytique calculant des coûts de revient pour le marché international en agriculture.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Équipier Polyvalent</h3>
+                <p class="role">McDonald's Laval</p>
+                <p class="date">Juin - Août 2024</p>
+                <p>Travail en équipe, respect des protocoles de qualité, gestion des commandes et organisation des flux de travail.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>💻 Compétences Techniques</h2>
+            <div class="skills">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">C/C++</span>
+                <span class="skill-tag">VHDL</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">HTML/CSS</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">R</span>
+                <span class="skill-tag">Git/GitHub</span>
+                <span class="skill-tag">VSCode</span>
+                <span class="skill-tag">Cisco Packet Tracer</span>
+                <span class="skill-tag">Django</span>
+                <span class="skill-tag">Flask</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Raspberry Pi</span>
+                <span class="skill-tag">IoT</span>
+                <span class="skill-tag">Systèmes Embarqués</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>🎓 Formation</h2>
+            <div class="experience-item">
+                <h3>Cycle Ingénieur - M1 Systèmes Embarqués Autonomes</h3>
+                <p class="role">ESIEA Paris</p>
+                <p class="date">Depuis Septembre 2021</p>
+                <p>Spécialisation en systèmes embarqués, IoT, réseaux informatiques, FPGA/VHDL, et analyse de données.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Baccalauréat Sciences Mathématiques</h3>
+                <p class="role">LSS Rabat, Maroc</p>
+                <p class="date">2020 - 2021</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>🌍 Langues</h2>
+            <p><strong>Anglais:</strong> C1 - TOEIC 915/990</p>
+            <p><strong>Français:</strong> Courant</p>
+            <p><strong>Arabe:</strong> Langue maternelle</p>
+        </section>
+
+        <section>
+            <h2>📂 Liens vers mes projets</h2>
+            <p>Consultez mes repositories GitHub pour découvrir mes projets complets:</p>
+            <ul style="margin-top: 1rem; line-height: 2;">
+                <li><a href="https://github.com/SvvGTH" target="_blank" style="color: #667eea;">🔗 GitHub Profile</a></li>
+                <li><a href="https://github.com/SvvGTH/demographic-data-analyzer" target="_blank" style="color: #667eea;">📊 Demographic Data Analyzer</a></li>
+                <li><a href="https://github.com/SvvGTH/mean-variance-standard-deviation-calculator" target="_blank" style="color: #667eea;">📈 Mean-Variance Calculator</a></li>
+                <li><a href="https://github.com/SvvGTH/Sea-Level-Predictor" target="_blank" style="color: #667eea;">🌊 Sea Level Predictor</a></li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Anass AGDIM - Tous droits réservés</p>
+        <p>Portfolio hébergé sur GitHub Pages</p>
+    </footer>
+</body>
+</html>
