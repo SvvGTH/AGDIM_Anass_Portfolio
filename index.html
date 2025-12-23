@@ -29,7 +29,6 @@
             padding: 40px 20px;
         }
         
-        /* PAGE DE COUVERTURE */
         .cover-page {
             min-height: 100vh;
             display: flex;
@@ -45,7 +44,6 @@
             color: #60a5fa;
             margin-bottom: 2rem;
             font-weight: 700;
-            letter-spacing: -0.02em;
         }
         
         .cover-subtitle {
@@ -70,13 +68,12 @@
             border-left: 4px solid #60a5fa;
             background: rgba(96, 165, 250, 0.1);
             border-radius: 10px;
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
         }
         
         .cover-author {
             font-size: 1.1rem;
             color: #94a3b8;
-            text-align: right;
             margin-top: 1rem;
         }
         
@@ -85,6 +82,7 @@
             animation: bounce 2s infinite;
             color: #60a5fa;
             font-size: 2rem;
+            cursor: pointer;
         }
         
         @keyframes bounce {
@@ -99,7 +97,6 @@
             }
         }
         
-        /* TABLE DES MATIÈRES */
         .toc {
             background: rgba(30, 41, 59, 0.8);
             backdrop-filter: blur(10px);
@@ -132,7 +129,6 @@
             text-decoration: none;
             display: flex;
             justify-content: space-between;
-            align-items: center;
             padding: 1rem;
             border-radius: 10px;
             transition: all 0.3s;
@@ -167,14 +163,12 @@
             font-size: 3rem;
             margin-bottom: 0.5rem;
             font-weight: 700;
-            letter-spacing: -0.02em;
         }
         
         .subtitle {
             color: #94a3b8;
             font-size: 1.3rem;
             margin-bottom: 1.5rem;
-            font-weight: 400;
         }
         
         .contact-info {
@@ -251,17 +245,14 @@
         .project-card p {
             color: #cbd5e1;
             line-height: 1.7;
+            margin-bottom: 1rem;
         }
         
-        .project-details {
-            margin-top: 1.5rem;
-        }
-        
-        .project-details h4 {
+        .project-card h4 {
             color: #60a5fa;
             font-size: 1.1rem;
-            margin-top: 1rem;
-            margin-bottom: 0.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
         }
         
         .skills {
@@ -389,15 +380,11 @@
             color: #cbd5e1;
         }
         
-        ul li a {
+        ul li::before {
+            content: "▸ ";
             color: #60a5fa;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-        
-        ul li a:hover {
-            color: #93c5fd;
-            padding-left: 10px;
+            font-weight: bold;
+            margin-right: 10px;
         }
         
         strong {
@@ -413,10 +400,6 @@
                 font-size: 2rem;
             }
             
-            .subtitle {
-                font-size: 1.1rem;
-            }
-            
             section {
                 padding: 1.5rem;
             }
@@ -428,7 +411,6 @@
     </style>
 </head>
 <body>
-    <!-- PAGE DE COUVERTURE -->
     <div class="cover-page">
         <h1 class="cover-title">Portfolio Professionnel</h1>
         <p class="cover-subtitle">Anass AGDIM</p>
@@ -439,10 +421,15 @@
             <p class="cover-author">- Steve Jobs</p>
         </blockquote>
         
-        <p class="scroll-indicator">↓</p>
+        <div class="scroll-indicator" onclick="document.getElementById('table-des-matieres').scrollIntoView();">↓</div>
     </div>
 
     <div class="container">
-        <!-- TABLE DES MATIÈRES -->
         <div class="toc" id="table-des-matieres">
-            <h2>📋 Table des Matières</h
+            <h2>📋 Table des Matières</h2>
+            <ul class="toc-list">
+                <li><a href="#introduction"><span class="toc-number">1.</span> Introduction</a></li>
+                <li><a href="#projets"><span class="toc-number">2.</span> Projets Principaux</a></li>
+                <li><a href="#experiences"><span class="toc-number">3.</span> Expériences Professionnelles</a></li>
+                <li><a href="#competences"><span class="toc-number">4.</span> Compétences Techniques</a></li>
+                <li><a href="#formation"><span class="toc
