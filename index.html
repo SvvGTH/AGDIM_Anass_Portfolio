@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anass AGDIM - Portfolio</title>
+    <title>Anass AGDIM - Portfolio Systèmes Embarqués</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
         }
         
         body {
@@ -23,6 +27,128 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
+        }
+        
+        /* PAGE DE COUVERTURE */
+        .cover-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .cover-title {
+            font-size: 3.5rem;
+            color: #60a5fa;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        
+        .cover-subtitle {
+            font-size: 2rem;
+            color: #94a3b8;
+            margin-bottom: 1rem;
+        }
+        
+        .cover-date {
+            font-size: 1.2rem;
+            color: #64748b;
+            margin-bottom: 3rem;
+            font-style: italic;
+        }
+        
+        .cover-quote {
+            font-size: 1.5rem;
+            color: #60a5fa;
+            font-style: italic;
+            max-width: 800px;
+            padding: 2rem;
+            border-left: 4px solid #60a5fa;
+            background: rgba(96, 165, 250, 0.1);
+            border-radius: 10px;
+            margin-bottom: 3rem;
+        }
+        
+        .cover-author {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            text-align: right;
+            margin-top: 1rem;
+        }
+        
+        .scroll-indicator {
+            margin-top: 4rem;
+            animation: bounce 2s infinite;
+            color: #60a5fa;
+            font-size: 2rem;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        /* TABLE DES MATIÈRES */
+        .toc {
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            margin-bottom: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        
+        .toc h2 {
+            color: #60a5fa;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .toc-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .toc-list li {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .toc-list a {
+            color: #cbd5e1;
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border-radius: 10px;
+            transition: all 0.3s;
+            background: rgba(15, 23, 42, 0.6);
+        }
+        
+        .toc-list a:hover {
+            background: rgba(96, 165, 250, 0.2);
+            transform: translateX(10px);
+            color: #60a5fa;
+        }
+        
+        .toc-number {
+            color: #60a5fa;
+            font-weight: 700;
+            margin-right: 1rem;
         }
         
         header {
@@ -81,6 +207,7 @@
             border: 1px solid rgba(148, 163, 184, 0.1);
             margin-bottom: 2rem;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+            scroll-margin-top: 20px;
         }
         
         h2 {
@@ -126,6 +253,17 @@
             line-height: 1.7;
         }
         
+        .project-details {
+            margin-top: 1.5rem;
+        }
+        
+        .project-details h4 {
+            color: #60a5fa;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
         .skills {
             display: flex;
             flex-wrap: wrap;
@@ -147,6 +285,32 @@
         .skill-tag:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+        }
+        
+        .soft-skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .soft-skill-card {
+            background: rgba(15, 23, 42, 0.6);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid #60a5fa;
+            border: 1px solid rgba(96, 165, 250, 0.2);
+        }
+        
+        .soft-skill-card h3 {
+            color: #60a5fa;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .soft-skill-card p {
+            color: #cbd5e1;
+            line-height: 1.7;
         }
         
         .experience-item {
@@ -181,6 +345,26 @@
         .experience-item p {
             color: #cbd5e1;
             line-height: 1.7;
+        }
+        
+        .future-vision {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(30, 64, 175, 0.1) 100%);
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 2px solid rgba(96, 165, 250, 0.3);
+            margin-top: 2rem;
+        }
+        
+        .future-vision h3 {
+            color: #60a5fa;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .future-vision p {
+            color: #cbd5e1;
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
         
         footer {
@@ -221,6 +405,10 @@
         }
         
         @media (max-width: 768px) {
+            .cover-title {
+                font-size: 2.5rem;
+            }
+            
             h1 {
                 font-size: 2rem;
             }
@@ -232,123 +420,29 @@
             section {
                 padding: 1.5rem;
             }
+            
+            .soft-skills {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- PAGE DE COUVERTURE -->
+    <div class="cover-page">
+        <h1 class="cover-title">Portfolio Professionnel</h1>
+        <p class="cover-subtitle">Anass AGDIM</p>
+        <p class="cover-date">Décembre 2025</p>
+        
+        <blockquote class="cover-quote">
+            "L'innovation distingue un leader d'un suiveur."
+            <p class="cover-author">- Steve Jobs</p>
+        </blockquote>
+        
+        <p class="scroll-indicator">↓</p>
+    </div>
+
     <div class="container">
-        <header>
-            <h1>Anass AGDIM</h1>
-            <p class="subtitle">Ingénieur Systèmes Embarqués | Étudiant M1 ESIEA Paris</p>
-            <div class="contact-info">
-                <a href="mailto:anassproagdim@gmail.com">✉️ anassproagdim@gmail.com</a>
-                <a href="tel:+33758220505">📱 +33 7 58 22 05 05</a>
-                <a href="https://github.com/SvvGTH" target="_blank">💻 GitHub</a>
-                <a href="https://www.linkedin.com/in/anass-agdim" target="_blank">🔗 LinkedIn</a>
-            </div>
-        </header>
-
-        <section>
-            <h2>🎯 À propos</h2>
-            <p>Étudiant en M1 à l'ESIEA Paris, spécialisé en <strong>Systèmes Embarqués Autonomes</strong>. Passionné par la conception, le développement et la maintenance de solutions logicielles innovantes pour l'embarqué. Fort d'une expérience en programmation Python, Java, C et VHDL, je recherche un stage de 4 mois à partir d'avril 2026.</p>
-        </section>
-
-        <section>
-            <h2>🚀 Projets Principaux</h2>
-            
-            <div class="project-card">
-                <h3>Escape Game Numérique - Analyse Vocale</h3>
-                <p class="date">Septembre 2023 - Juin 2024</p>
-                <p>Conception d'une épreuve d'analyse vocale pour un escape game en équipe. Développement en Python avec intégration Raspberry Pi pour l'électronique embarquée.</p>
-                <div class="skills">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Raspberry Pi</span>
-                    <span class="skill-tag">Électronique</span>
-                    <span class="skill-tag">Travail d'équipe</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>Collier Connecté pour Animaux</h3>
-                <p class="date">Septembre 2022 - Juin 2023</p>
-                <p>Conception d'un collier domestique facilitant la surveillance des animaux de compagnie avec application mobile Java permettant le suivi en temps réel de la localisation.</p>
-                <div class="skills">
-                    <span class="skill-tag">Java</span>
-                    <span class="skill-tag">Android</span>
-                    <span class="skill-tag">IoT</span>
-                    <span class="skill-tag">GPS</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>Design Sprint - Teach Up</h3>
-                <p class="date">Janvier 2025 - Présent</p>
-                <p>Participation à un sprint de conception sur Figma pour améliorer l'expérience utilisateur. Collaboration avec Teach Up lors de réunions clients, analyse de problématiques et développement de prototypes interactifs.</p>
-                <div class="skills">
-                    <span class="skill-tag">UX/UI Design</span>
-                    <span class="skill-tag">Figma</span>
-                    <span class="skill-tag">Prototypage</span>
-                    <span class="skill-tag">Design Thinking</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>Projet Associatif - HumaNépal</h3>
-                <p class="date">Septembre 2021 - Juin 2023</p>
-                <p>Vice-Président de l'association (Trophée du Bénévolat Associatif Esprit d'Équipe 2022). Projet solidaire de scolarisation, informatisation et enseignement avec échanges culturels franco-népalais.</p>
-                <div class="skills">
-                    <span class="skill-tag">Leadership</span>
-                    <span class="skill-tag">Gestion de projet</span>
-                    <span class="skill-tag">Solidarité</span>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>💼 Expériences Professionnelles</h2>
-            
-            <div class="experience-item">
-                <h3>Stage de Développeur Junior</h3>
-                <p class="role">YOURPACKAGING, Rabat (Maroc)</p>
-                <p class="date">Juillet - Août 2022</p>
-                <p>Développement d'une application Python de gestion analytique calculant des coûts de revient pour le marché international en agriculture.</p>
-            </div>
-
-            <div class="experience-item">
-                <h3>Équipier Polyvalent</h3>
-                <p class="role">McDonald's Laval</p>
-                <p class="date">Juin - Août 2024</p>
-                <p>Travail en équipe, respect des protocoles de qualité, gestion des commandes et organisation des flux de travail.</p>
-            </div>
-        </section>
-
-        <section>
-            <h2>💻 Compétences Techniques</h2>
-            <div class="skills">
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">Java</span>
-                <span class="skill-tag">C/C++</span>
-                <span class="skill-tag">VHDL</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">HTML/CSS</span>
-                <span class="skill-tag">SQL</span>
-                <span class="skill-tag">R</span>
-                <span class="skill-tag">Git/GitHub</span>
-                <span class="skill-tag">VSCode</span>
-                <span class="skill-tag">Cisco Packet Tracer</span>
-                <span class="skill-tag">Django</span>
-                <span class="skill-tag">Flask</span>
-                <span class="skill-tag">React</span>
-                <span class="skill-tag">Raspberry Pi</span>
-                <span class="skill-tag">IoT</span>
-                <span class="skill-tag">Systèmes Embarqués</span>
-            </div>
-        </section>
-
-        <section>
-            <h2>🎓 Formation</h2>
-            <div class="experience-item">
-                <h3>Cycle Ingénieur - M1 Systèmes Embarqués Autonomes</h3>
-                <p class="role">ESIEA Paris</p>
-                <p class="date">Depuis Septembre 2021</p>
-                <p>Spécialisation en systèmes embarqués, IoT, réseaux
+        <!-- TABLE DES MATIÈRES -->
+        <div class="toc" id="table-des-matieres">
+            <h2>📋 Table des Matières</h
