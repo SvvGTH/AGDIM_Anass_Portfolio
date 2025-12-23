@@ -1,612 +1,815 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Anass AGDIM | Ingénieur Systèmes Embarqués</title>
-    <style>
-        :root {
-            --color-primary: #1a5f7a;
-            --color-secondary: #2d9cca;
-            --color-accent: #f39c12;
-            --color-light: #ecf0f1;
-            --color-dark: #2c3e50;
-            --color-text: #333333;
-            --color-border: #bdc3c7;
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.1);
-            --shadow-md: 0 4px 15px rgba(0,0,0,0.15);
-            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio – Anass AGDIM – Ingénieur Systèmes Embarqués (ESIEA Paris)." />
+  <title>Portfolio – Anass AGDIM</title>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <style>
+    :root{
+      --bg: #0b1220;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.09);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.70);
+      --soft: rgba(255,255,255,.12);
+      --line: rgba(255,255,255,.16);
+      --brand: #37b6ff;
+      --brand-2: #19d3c5;
+      --accent: #ffb020;
+      --ok: #62e6a7;
+      --shadow: 0 16px 44px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1080px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    *{ box-sizing: border-box; }
+    html{ scroll-behavior: smooth; }
+    body{
+      margin: 0;
+      font-family: var(--sans);
+      background:
+        radial-gradient(1200px 700px at 10% 10%, rgba(55,182,255,.18), transparent 55%),
+        radial-gradient(900px 600px at 90% 20%, rgba(25,211,197,.16), transparent 55%),
+        radial-gradient(1000px 800px at 55% 100%, rgba(255,176,32,.12), transparent 60%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--color-text);
-            background: #f8f9fa;
-        }
+    a{ color: inherit; text-decoration: none; }
+    a:hover{ text-decoration: underline; text-underline-offset: 3px; }
 
-        /* Navigation */
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: white;
-            box-shadow: var(--shadow-sm);
-            padding: 1rem 2rem;
-        }
+    .skip-link{
+      position: absolute; left: -999px; top: 10px;
+      background: #fff; color: #000; padding: 10px 12px; border-radius: 10px;
+      z-index: 9999;
+    }
+    .skip-link:focus{ left: 12px; }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    .container{ max-width: var(--max); margin: 0 auto; padding: 26px 18px 74px; }
 
-        nav a {
-            text-decoration: none;
-            color: var(--color-primary);
-            font-weight: 500;
-            transition: var(--transition);
-            position: relative;
-        }
+    /* Top bar */
+    .topbar{
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(to bottom, rgba(11,18,32,.92), rgba(11,18,32,.65));
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar-inner{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
 
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--color-accent);
-            transition: var(--transition);
-        }
+    .brand{
+      display: flex; align-items: center; gap: 10px;
+      min-width: 220px;
+    }
+    .logo{
+      width: 40px; height: 40px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      box-shadow: 0 12px 30px rgba(55,182,255,.22);
+      display: grid; place-items: center;
+      font-weight: 800; letter-spacing: .5px;
+      color: rgba(0,0,0,.78);
+    }
+    .brand strong{ display: block; font-size: .98rem; }
+    .brand span{ display: block; font-size: .78rem; color: var(--muted); }
 
-        nav a:hover::after {
-            width: 100%;
-        }
+    nav{
+      display: flex; gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .navlink{
+      font-size: .88rem;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      color: var(--muted);
+    }
+    .navlink:hover{
+      border-color: var(--line);
+      background: rgba(255,255,255,.04);
+      text-decoration: none;
+      color: var(--text);
+    }
+    .navlink.active{
+      background: rgba(55,182,255,.10);
+      border-color: rgba(55,182,255,.25);
+      color: var(--text);
+    }
 
-        /* Section commune */
-        section {
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    /* Sections */
+    section{ scroll-margin-top: 84px; }
+    .card{
+      background: linear-gradient(180deg, var(--panel), rgba(255,255,255,.03));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px 18px;
+    }
 
-        h1, h2, h3 {
-            color: var(--color-primary);
-            margin-bottom: 1rem;
-        }
+    .hero{
+      padding: 26px 18px 18px;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero:before{
+      content: "";
+      position: absolute; inset: -2px;
+      background: radial-gradient(700px 360px at 20% 30%, rgba(55,182,255,.22), transparent 55%),
+                  radial-gradient(520px 300px at 85% 15%, rgba(25,211,197,.18), transparent 55%),
+                  radial-gradient(620px 360px at 60% 110%, rgba(255,176,32,.12), transparent 60%);
+      filter: blur(0px);
+      opacity: .85;
+      pointer-events: none;
+    }
+    .hero > *{ position: relative; }
 
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-        }
+    .kicker{
+      display: inline-flex; gap: 10px; align-items: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .88rem;
+    }
+    .dot{
+      width: 10px; height: 10px; border-radius: 99px;
+      background: var(--ok);
+      box-shadow: 0 0 0 5px rgba(98,230,167,.12);
+    }
 
-        h2 {
-            font-size: 2.5rem;
-            border-bottom: 3px solid var(--color-accent);
-            padding-bottom: 1rem;
-            margin-bottom: 2rem;
-        }
+    h1{
+      margin: 14px 0 8px;
+      font-size: clamp(1.6rem, 3.6vw, 2.4rem);
+      letter-spacing: -.02em;
+    }
+    .subtitle{
+      margin: 0;
+      color: var(--muted);
+      max-width: 74ch;
+    }
+    .hero-grid{
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: 1.4fr .9fr;
+      gap: 14px;
+    }
+    @media (max-width: 860px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .brand{ min-width: 0; }
+    }
 
-        h3 {
-            font-size: 1.5rem;
-            margin-top: 1.5rem;
-        }
+    .pill-row{ display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .pill{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color: var(--muted);
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: .82rem;
+      white-space: nowrap;
+    }
+    .cta-row{ display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+    .btn{
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      color: var(--text);
+      font-size: .92rem;
+      text-decoration: none;
+    }
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(55,182,255,.22), rgba(25,211,197,.18));
+      border-color: rgba(55,182,255,.25);
+    }
+    .btn:hover{ text-decoration: none; filter: brightness(1.06); }
+    .btn .mono{ font-family: var(--mono); font-size: .88em; color: var(--muted); }
 
-        /* Page de couverture */
-        #couverture {
-            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 2rem;
-        }
+    /* Table of contents */
+    .toc{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    @media (max-width: 700px){ .toc{ grid-template-columns: 1fr; } }
+    .toc a{
+      display: flex; justify-content: space-between; gap: 10px;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+    }
+    .toc a:hover{ text-decoration: none; background: rgba(255,255,255,.06); }
+    .toc small{ color: var(--muted); }
 
-        #couverture h1 {
-            color: white;
-            font-size: 3.5rem;
-            margin-bottom: 0.5rem;
-            animation: slideInDown 0.8s ease;
-        }
+    .section-title{
+      margin: 0 0 8px;
+      font-size: 1.15rem;
+      letter-spacing: -.01em;
+    }
+    .section-sub{ margin: 0; color: var(--muted); }
 
-        #couverture .subtitle {
-            font-size: 1.5rem;
-            margin: 1rem 0;
-            color: var(--color-light);
-        }
+    /* Project cards */
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+    }
+    .col-12{ grid-column: span 12; }
+    .col-8{ grid-column: span 8; }
+    .col-6{ grid-column: span 6; }
+    .col-4{ grid-column: span 4; }
+    @media (max-width: 920px){
+      .col-8, .col-6, .col-4{ grid-column: span 12; }
+    }
 
-        #couverture .tagline {
-            font-size: 1.2rem;
-            font-style: italic;
-            color: var(--color-accent);
-            margin: 2rem 0;
-            font-weight: 600;
-            animation: fadeIn 1.2s ease;
-        }
+    .project{
+      padding: 18px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      box-shadow: 0 14px 38px rgba(0,0,0,.28);
+      position: relative;
+      overflow: hidden;
+    }
+    .project:before{
+      content: "";
+      position: absolute; inset: -2px;
+      background: radial-gradient(520px 320px at 12% 8%, rgba(55,182,255,.16), transparent 55%),
+                  radial-gradient(480px 320px at 92% 0%, rgba(25,211,197,.14), transparent 55%);
+      opacity: .65;
+      pointer-events: none;
+    }
+    .project > *{ position: relative; }
 
-        #couverture .date {
-            font-size: 1rem;
-            color: rgba(255,255,255,0.8);
-            margin-top: 3rem;
-        }
+    .project h3{
+      margin: 0 0 6px;
+      font-size: 1.02rem;
+      letter-spacing: -.01em;
+    }
+    .meta{
+      display: flex; flex-wrap: wrap; gap: 8px;
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: .86rem;
+    }
+    .tag{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      padding: 6px 9px;
+      border-radius: 999px;
+      font-size: .78rem;
+      color: var(--muted);
+    }
+    .project p{ margin: 8px 0; color: var(--muted); }
+    .project ul{
+      margin: 8px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
 
-        @keyframes slideInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    figure{
+      margin: 12px 0 0;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px dashed rgba(255,255,255,.22);
+      background: rgba(0,0,0,.12);
+    }
+    figure .ph{
+      padding: 14px;
+      font-family: var(--mono);
+      font-size: .86rem;
+      color: rgba(255,255,255,.70);
+    }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+    /* Simple list cards */
+    .mini{
+      padding: 16px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+    }
+    .mini h3{ margin: 0 0 8px; font-size: 1.0rem; }
+    .mini p{ margin: 0; color: var(--muted); }
+    .mini ul{ margin: 10px 0 0; padding-left: 18px; color: var(--muted); }
 
-        /* Table des matières */
-        #toc {
-            background: white;
-        }
+    footer{
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: .9rem;
+      text-align: center;
+    }
 
-        .toc-list {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .toc-list li {
-            padding: 1rem;
-            background: var(--color-light);
-            border-left: 4px solid var(--color-secondary);
-            border-radius: 4px;
-            transition: var(--transition);
-        }
-
-        .toc-list li:hover {
-            transform: translateX(5px);
-            background: #dfe6e9;
-        }
-
-        .toc-list a {
-            text-decoration: none;
-            color: var(--color-primary);
-            font-weight: 500;
-        }
-
-        /* Introduction */
-        #intro {
-            background: white;
-        }
-
-        .intro-content {
-            background: linear-gradient(to right, rgba(26, 95, 122, 0.05), transparent);
-            padding: 2rem;
-            border-left: 4px solid var(--color-secondary);
-            border-radius: 8px;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin: 2rem 0;
-        }
-
-        /* Projets */
-        #projets {
-            background: white;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .project-card {
-            background: white;
-            border: 1px solid var(--color-border);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-md);
-            border-color: var(--color-secondary);
-        }
-
-        .project-header {
-            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-            color: white;
-            padding: 1.5rem;
-            text-align: center;
-        }
-
-        .project-header h3 {
-            color: white;
-            margin: 0;
-        }
-
-        .project-period {
-            font-size: 0.9rem;
-            color: var(--color-light);
-            margin-top: 0.5rem;
-        }
-
-        .project-body {
-            padding: 1.5rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-section {
-            margin-bottom: 1rem;
-        }
-
-        .project-section strong {
-            color: var(--color-primary);
-        }
-
-        .project-section p {
-            margin: 0.5rem 0;
-            font-size: 0.95rem;
-        }
-
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-
-        .tech-tag {
-            background: var(--color-accent);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-
-        /* Conclusion */
-        #conclusion {
-            background: #f8f9fa;
-        }
-
-        .conclusion-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .conclusion-box {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: var(--shadow-sm);
-            border-top: 4px solid var(--color-secondary);
-        }
-
-        .conclusion-box h3 {
-            margin-top: 0;
-        }
-
-        .skills-list {
-            list-style: none;
-        }
-
-        .skills-list li {
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-            color: #555;
-        }
-
-        .skills-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--color-accent);
-            font-weight: bold;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--color-dark);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-
-        footer p {
-            margin: 0.5rem 0;
-        }
-
-        footer a {
-            color: var(--color-accent);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        .social-links {
-            margin: 1rem 0;
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-        }
-
-        .social-links a {
-            font-weight: 600;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            #couverture h1 {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .conclusion-content {
-                grid-template-columns: 1fr;
-            }
-
-            section {
-                padding: 2rem 1rem;
-            }
-        }
-    </style>
+    /* Print */
+    @media print{
+      .topbar{ display: none; }
+      body{ background: #fff; color: #000; }
+      .card, .project, .mini{ box-shadow: none; }
+      a{ text-decoration: none; }
+    }
+  </style>
 </head>
+
 <body>
-<!-- Navigation -->
-<nav>
-    <ul>
-        <li><a href="#couverture">Accueil</a></li>
-        <li><a href="#toc">Sommaire</a></li>
-        <li><a href="#intro">Introduction</a></li>
-        <li><a href="#projets">Projets</a></li>
-        <li><a href="#conclusion">Conclusion</a></li>
-    </ul>
-</nav>
+  <a class="skip-link" href="#couverture">Aller au contenu</a>
 
-<!-- Page de couverture -->
-<section id="couverture">
-    <h1>PORTFOLIO</h1>
-    <p class="subtitle">Anass AGDIM</p>
-    <p class="tagline">« Concevoir et développer des solutions logicielles innovantes pour l'embarqué »</p>
-    <p class="subtitle" style="color: white; margin-top: 1rem;">Ingénieur Systèmes Embarqués - ESIEA Paris</p>
-    <p class="date">Décembre 2025</p>
-</section>
+  <header class="topbar" role="banner" aria-label="Barre de navigation">
+    <div class="topbar-inner">
+      <div class="brand" aria-label="Identité">
+        <div class="logo" aria-hidden="true">AA</div>
+        <div>
+          <strong>Anass AGDIM</strong>
+          <span>Ingénieur Systèmes Embarqués</span>
+        </div>
+      </div>
 
-<!-- Table des matières -->
-<section id="toc">
-    <h2>Table des matières</h2>
-    <ul class="toc-list">
-        <li><a href="#intro">Introduction</a><br><span style="font-size: 0.9rem; color: #7f8c8d;">Présentation générale</span></li>
-        <li><a href="#projets">Projets Scientifiques</a><br><span style="font-size: 0.9rem; color: #7f8c8d;">Escape Game & Collier Connecté</span></li>
-        <li><a href="#projets">Projets Additionnels</a><br><span style="font-size: 0.9rem; color: #7f8c8d;">Design Sprint & Projets Humanitaires</span></li>
-        <li><a href="#conclusion">Conclusion</a><br><span style="font-size: 0.9rem; color: #7f8c8d;">Compétences & Projections</span></li>
-    </ul>
-</section>
+      <nav aria-label="Navigation principale">
+        <a class="navlink" href="#couverture">Couverture</a>
+        <a class="navlink" href="#toc">Sommaire</a>
+        <a class="navlink" href="#introduction">Introduction</a>
+        <a class="navlink" href="#projets">Projets</a>
+        <a class="navlink" href="#conclusion">Conclusion</a>
+        <a class="navlink" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<!-- Introduction -->
-<section id="intro">
-    <h2>Introduction</h2>
-    <div class="intro-content">
-        <p>
-            Étudiant en M1 à l'ESIEA Paris, spécialisé en Systèmes Embarqués, je suis passionné par la conception et le développement de solutions logicielles innovantes pour l'embarqué. Rigoureux et autonome, j'ai consolidé mes compétences techniques à travers des projets académiques ambitieux et une expérience en environnement industriel. Mon objectif est de devenir un ingénieur capable d'intégrer des solutions matérielles et logicielles pour créer des produits performants et fiables, tout en favorisant le travail collaboratif et l'excellence technique.
+  <main class="container" id="main" role="main">
+    <!-- =========================
+         PAGE DE COUVERTURE
+         ========================= -->
+    <section id="couverture" class="card hero" aria-label="Page de couverture">
+      <!-- Informations issues du CV [file:2] -->
+      <div class="kicker">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Portfolio • ESIEA Paris • Recherche stage 4 mois (dès avril 2026)</span>
+      </div>
+
+      <h1>Portfolio – Anass AGDIM</h1>
+
+      <p class="subtitle">
+        Accroche : « Concevoir des systèmes autonomes, fiables et mesurables — du firmware à la plateforme de monitoring. »
+      </p>
+
+      <div class="hero-grid">
+        <div class="card" style="margin:0; background: rgba(255,255,255,.04); box-shadow:none;">
+          <h2 class="section-title">Informations</h2>
+          <p class="section-sub">
+            Nom : Anass AGDIM • Titre : Ingénieur Systèmes Embarqués • Date de réalisation : 23 décembre 2025
+          </p>
+
+          <div class="pill-row" aria-label="Mots-clés">
+            <!-- Compétences principales issues du CV [file:2] -->
+            <span class="pill">Embarqué (ESP32 / Raspberry Pi)</span>
+            <span class="pill">C / Arduino</span>
+            <span class="pill">Python</span>
+            <span class="pill">Java</span>
+            <span class="pill">Réseaux & IoT</span>
+            <span class="pill">Web (Node/Express • HTML/CSS/JS)</span>
+            <span class="pill">Git/GitHub</span>
+            <span class="pill">Agile / Jira</span>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn primary" href="#projets">Voir les projets</a>
+            <a class="btn" href="#contact">Me contacter</a>
+            <a class="btn" href="#toc"><span>Accéder au sommaire</span> <span class="mono">↘</span></a>
+          </div>
+        </div>
+
+        <aside class="card" style="margin:0; background: rgba(255,255,255,.04); box-shadow:none;">
+          <h2 class="section-title">Objectif</h2>
+          <!-- Profil issu du CV [file:2] -->
+          <p class="section-sub">
+            Concevoir, développer et maintenir des solutions logicielles innovantes pour l’embarqué, en m’appuyant sur une approche rigoureuse et orientée résultats.
+          </p>
+
+          <div style="margin-top: 12px; border-top:1px solid var(--line); padding-top: 12px;">
+            <!-- Langues issues du CV [file:2] -->
+            <p style="margin:0; color:var(--muted);">
+              Langues : Français (courant) • Anglais (C1 – TOEIC 915/990)
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- =========================
+         TABLE DES MATIÈRES
+         ========================= -->
+    <section id="toc" class="card" style="margin-top:14px;" aria-label="Table des matières">
+      <h2 class="section-title">Table des matières</h2>
+      <p class="section-sub">Navigation rapide vers les sections du portfolio.</p>
+
+      <div class="toc" style="margin-top:12px;">
+        <a href="#couverture"><span>1. Page de couverture</span> <small>#couverture</small></a>
+        <a href="#toc"><span>2. Table des matières</span> <small>#toc</small></a>
+        <a href="#introduction"><span>3. Introduction (pitch)</span> <small>#introduction</small></a>
+        <a href="#projets"><span>4. Projets / Travaux</span> <small>#projets</small></a>
+        <a href="#parcours"><span>5. Parcours & expériences</span> <small>#parcours</small></a>
+        <a href="#competences"><span>6. Compétences</span> <small>#competences</small></a>
+        <a href="#conclusion"><span>7. Conclusion</span> <small>#conclusion</small></a>
+        <a href="#contact"><span>8. Contact</span> <small>#contact</small></a>
+      </div>
+    </section>
+
+    <!-- =========================
+         INTRODUCTION (5 lignes)
+         ========================= -->
+    <section id="introduction" class="card" style="margin-top:14px;" aria-label="Introduction">
+      <h2 class="section-title">Introduction</h2>
+      <!-- Pitch basé sur le profil du CV [file:2] -->
+      <p class="section-sub">
+        Étudiant en cycle ingénieur à l’ESIEA Paris, je me spécialise dans les systèmes embarqués autonomes. <br/>
+        Mon objectif est de transformer des contraintes terrain (énergie, capteurs, communications) en solutions fiables et maintenables. <br/>
+        Mes projets combinent firmware, intégration matériel et interfaces de monitoring pour mesurer, diagnostiquer et améliorer les systèmes. <br/>
+        Je travaille avec une approche structurée (rigueur, tests, collaboration) afin de livrer des résultats exploitables. <br/>
+        Je recherche un stage de 4 mois à partir d’avril 2026 pour contribuer à des produits embarqués innovants.
+      </p>
+    </section>
+
+    <!-- =========================
+         PROJETS (min 2)
+         ========================= -->
+    <section id="projets" style="margin-top:14px;" aria-label="Projets">
+      <div class="card">
+        <h2 class="section-title">Projets / Travaux</h2>
+        <p class="section-sub">
+          Sélection de réalisations centrées sur l’embarqué, l’IoT, l’intégration et l’expérience utilisateur.
         </p>
-    </div>
-</section>
 
-<!-- Projets -->
-<section id="projets">
-    <h2>Projets Scientifiques et Techniques</h2>
+        <div class="grid" style="margin-top: 14px;">
+          <!-- Projet 1: CAP 4A (ajout) -->
+          <article class="project col-12" aria-label="Projet CAP 4A">
+            <h3>Projet CAP 4A – Lampadaire urbain autonome piézoélectrique</h3>
+            <p class="meta">
+              <span class="tag">Depuis janvier 2025</span>
+              <span class="tag">NOVA / ESIEA</span>
+              <span class="tag">ESP32 • ESP-NOW</span>
+              <span class="tag">Node.js • Express • MySQL</span>
+              <span class="tag">Agile • Jira</span>
+            </p>
 
-    <div class="projects-grid">
-        <!-- Projet 1 : Escape Game -->
-        <div class="project-card">
-            <div class="project-header">
-                <h3>Escape Game Numérique</h3>
-                <p class="project-period">Septembre 2023 - Juin 2024</p>
-            </div>
-            <div class="project-body">
-                <div class="project-section">
-                    <strong>🎯 Contexte & Objectifs</strong>
-                    <p>Conception collaborative d'une épreuve d'analyse vocale intégrée dans un escape game pédagogique. L'objectif était de combiner les competences en traitement audio et en électronique embarquée pour créer une expérience utilisateur immersive.</p>
-                </div>
-
-                <div class="project-section">
-                    <strong>⚙️ Processus & Approche</strong>
-                    <p>Répartition des tâches entre programmation Python (traitement du signal vocal) et électronique embarquée sur Raspberry Pi. Intégration modulaire des composants logiciels et matériels dans la structure globale de l'escape game.</p>
-                </div>
-
-                <div class="project-section">
-                    <strong>✨ Résultats</strong>
-                    <p>Module d'analyse vocale fonctionnel intégré avec succès au système d'escape game. Démonstration réussie auprès des utilisateurs avec reconnaissance vocale fiable et interaction fluide.</p>
-                </div>
-
-                <div class="tech-stack">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Raspberry Pi</span>
-                    <span class="tech-tag">Audio Processing</span>
-                    <span class="tech-tag">Électronique</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Projet 2 : Collier Connecté -->
-        <div class="project-card">
-            <div class="project-header">
-                <h3>Collier Connecté IoT</h3>
-                <p class="project-period">Septembre 2022 - Juin 2023</p>
-            </div>
-            <div class="project-body">
-                <div class="project-section">
-                    <strong>🎯 Contexte & Objectifs</strong>
-                    <p>Conception d'une solution IoT pour la surveillance en temps réel des animaux domestiques. Le projet visait à combiner un dispositif embarqué miniaturisé avec une application mobile intuitive pour les propriétaires.</p>
-                </div>
-
-                <div class="project-section">
-                    <strong>⚙️ Processus & Approche</strong>
-                    <p>Développement d'une application mobile en Java pour le suivi GPS en temps réel. Architecture client-serveur intégrant les données du collier avec synchronisation instantanée et interface utilisateur ergonomique.</p>
-                </div>
-
-                <div class="project-section">
-                    <strong>✨ Résultats</strong>
-                    <p>Application mobile fonctionnelle permettant aux propriétaires de localiser précisément leurs animaux. Système complet testé et validé offrant une expérience utilisateur fluide et des données précises en temps réel.</p>
-                </div>
-
-                <div class="tech-stack">
-                    <span class="tech-tag">Java</span>
-                    <span class="tech-tag">IoT</span>
-                    <span class="tech-tag">GPS/Localisation</span>
-                    <span class="tech-tag">Mobile App</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Projet 3 : Design Sprint -->
-        <div class="project-card">
-            <div class="project-header">
-                <h3>Design Sprint - Teach Up</h3>
-                <p class="project-period">Janvier 2025 - En cours</p>
-            </div>
-            <div class="project-body">
-                <div class="project-section">
-                    <strong>🎯 Contexte & Objectifs</strong>
-                    <p>Participation à un sprint de conception UX/UI pour optimiser l'expérience utilisateur d'une plateforme éducative. Collaboration directe avec les équipes produit et clients pour valider les besoins.</p>
-                </div>
-
-                <div class="project-section">
-                    <strong>⚙️ Processus & Approche</strong>
-                    <p>Analyse collaborative de la problématique, conception de solutions UX/UI sur Figma, développement d'un prototype interactif. Itérations rapides avec feedback clients lors de réunions régulières.</p>
-                </div>
-
-                <div class="project-section">
-                    <strong>✨ Résultats</strong>
-                    <p>Prototype interactif validé auprès des clients. Démonstration de capacités en design thinking, communication client et adaptation rapide aux retours pour améliorer l'expérience utilisateur.</p>
-                </div>
-
-                <div class="tech-stack">
-                    <span class="tech-tag">Figma</span>
-                    <span class="tech-tag">UX/UI Design</span>
-                    <span class="tech-tag">Prototypage</span>
-                    <span class="tech-tag">Design Sprint</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Projet 4 : Huma'Népal -->
-        <div class="project-card">
-            <div class="project-header">
-                <h3>Projet de Formation Humaine : Huma'Népal</h3>
-                <p class="project-period">Septembre 2021 - Juin 2023</p>
-            </div>
-            <div class="project-body">
-                <div class="project-section">
-                    <strong>🎯 Contexte & Objectifs</strong>
-                    <p>Projet solidaire visant à scolariser, informatiser et former des enfants au Népal, tout en favorisant les échanges culturels franco-népalais. Ancien Vice-Président de l'association.</p>
-                </div>
-
-                <div class="project-section">
-                    <strong>⚙️ Processus & Approche</strong>
-                    <p>Gestion administrative et coordination des initiatives. Mise en place de programme d'informatique adaptés au contexte local. Favorisation des échanges culturels et du mentorat.</p>
-                </div>
-
-                <div class="project-section">
-                    <strong>✨ Résultats</strong>
-                    <p><strong>Trophée du Bénévolat Associatif - Esprit d'Équipe 2022.</strong> Impact social mesurable avec formation de plusieurs enfants et renforcement des liens franco-népalais à travers les échanges culturels.</p>
-                </div>
-
-                <div class="tech-stack">
-                    <span class="tech-tag">Leadership</span>
-                    <span class="tech-tag">Gestion Projet</span>
-                    <span class="tech-tag">Éducation</span>
-                    <span class="tech-tag">Solidarité</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Conclusion -->
-<section id="conclusion">
-    <h2>Conclusion</h2>
-
-    <div class="conclusion-content">
-        <div class="conclusion-box">
-            <h3>🎓 Compétences Humaines Développées</h3>
-            <ul class="skills-list">
-                <li><strong>Autonomie :</strong> Capacité à prendre l'initiative, gérer mon temps et mener des tâches de manière indépendante, comme démontré dans mes projets techniques et mon rôle de Vice-Président à Huma'Népal.</li>
-                <li><strong>Adaptabilité :</strong> Flexibilité à switcher entre différents domaines (embarqué, web, UX/UI), technologies et contextes de travail, y compris en environnement multiculturel.</li>
-                <li><strong>Travail en équipe :</strong> Collaboration efficace avec des équipes multidisciplinaires, partage de connaissances et soutien des membres, comme démontré par le trophée d'Esprit d'Équipe 2022.</li>
-            </ul>
-        </div>
-
-        <div class="conclusion-box">
-            <h3>🚀 Projections & Perspectives</h3>
             <p>
-                <strong>L'ingénieur que je souhaite devenir :</strong> Un ingénieur en systèmes embarqués capable de concevoir des solutions complètes intégrant matériel et logiciel, tout en maintenant l'excellence technique et la rigueur. Je souhaite contribuer à des projets innovants dans les domaines de l'IoT, des objets connectés intelligents et des systèmes autonomes. Mon objectif à court terme est de réaliser un stage de 4 mois (à partir d'avril 2026) dans une entreprise leader du secteur embarqué, puis poursuivre ma formation pour devenir Expert Technique ou Technical Lead.
+              Conception d’un système embarqué de récupération d’énergie (20 capteurs piézoélectriques) pour alimenter un lampadaire LED, avec détection de présence (PIR) et batterie Li-ion.
             </p>
-            <p style="margin-top: 1rem; font-weight: 600; color: var(--color-primary);">
-                Passionné, rigoureux et orienté résultats, je suis prêt à relever les défis techniques et contribuer à l'innovation dans l'industrie de l'embarqué.
-            </p>
-        </div>
-    </div>
-</section>
 
-<!-- Footer -->
-<footer>
-    <p><strong>Anass AGDIM</strong> | Ingénieur Systèmes Embarqués</p>
-    <p>ESIEA Paris - M1 Informatique</p>
-    <div class="social-links">
-        <a href="mailto:anassproagdim@gmail.com">📧 Email</a>
-        <a href="tel:+33758220505">📱 Téléphone</a>
-        <a href="https://github.com/AnassAGDIM" target="_blank">💻 GitHub</a>
-        <a href="https://www.linkedin.com/in/anass-agdim/" target="_blank">🔗 LinkedIn</a>
-    </div>
-    <p style="margin-top: 1.5rem; font-size: 0.9rem; color: #bdc3c7;">© 2025 - Portfolio Anass AGDIM. Tous droits réservés.</p>
-</footer>
+            <div class="grid" style="margin-top: 8px;">
+              <div class="mini col-6">
+                <h3>Contexte & objectifs</h3>
+                <ul>
+                  <li>Récupérer et gérer l’énergie produite pour maximiser l’autonomie.</li>
+                  <li>Assurer une détection fiable de présence et un pilotage LED adapté.</li>
+                  <li>Fournir un monitoring Web (tableau de bord, alertes, rôles).</li>
+                </ul>
+              </div>
+
+              <div class="mini col-6">
+                <h3>Processus</h3>
+                <ul>
+                  <li>Organisation en équipe selon une approche agile : backlog, planification, sprints hebdomadaires, suivi via Jira.</li>
+                  <li>Revues régulières, répartition claire des responsabilités : électronique, firmware, back-end, front-end.</li>
+                  <li>Intégration progressive : mesures → calculs énergie → communication → supervision.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="grid" style="margin-top: 8px;">
+              <div class="mini col-6">
+                <h3>Réalisation technique</h3>
+                <ul>
+                  <li>Firmware ESP32 (C/Arduino) : mesure tension/courant via ADC 12 bits, calcul énergie produite/consommée, pilotage lampadaire.</li>
+                  <li>Communication ESP-NOW vers une passerelle ESP32-B.</li>
+                  <li>Plateforme Web : Node.js, Express, MySQL, HTML/CSS/JavaScript (dashboard, alertes, gestion de rôles).</li>
+                </ul>
+              </div>
+
+              <div class="mini col-6">
+                <h3>Résultats (à valoriser)</h3>
+                <ul>
+                  <li>Chaîne complète : capteurs → microcontrôleur → communication → supervision.</li>
+                  <li>Traçabilité projet via backlog/sprints et revues régulières.</li>
+                  <li>Base solide pour itérations (optimisation énergie, fiabilité, UX monitoring).</li>
+                </ul>
+              </div>
+            </div>
+
+            <figure aria-label="Visuel CAP 4A">
+              <div class="ph">
+                Visuel : ajoutez ici une photo du prototype, un schéma d’architecture (capteurs → ESP32 → passerelle → serveur), ou des captures du dashboard.
+              </div>
+            </figure>
+
+            <!-- Contenu CAP 4A saisi depuis votre capture fournie (fichier image) -->
+          </article>
+
+          <!-- Projet 2: Escape Game Numérique -->
+          <article class="project col-12" aria-label="Escape Game Numérique">
+            <!-- Détails issus du CV [file:2] -->
+            <h3>Projet Scientifique et Technique – Escape Game Numérique (analyse vocale)</h3>
+            <p class="meta">
+              <span class="tag">Sept. 2023 → Juin 2024</span>
+              <span class="tag">Python</span>
+              <span class="tag">Raspberry Pi</span>
+              <span class="tag">Travail en équipe</span>
+            </p>
+            <p>
+              Conception d’une épreuve d’analyse vocale pour un escape game, avec intégration logicielle et matérielle dans une structure globale.
+            </p>
+            <div class="grid" style="margin-top: 8px;">
+              <div class="mini col-6">
+                <h3>Objectifs</h3>
+                <ul>
+                  <li>Mettre en place une épreuve basée sur la voix (acquisition, traitement, décision).</li>
+                  <li>Assurer l’intégration sur une plateforme embarquée (Raspberry Pi).</li>
+                </ul>
+              </div>
+              <div class="mini col-6">
+                <h3>Processus & résultats</h3>
+                <ul>
+                  <li>Répartition des tâches : programmation Python / électronique embarquée.</li>
+                  <li>Intégration et tests des modules dans l’environnement global de jeu.</li>
+                </ul>
+              </div>
+            </div>
+            <figure aria-label="Visuel Escape Game">
+              <div class="ph">
+                Visuel : capture console / architecture (audio → traitement → validation) / photo du montage Raspberry Pi.
+              </div>
+            </figure>
+          </article>
+
+          <!-- Projet 3: Collier connecté -->
+          <article class="project col-12" aria-label="Collier connecté">
+            <!-- Détails issus du CV [file:2] -->
+            <h3>Projet Scientifique et Technique – Collier Connecté (suivi d’animaux)</h3>
+            <p class="meta">
+              <span class="tag">Sept. 2022 → Juin 2023</span>
+              <span class="tag">Java</span>
+              <span class="tag">Mobile</span>
+              <span class="tag">IoT</span>
+            </p>
+            <p>
+              Conception d’un collier domestique facilitant la surveillance des animaux de compagnie, avec une application mobile permettant le suivi en temps réel.
+            </p>
+            <div class="grid" style="margin-top: 8px;">
+              <div class="mini col-6">
+                <h3>Objectifs</h3>
+                <ul>
+                  <li>Permettre aux propriétaires de localiser leur animal en temps réel.</li>
+                  <li>Concevoir une solution simple d’utilisation et exploitable au quotidien.</li>
+                </ul>
+              </div>
+              <div class="mini col-6">
+                <h3>Processus & résultats</h3>
+                <ul>
+                  <li>Développement d’une application mobile (Java).</li>
+                  <li>Valorisation : démontrez l’écran de suivi et le flux de données (capteur → app).</li>
+                </ul>
+              </div>
+            </div>
+            <figure aria-label="Visuel Collier connecté">
+              <div class="ph">
+                Visuel : captures de l’application (carte, position, historique), schéma bloc du système.
+              </div>
+            </figure>
+          </article>
+
+          <!-- Projet 4: Design Sprint -->
+          <article class="project col-12" aria-label="Design Sprint Teach Up">
+            <!-- Détails issus du CV [file:2] -->
+            <h3>Design Sprint – Teach Up (prototype UX/UI)</h3>
+            <p class="meta">
+              <span class="tag">Depuis janv. 2025</span>
+              <span class="tag">Figma</span>
+              <span class="tag">Ateliers client</span>
+              <span class="tag">Itération rapide</span>
+            </p>
+            <p>
+              Participation à un sprint de conception pour améliorer l’expérience utilisateur, avec analyse du besoin, solutions UX/UI et prototype interactif.
+            </p>
+            <div class="grid" style="margin-top: 8px;">
+              <div class="mini col-6">
+                <h3>Objectifs</h3>
+                <ul>
+                  <li>Clarifier les besoins avec les parties prenantes.</li>
+                  <li>Prototyper et valider des parcours utilisateurs.</li>
+                </ul>
+              </div>
+              <div class="mini col-6">
+                <h3>Processus & résultats</h3>
+                <ul>
+                  <li>Co-conception, retours clients, itérations courtes.</li>
+                  <li>Prototype interactif prêt à démontrer en entretien.</li>
+                </ul>
+              </div>
+            </div>
+            <figure aria-label="Visuel Teach Up">
+              <div class="ph">
+                Visuel : captures Figma (wireframes, flow, prototype), ou lien vers prototype (si public).
+              </div>
+            </figure>
+          </article>
+
+          <!-- Projet 5: Huma'Népal -->
+          <article class="project col-12" aria-label="Huma'Népal">
+            <!-- Détails issus du CV [file:2] -->
+            <h3>Projet de Formation Humaine – Huma'Népal (association)</h3>
+            <p class="meta">
+              <span class="tag">Sept. 2021 → Juin 2023</span>
+              <span class="tag">Vice-Président</span>
+              <span class="tag">Projet solidaire</span>
+              <span class="tag">Esprit d’équipe 2022</span>
+            </p>
+            <p>
+              Projet solidaire visant à scolariser, informatiser et enseigner, tout en favorisant les échanges culturels franco-népalais.
+            </p>
+            <div class="grid" style="margin-top: 8px;">
+              <div class="mini col-6">
+                <h3>Objectifs</h3>
+                <ul>
+                  <li>Porter un projet utile, concret et structuré sur la durée.</li>
+                  <li>Coordonner et fédérer une équipe autour d’actions mesurables.</li>
+                </ul>
+              </div>
+              <div class="mini col-6">
+                <h3>Résultats (à valoriser)</h3>
+                <ul>
+                  <li>Leadership associatif et organisation d’équipe.</li>
+                  <li>Reconnaissance : Trophées du Bénévolat Associatif – Esprit d’équipe 2022.</li>
+                </ul>
+              </div>
+            </div>
+            <figure aria-label="Visuel Huma'Népal">
+              <div class="ph">
+                Visuel : photo d’événements, affiche, indicateurs (dons, matériel, actions menées).
+              </div>
+            </figure>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         PARCOURS & EXPERIENCES
+         ========================= -->
+    <section id="parcours" class="card" style="margin-top:14px;" aria-label="Parcours">
+      <h2 class="section-title">Parcours & expériences</h2>
+      <p class="section-sub">Synthèse des expériences significatives (industrie + opérations) et de la formation.</p>
+
+      <div class="grid" style="margin-top: 12px;">
+        <div class="mini col-6">
+          <h3>Expériences professionnelles</h3>
+          <ul>
+            <!-- Expériences issues du CV [file:2] -->
+            <li>Stage de découverte – Développeur junior (YOURPACKAGING, Rabat) : application Python de gestion analytique (calcul de coûts de revient).</li>
+            <li>Équipier polyvalent (McDonald’s Laval) : travail en équipe, respect de protocoles qualité, gestion des flux.</li>
+          </ul>
+        </div>
+
+        <div class="mini col-6">
+          <h3>Formation</h3>
+          <ul>
+            <!-- Formation issue du CV [file:2] -->
+            <li>ESIEA Paris – Formation Ingénieur Informatique (M1), 2e année cycle ingénieur (depuis septembre 2021).</li>
+            <li>Baccalauréat Sciences Mathématiques (LSS Rabat, 2020–2021).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         COMPETENCES
+         ========================= -->
+    <section id="competences" class="card" style="margin-top:14px;" aria-label="Compétences">
+      <h2 class="section-title">Compétences</h2>
+      <p class="section-sub">Compétences techniques, outils et qualités humaines mobilisées dans les projets.</p>
+
+      <div class="grid" style="margin-top: 12px;">
+        <div class="mini col-6">
+          <h3>Langages</h3>
+          <!-- Liste issue du CV [file:2] -->
+          <p>Python • Java • C • JavaScript • HTML • CSS • SQL • R</p>
+        </div>
+
+        <div class="mini col-6">
+          <h3>Outils & environnements</h3>
+          <!-- Liste issue du CV [file:2] -->
+          <p>VS Code • Git/GitHub • Cisco • Django • Flask • React • Pack Office • Canva • Trello</p>
+        </div>
+
+        <div class="mini col-12">
+          <h3>Soft skills (roue des soft skills)</h3>
+          <!-- Soft skills issues du CV [file:2] -->
+          <ul>
+            <li>Autonomie : avancer efficacement sur firmware, intégration et résolution de problèmes.</li>
+            <li>Adaptabilité : passer du matériel au logiciel (et du technique à l’UX) selon les besoins.</li>
+            <li>Travail en équipe : coordination, répartition des tâches, revues et itérations rapides.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         CONCLUSION
+         ========================= -->
+    <section id="conclusion" class="card" style="margin-top:14px;" aria-label="Conclusion">
+      <h2 class="section-title">Conclusion</h2>
+
+      <div class="grid" style="margin-top: 12px;">
+        <div class="mini col-6">
+          <h3>Réflexion personnelle</h3>
+          <p>
+            Les projets présentés montrent une progression vers des systèmes complets, intégrant capteurs, firmware, communication et supervision, avec une attention constante à la robustesse et à la mesure.
+          </p>
+          <p style="margin-top:10px;">
+            Trois compétences humaines particulièrement mobilisées : autonomie, adaptabilité et travail en équipe.
+          </p>
+        </div>
+
+        <div class="mini col-6">
+          <h3>Projection : quel ingénieur je souhaite devenir</h3>
+          <p>
+            Devenir un ingénieur systèmes embarqués capable de livrer des solutions autonomes et fiables (énergie, capteurs, communications), tout en rendant le système observable via des outils de monitoring et des indicateurs pertinents.
+          </p>
+          <p style="margin-top:10px;">
+            Priorités : qualité firmware, intégration propre, testabilité, et collaboration efficace avec les équipes produit/indus.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         CONTACT
+         ========================= -->
+    <section id="contact" class="card" style="margin-top:14px;" aria-label="Contact">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-sub">Liens et informations utiles pour un recruteur.</p>
+
+      <div class="grid" style="margin-top: 12px;">
+        <div class="mini col-6">
+          <h3>Coordonnées</h3>
+          <!-- Coordonnées issues du CV [file:2] -->
+          <ul>
+            <li>Email : <a href="mailto:anassproagdim@gmail.com">anassproagdim@gmail.com</a></li>
+            <li>Téléphone : <a href="tel:+33758220505">+33 7 58 22 05 05</a></li>
+            <li>Localisation : Île-de-France</li>
+          </ul>
+        </div>
+
+        <div class="mini col-6">
+          <h3>Réseaux</h3>
+          <!-- LinkedIn mentionné dans le CV (sans URL explicite) [file:2] -->
+          <ul>
+            <li>LinkedIn : Anass Agdim (ajoutez votre lien public ici)</li>
+            <li>GitHub : (ajoutez votre lien GitHub ici)</li>
+          </ul>
+          <p style="margin-top:10px; color:var(--muted);">
+            Astuce GitHub Pages : dépôt <span style="font-family:var(--mono);">username.github.io</span> ou Pages via la branche <span style="font-family:var(--mono);">main</span> (dossier root).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 – Portfolio Anass AGDIM • Dernière mise à jour : 23/12/2025
+    </footer>
+  </main>
+
+  <script>
+    // Highlight nav item on scroll (simple + léger)
+    const links = [...document.querySelectorAll(".navlink")];
+    const sections = links
+      .map(a => document.querySelector(a.getAttribute("href")))
+      .filter(Boolean);
+
+    const setActive = () => {
+      let idx = 0;
+      const fromTop = window.scrollY + 110;
+      for (let i = 0; i < sections.length; i++){
+        if (sections[i].offsetTop <= fromTop) idx = i;
+      }
+      links.forEach(l => l.classList.remove("active"));
+      if (links[idx]) links[idx].classList.add("active");
+    };
+
+    window.addEventListener("scroll", setActive, { passive: true });
+    window.addEventListener("load", setActive);
+  </script>
 </body>
 </html>
