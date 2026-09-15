@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfolio – Anass AGDIM – Ingénieur Informatique, majeur Systèmes Embarqués (ESIEA Paris)." />
+  <meta name="description" content="Portfolio de Anass AGDIM, élève ingénieur en Intelligence Artificielle et Data Science (ESIEA Paris) et étudiant du MSc AIBT (SKEMA x ESIEA)." />
   <title>Portfolio – Anass AGDIM</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>" />
 
   <style>
     :root{
@@ -39,6 +40,21 @@
 
     a{ color: inherit; text-decoration: none; }
     a:hover{ text-decoration: underline; text-underline-offset: 3px; }
+    a:focus-visible, .btn:focus-visible{ outline: 2px solid var(--brand); outline-offset: 3px; }
+    .mini a, .project a{ color: var(--brand); }
+    .kpi{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 12px 0 4px; }
+    @media (max-width: 700px){ .kpi{ grid-template-columns: repeat(2, 1fr); } }
+    .kpi div{ border:1px solid var(--line); border-radius: 14px; padding: 10px 12px; background: rgba(255,255,255,.04); }
+    .kpi strong{ display:block; font-size: 1.15rem; color: var(--text); }
+    .kpi span{ font-size: .8rem; color: var(--muted); }
+    @media (max-width: 700px){
+      .topbar .topbar-inner{ flex-direction: column; align-items: stretch; gap: 8px; padding: 10px 14px; }
+      .topbar nav{ flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; scrollbar-width: none; }
+      .topbar nav::-webkit-scrollbar{ display: none; }
+      .navlink{ white-space: nowrap; }
+      .logo{ width: 34px; height: 34px; }
+    }
+    @media (prefers-reduced-motion: reduce){ html{ scroll-behavior: auto; } }
 
     .skip-link{
       position: absolute; left: -999px; top: 10px;
@@ -195,24 +211,6 @@
     .btn:hover{ text-decoration: none; filter: brightness(1.06); }
     .btn .mono{ font-family: var(--mono); font-size: .88em; color: var(--muted); }
 
-    /* Table of contents */
-    .toc{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    @media (max-width: 700px){ .toc{ grid-template-columns: 1fr; } }
-    .toc a{
-      display: flex; justify-content: space-between; gap: 10px;
-      padding: 12px 12px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      color: var(--text);
-    }
-    .toc a:hover{ text-decoration: none; background: rgba(255,255,255,.06); }
-    .toc small{ color: var(--muted); }
-
     .section-title{
       margin: 0 0 8px;
       font-size: 1.15rem;
@@ -315,15 +313,16 @@
         <div class="logo" aria-hidden="true">AA</div>
         <div>
           <strong>Anass AGDIM</strong>
-          <span>Ingénieur Informatique, majeur Systèmes Embarqués</span>
+          <span>Élève ingénieur IA &amp; Data Science • MSc AIBT</span>
         </div>
       </div>
 
       <nav aria-label="Navigation principale">
-        <a class="navlink" href="#couverture">Couverture</a>
-        <a class="navlink" href="#toc">Sommaire</a>
+        <a class="navlink" href="#couverture">Accueil</a>
         <a class="navlink" href="#introduction">Introduction</a>
         <a class="navlink" href="#projets">Projets</a>
+        <a class="navlink" href="#parcours">Parcours</a>
+        <a class="navlink" href="#competences">Compétences</a>
         <a class="navlink" href="#conclusion">Conclusion</a>
         <a class="navlink" href="#contact">Contact</a>
       </nav>
@@ -337,49 +336,49 @@
     <section id="couverture" class="card hero" aria-label="Page de couverture">
       <div class="kicker">
         <span class="dot" aria-hidden="true"></span>
-        <span>Portfolio • ESIEA Paris • Recherche stage 4 mois (dès avril 2026)</span>
+        <span>ESIEA Paris × SKEMA • Recherche stage de fin d’études en IA / Data</span>
       </div>
 
       <h1>Portfolio – Anass AGDIM</h1>
 
       <p class="subtitle">
-        Accroche : « Concevoir et développer des systèmes fiables : intégration hardware/software, backend robuste, et data-driven insights. »
+        De la donnée brute au modèle qui tourne sur le terrain : entraîner, compresser, déployer et mesurer des systèmes d’IA utiles.
       </p>
 
       <div class="hero-grid">
         <div class="card" style="margin:0; background: rgba(255,255,255,.04); box-shadow:none;">
           <h2 class="section-title">Informations</h2>
           <p class="section-sub">
-            • Titre : Ingénieur Informatique, majeur Systèmes Embarqués • Date de réalisation : 13 décembre 2025
+            Élève ingénieur en 5e année à l’ESIEA (majeure Intelligence Artificielle &amp; Data Science), en double diplôme avec le MSc Artificial Intelligence for Business Transformation (SKEMA × ESIEA, 2026–2027).
           </p>
 
           <div class="pill-row" aria-label="Mots-clés">
-            <span class="pill">Embarqué (ESP32 / Raspberry Pi)</span>
-            <span class="pill">C / Arduino</span>
             <span class="pill">Python</span>
-            <span class="pill">Java</span>
-            <span class="pill">Réseaux & IoT</span>
-            <span class="pill">Web (Node/Express • HTML/CSS/JS)</span>
-            <span class="pill">Git/GitHub</span>
-            <span class="pill">Agile / Jira</span>
+            <span class="pill">PyTorch • Transformers</span>
+            <span class="pill">Computer Vision / OCR</span>
+            <span class="pill">ONNX • IA embarquée mobile</span>
+            <span class="pill">SQL • PostgreSQL</span>
+            <span class="pill">Azure • GCP</span>
+            <span class="pill">React Native • TypeScript</span>
+            <span class="pill">Git • CI</span>
           </div>
 
           <div class="cta-row">
             <a class="btn primary" href="#projets">Voir les projets</a>
             <a class="btn" href="#contact">Me contacter</a>
-            <a class="btn" href="#toc"><span>Accéder au sommaire</span> <span class="mono">↘</span></a>
+            <a class="btn" href="https://github.com/SvvGTH" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
 
         <aside class="card" style="margin:0; background: rgba(255,255,255,.04); box-shadow:none;">
           <h2 class="section-title">Objectif</h2>
           <p class="section-sub">
-            Concevoir, développer et maintenir des solutions logicielles innovantes pour l’embarqué, en m’appuyant sur une approche rigoureuse et orientée résultats.
+            Rejoindre une équipe Data / IA pour un stage de fin d’études, sur des sujets où le modèle doit fonctionner en production et apporter un résultat mesurable au métier.
           </p>
 
           <div style="margin-top: 12px; border-top:1px solid var(--line); padding-top: 12px;">
             <p style="margin:0; color:var(--muted);">
-              Langues : Français (courant) • Anglais (C1 – TOEIC 915/990)
+              Langues : Français (courant) • Anglais (C1, TOEIC 915/990)
             </p>
           </div>
         </aside>
@@ -387,35 +386,100 @@
     </section>
 
     <!-- =========================
-         INTRODUCTION (5 lignes)
+         INTRODUCTION
          ========================= -->
     <section id="introduction" class="card" style="margin-top:14px;" aria-label="Introduction">
       <h2 class="section-title">Introduction</h2>
       <p class="section-sub">
-        Étudiant en cycle ingénieur à l’ESIEA Paris, je me spécialise dans les systèmes embarqués autonomes. <br/>
-        Mon objectif est de transformer des contraintes terrain (énergie, capteurs, communications) en solutions fiables et maintenables. <br/>
-        Mes projets combinent firmware, intégration matériel et interfaces de monitoring pour mesurer, diagnostiquer et améliorer les systèmes. <br/>
-        Je travaille avec une approche structurée (rigueur, tests, collaboration) afin de livrer des résultats exploitables. <br/>
-        Je recherche un stage de 4 mois à partir d’avril 2026 pour contribuer à des produits embarqués innovants.
+        Étudiant en 5e année à l’ESIEA Paris, je me spécialise en intelligence artificielle et data science. <br/>
+        Pendant mon stage de 4A chez TECH ELEVATE (Maroc), j’ai construit un système d’OCR hors ligne utilisé sur smartphone par des agents de terrain, de la base de données jusqu’à l’application mobile. <br/>
+        Ce projet m’a appris qu’un bon modèle ne suffit pas : il faut des données propres, des métriques fiables, un code audité et une solution adaptée à ceux qui l’utilisent. <br/>
+        C’est pour cette raison que je complète ma formation d’ingénieur par le MSc AIBT (SKEMA × ESIEA), orienté management et transformation des entreprises par l’IA. <br/>
+        Je recherche un stage de fin d’études en IA / Data pour mettre ces deux dimensions au service d’un projet concret.
       </p>
     </section>
 
     <!-- =========================
-         PROJETS (min 2)
+         PROJETS
          ========================= -->
     <section id="projets" style="margin-top:14px;" aria-label="Projets">
       <div class="card">
         <h2 class="section-title">Projets / Travaux</h2>
         <p class="section-sub">
-          Sélection de réalisations centrées sur l’embarqué, l’IoT, l’intégration et l’expérience utilisateur.
+          Sélection de réalisations en IA, data, systèmes embarqués et conception produit.
         </p>
 
         <div class="grid" style="margin-top: 14px;">
+          <!-- Projet: Stage OCR -->
+          <article class="project col-12" aria-label="Stage TECH ELEVATE OCR boucles d'identification">
+            <h3>Stage 4A – OCR hors ligne des boucles d’identification ovines et caprines</h3>
+            <p class="meta">
+              <span class="tag">Avril → Août 2026 (4 mois)</span>
+              <span class="tag">TECH ELEVATE, Maroc</span>
+              <span class="tag">PyTorch • TrOCR</span>
+              <span class="tag">ONNX</span>
+              <span class="tag">React Native</span>
+              <span class="tag">PostgreSQL • Azure Blob Storage</span>
+            </p>
+
+            <p>
+              Conception d’un système de lecture automatique des numéros de boucles d’identification (8 chiffres sur 2 lignes) pour l’ANOC, l’association nationale marocaine des éleveurs ovins et caprins. L’outil fonctionne 100 % hors ligne, directement sur les smartphones Android des agents de terrain.
+            </p>
+
+            <div class="kpi" aria-label="Chiffres clés">
+              <div><strong>~450</strong><span>agents de terrain ciblés</span></div>
+              <div><strong>~2,7 M</strong><span>enregistrements en base</span></div>
+              <div><strong>~30 Mo</strong><span>modèle final quantifié</span></div>
+              <div><strong>100 %</strong><span>hors ligne</span></div>
+            </div>
+
+            <div class="grid" style="margin-top: 8px;">
+              <div class="mini col-6">
+                <h3>Contexte &amp; objectifs</h3>
+                <ul>
+                  <li>Remplacer la saisie manuelle des numéros par une lecture photo, sans réseau.</li>
+                  <li>Contraintes fixées : précision &gt; 90 %, CER &lt; 5 %, inférence &lt; 3 s, modèle &lt; 50 Mo.</li>
+                  <li>Images de faible résolution (médiane 375×500 px) prises en conditions réelles.</li>
+                </ul>
+              </div>
+
+              <div class="mini col-6">
+                <h3>Démarche</h3>
+                <ul>
+                  <li>Extraction et préparation des données depuis PostgreSQL et Azure Blob Storage.</li>
+                  <li>Fine-tuning de TrOCR avec vocabulaire restreint aux chiffres [0-9] et augmentations adaptées (pas de retournement horizontal pour garder l’ordre des chiffres).</li>
+                  <li>Comparaison TrOCR-small / TrOCR-base : aucun gain avec le plus gros modèle, preuve que la limite venait des données.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="grid" style="margin-top: 8px;">
+              <div class="mini col-6">
+                <h3>Réalisation technique</h3>
+                <ul>
+                  <li>Pipeline en deux étapes : classifieur d’orientation puis OCR, avec un pipeline à au moins 95 % de la performance « oracle ».</li>
+                  <li>Export ONNX, élagage du vocabulaire et quantification pour atteindre ~30 Mo.</li>
+                  <li>Intégration dans une application React Native utilisable sans connexion.</li>
+                </ul>
+              </div>
+
+              <div class="mini col-6">
+                <h3>Qualité &amp; fiabilité</h3>
+                <ul>
+                  <li>Audit complet du code en sept lots : suite de tests qui ne dépasse plus le délai, couverture CI élargie.</li>
+                  <li>Neuf implémentations de métriques unifiées en un seul module, validé sur 40 000 lignes réelles.</li>
+                  <li>Suppression d’une permission INTERNET non déclarée, héritée d’une dépendance tierce (repérée via logcat).</li>
+                  <li>Invariants du projet versionnés, aucun secret exposé sur 265 commits.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
           <!-- Projet: CAP 4A -->
           <article class="project col-12" aria-label="Projet CAP 4A">
             <h3>Projet CAP 4A – Lampadaire urbain autonome piézoélectrique</h3>
             <p class="meta">
-              <span class="tag">Depuis janvier 2025</span>
+              <span class="tag">2025 → 2026</span>
               <span class="tag">NOVA / ESIEA</span>
               <span class="tag">ESP32 • ESP-NOW</span>
               <span class="tag">Node.js • Express • MySQL</span>
@@ -428,7 +492,7 @@
 
             <div class="grid" style="margin-top: 8px;">
               <div class="mini col-6">
-                <h3>Contexte & objectifs</h3>
+                <h3>Contexte &amp; objectifs</h3>
                 <ul>
                   <li>Récupérer et gérer l’énergie produite pour maximiser l’autonomie.</li>
                   <li>Assurer une détection fiable de présence et un pilotage LED adapté.</li>
@@ -439,9 +503,9 @@
               <div class="mini col-6">
                 <h3>Processus</h3>
                 <ul>
-                  <li>Organisation en équipe selon une approche agile : backlog, planification, sprints hebdomadaires, suivi via Jira.</li>
-                  <li>Revues régulières, répartition claire des responsabilités : électronique, firmware, back-end, front-end.</li>
-                  <li>Intégration progressive : mesures → calculs énergie → communication → supervision.</li>
+                  <li>Organisation agile : backlog, sprints hebdomadaires, suivi via Jira.</li>
+                  <li>Responsabilités réparties : électronique, firmware, back-end, front-end.</li>
+                  <li>Intégration progressive : mesures, calculs d’énergie, communication, supervision.</li>
                 </ul>
               </div>
             </div>
@@ -450,18 +514,43 @@
               <div class="mini col-6">
                 <h3>Réalisation technique</h3>
                 <ul>
-                  <li>Firmware ESP32 (C/Arduino) : mesure tension/courant via ADC 12 bits, calcul énergie produite/consommée, pilotage lampadaire.</li>
-                  <li>Communication ESP-NOW vers une passerelle ESP32-B.</li>
-                  <li>Plateforme Web : Node.js, Express, MySQL, HTML/CSS/JavaScript (dashboard, alertes, gestion de rôles).</li>
+                  <li>Firmware ESP32 (C/Arduino) : mesure tension/courant via ADC 12 bits, calcul de l’énergie produite et consommée, pilotage du lampadaire.</li>
+                  <li>Communication ESP-NOW vers une passerelle ESP32.</li>
+                  <li>Plateforme Web : Node.js, Express, MySQL, HTML/CSS/JavaScript (dashboard, alertes, gestion des rôles).</li>
                 </ul>
               </div>
 
               <div class="mini col-6">
-                <h3>Résultats (à valoriser)</h3>
+                <h3>Résultats</h3>
                 <ul>
-                  <li>Chaîne complète : capteurs → microcontrôleur → communication → supervision.</li>
-                  <li>Traçabilité projet via backlog/sprints et revues régulières.</li>
-                  <li>Base solide pour itérations (optimisation énergie, fiabilité, UX monitoring).</li>
+                  <li>Chaîne complète : capteurs, microcontrôleur, communication, supervision.</li>
+                  <li>Traçabilité du projet via backlog, sprints et revues régulières.</li>
+                  <li>Base solide pour de futures itérations (optimisation énergétique, fiabilité, interface).</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projet: freeCodeCamp -->
+          <article class="project col-12" aria-label="Projets Data Analysis with Python">
+            <h3>Data Analysis with Python – 5 projets certifiants (freeCodeCamp)</h3>
+            <p class="meta">
+              <span class="tag">Décembre 2025</span>
+              <span class="tag">Python • NumPy • Pandas</span>
+              <span class="tag">Matplotlib • Seaborn</span>
+              <span class="tag">SciPy</span>
+            </p>
+            <p>
+              Cinq projets réalisés pour obtenir la certification, chacun publié sur GitHub.
+            </p>
+            <div class="grid" style="margin-top: 8px;">
+              <div class="mini col-12">
+                <ul>
+                  <li><a href="https://github.com/SvvGTH/mean-variance-standard-deviation-calculator" target="_blank" rel="noopener">Mean-Variance-Standard Deviation Calculator</a> : statistiques descriptives sur une matrice 3×3 avec NumPy.</li>
+                  <li><a href="https://github.com/SvvGTH/demographic-data-analyzer" target="_blank" rel="noopener">Demographic Data Analyzer</a> : analyse d’un jeu de données de recensement avec Pandas.</li>
+                  <li><a href="https://github.com/SvvGTH/Medical-Data-Visualizer" target="_blank" rel="noopener">Medical Data Visualizer</a> : nettoyage de données médicales, graphiques catégoriels et carte de corrélation.</li>
+                  <li><a href="https://github.com/SvvGTH/Page-View-Time-Series-Visualizer" target="_blank" rel="noopener">Page View Time Series Visualizer</a> : analyse de série temporelle de fréquentation web.</li>
+                  <li><a href="https://github.com/SvvGTH/Sea-Level-Predictor" target="_blank" rel="noopener">Sea Level Predictor</a> : régression linéaire pour projeter le niveau de la mer.</li>
                 </ul>
               </div>
             </div>
@@ -488,10 +577,10 @@
                 </ul>
               </div>
               <div class="mini col-6">
-                <h3>Processus & résultats</h3>
+                <h3>Processus &amp; résultats</h3>
                 <ul>
-                  <li>Répartition des tâches : programmation Python / électronique embarquée.</li>
-                  <li>Intégration et tests des modules dans l’environnement global de jeu.</li>
+                  <li>Répartition des tâches : programmation Python et électronique embarquée.</li>
+                  <li>Intégration et tests des modules dans l’environnement global du jeu.</li>
                 </ul>
               </div>
             </div>
@@ -514,14 +603,14 @@
                 <h3>Objectifs</h3>
                 <ul>
                   <li>Permettre aux propriétaires de localiser leur animal en temps réel.</li>
-                  <li>Concevoir une solution simple d’utilisation et exploitable au quotidien.</li>
+                  <li>Concevoir une solution simple d’utilisation au quotidien.</li>
                 </ul>
               </div>
               <div class="mini col-6">
-                <h3>Processus & résultats</h3>
+                <h3>Processus &amp; résultats</h3>
                 <ul>
-                  <li>Développement d’une application mobile (Java).</li>
-                  <li>Valorisation : démontrez l’écran de suivi et le flux de données (capteur → app).</li>
+                  <li>Développement de l’application mobile en Java.</li>
+                  <li>Mise en place du flux de données du collier vers l’application.</li>
                 </ul>
               </div>
             </div>
@@ -531,13 +620,13 @@
           <article class="project col-12" aria-label="Design Sprint Teach Up">
             <h3>Design Sprint – Teach Up (prototype UX/UI)</h3>
             <p class="meta">
-              <span class="tag">Depuis janv. 2025</span>
+              <span class="tag">Janv. 2025</span>
               <span class="tag">Figma</span>
               <span class="tag">Ateliers client</span>
               <span class="tag">Itération rapide</span>
             </p>
             <p>
-              Participation à un sprint de conception pour améliorer l’expérience utilisateur, avec analyse du besoin, solutions UX/UI et prototype interactif.
+              Participation à un sprint de conception pour améliorer l’expérience utilisateur : analyse du besoin, propositions UX/UI et prototype interactif.
             </p>
             <div class="grid" style="margin-top: 8px;">
               <div class="mini col-6">
@@ -548,10 +637,10 @@
                 </ul>
               </div>
               <div class="mini col-6">
-                <h3>Processus & résultats</h3>
+                <h3>Processus &amp; résultats</h3>
                 <ul>
-                  <li>Co-conception, retours clients, itérations courtes.</li>
-                  <li>Prototype interactif prêt à démontrer en entretien.</li>
+                  <li>Co-conception, retours client, itérations courtes.</li>
+                  <li>Prototype interactif sous Figma, testé avec le client.</li>
                 </ul>
               </div>
             </div>
@@ -559,7 +648,7 @@
 
           <!-- Projet: Huma'Népal -->
           <article class="project col-12" aria-label="Huma'Népal">
-            <h3>Projet de Formation Humaine – Huma'Népal (association)</h3>
+            <h3>Projet de Formation Humaine – Huma’Népal (association)</h3>
             <p class="meta">
               <span class="tag">Sept. 2021 → Juin 2023</span>
               <span class="tag">Vice-Président</span>
@@ -578,10 +667,10 @@
                 </ul>
               </div>
               <div class="mini col-6">
-                <h3>Résultats (à valoriser)</h3>
+                <h3>Résultats</h3>
                 <ul>
                   <li>Leadership associatif et organisation d’équipe.</li>
-                  <li>Reconnaissance : Trophées du Bénévolat Associatif – Esprit d’équipe 2022.</li>
+                  <li>Trophées du Bénévolat Associatif, prix Esprit d’équipe 2022.</li>
                 </ul>
               </div>
             </div>
@@ -594,24 +683,25 @@
          PARCOURS & EXPERIENCES
          ========================= -->
     <section id="parcours" class="card" style="margin-top:14px;" aria-label="Parcours">
-      <h2 class="section-title">Parcours & expériences</h2>
-      <p class="section-sub">Synthèse des expériences significatives et de la formation.</p>
+      <h2 class="section-title">Parcours &amp; expériences</h2>
+      <p class="section-sub">Expériences significatives et formation.</p>
 
       <div class="grid" style="margin-top: 12px;">
         <div class="mini col-6">
           <h3>Expériences professionnelles</h3>
           <ul>
-            <li>Stage de découverte – Développeur junior (YOURPACKAGING, Rabat) : application Python de gestion analytique (calcul de coûts de revient).</li>
-            <li>Équipier polyvalent (McDonald’s Laval) : travail en équipe, respect de protocoles qualité, gestion des flux.</li>
+            <li><strong>Stagiaire ingénieur IA / Computer Vision</strong>, TECH ELEVATE (Maroc), avril à août 2026 : OCR hors ligne des boucles d’identification pour l’ANOC, de l’entraînement du modèle à l’application mobile.</li>
+            <li><strong>Équipier polyvalent</strong>, McDonald’s Laval : travail en équipe, respect des protocoles qualité, gestion des flux.</li>
           </ul>
         </div>
 
         <div class="mini col-6">
           <h3>Formation</h3>
           <ul>
-            <li>ESIEA Paris – Formation Ingénieur Informatique (M1), 2e année cycle ingénieur (depuis septembre 2021).</li>
-            <li>Baccalauréat Sciences Mathématiques (LSS Rabat, 2020–2021).</li>
-            <li>Certification Data Analysis with Python (freeCodeCamp, decembre 2025) - Analyse de donnees, regression lineaire, visualisations.</li>
+            <li><strong>ESIEA Paris</strong>, cycle ingénieur, 5e année, majeure Intelligence Artificielle &amp; Data Science (depuis 2021).</li>
+            <li><strong>MSc Artificial Intelligence for Business Transformation</strong>, double diplôme SKEMA Business School × ESIEA, Paris (2026–2027).</li>
+            <li>Baccalauréat Sciences Mathématiques, LSS Rabat (2020–2021).</li>
+            <li>Certification Data Analysis with Python, freeCodeCamp (décembre 2025) : analyse de données, régression linéaire, visualisation.</li>
           </ul>
         </div>
       </div>
@@ -627,24 +717,29 @@
       <div class="grid" style="margin-top: 12px;">
         <div class="mini col-6">
           <h3>Langages</h3>
-          <p>Python • Java • C • JavaScript • HTML • CSS • SQL • R</p>
+          <p>Python (avancé) • SQL, C, JavaScript / TypeScript (intermédiaire) • R, Java (notions) • HTML • CSS</p>
         </div>
-        
-<div class="mini col-6">
-<h3>Data Science & Analysis</h3>
-<p>NumPy • Pandas • Matplotlib • Seaborn • Scikit-learn • Analyse statistique • Series temporelles</p>
-</div>
 
         <div class="mini col-6">
-          <h3>Outils & environnements</h3>
-          <p>VS Code • Git/GitHub • Cisco • Django • Flask • React • Pack Office • Canva • Trello • Docker • MATLAB • Simulink</p>
+          <h3>IA &amp; Data Science</h3>
+          <p>PyTorch • Hugging Face Transformers (TrOCR) • ONNX • Computer Vision / OCR • Scikit-learn • NumPy • Pandas • Matplotlib • Seaborn • Analyse statistique • Séries temporelles</p>
+        </div>
+
+        <div class="mini col-6">
+          <h3>Data, cloud &amp; déploiement</h3>
+          <p>PostgreSQL • MySQL • Azure Blob Storage • Google Cloud Platform • API REST / JSON • OAuth • React Native • Node.js / Express • Docker • CI</p>
+        </div>
+
+        <div class="mini col-6">
+          <h3>Outils &amp; environnements</h3>
+          <p>VS Code • Jupyter • Git / GitHub • Claude Code • Notion • Jira • Trello • Figma • Canva • MATLAB / Simulink • Pack Office • LaTeX / Overleaf</p>
         </div>
 
         <div class="mini col-12">
           <h3>Soft skills</h3>
           <ul>
-            <li>Autonomie : avancer efficacement sur firmware, intégration et résolution de problèmes.</li>
-            <li>Adaptabilité : passer du matériel au logiciel (et du technique à l’UX) selon les besoins.</li>
+            <li>Autonomie : mener seul un projet de bout en bout pendant 4 mois, en organisant mes tâches et en rendant compte à mon tuteur.</li>
+            <li>Adaptabilité : passer du modèle au mobile, de l’embarqué au Web, et du technique aux enjeux métier.</li>
             <li>Travail en équipe : coordination, répartition des tâches, revues et itérations rapides.</li>
           </ul>
         </div>
@@ -661,7 +756,7 @@
         <div class="mini col-6">
           <h3>Réflexion personnelle</h3>
           <p>
-            Les projets présentés montrent une progression vers des systèmes complets, intégrant capteurs, firmware, communication et supervision, avec une attention constante à la robustesse et à la mesure.
+            Mes projets montrent une progression de l’embarqué vers l’IA appliquée. Le stage de 4A a été le déclic : livrer un modèle qui tient sur un téléphone, sans réseau, pour des utilisateurs réels, demande autant de rigueur sur les données et le code que sur l’algorithme.
           </p>
           <p style="margin-top:10px;">
             Trois compétences humaines particulièrement mobilisées : autonomie, adaptabilité et travail en équipe.
@@ -671,10 +766,10 @@
         <div class="mini col-6">
           <h3>Projection : quel ingénieur je souhaite devenir</h3>
           <p>
-            Devenir un Ingénieur Informatique, majeur Systèmes Embarqués capable de livrer des solutions autonomes et fiables (énergie, capteurs, communications), tout en rendant le système observable via des outils de monitoring et des indicateurs pertinents.
+            Un ingénieur IA / Data capable de mener un projet du besoin métier jusqu’au déploiement, et d’expliquer clairement ce que le modèle apporte et ses limites.
           </p>
           <p style="margin-top:10px;">
-            Priorités : qualité firmware, intégration propre, testabilité, et collaboration efficace avec les équipes produit/indus.
+            Priorités : qualité des données, métriques fiables, code testé, et collaboration étroite avec les équipes métier. Le MSc AIBT me donne le volet management et stratégie pour y arriver.
           </p>
         </div>
       </div>
@@ -693,26 +788,27 @@
           <ul>
             <li>Email : <a href="mailto:anassproagdim@gmail.com">anassproagdim@gmail.com</a></li>
             <li>Téléphone : <a href="tel:+33758220505">+33 7 58 22 05 05</a></li>
-            <li>Localisation : Île-de-France</li>
+            <li>Localisation : Paris, Île-de-France</li>
           </ul>
         </div>
 
         <div class="mini col-6">
           <h3>Réseaux</h3>
           <ul>
-            <li>LinkedIn : <a href="https://www.linkedin.com/in/anass-agdim/" target="_blank">Anass Agdim</a></li>
+            <li>LinkedIn : <a href="https://www.linkedin.com/in/anass-agdim/" target="_blank" rel="noopener">Anass Agdim</a></li>
+            <li>GitHub : <a href="https://github.com/SvvGTH" target="_blank" rel="noopener">SvvGTH</a></li>
           </ul>
         </div>
       </div>
     </section>
 
     <footer>
-      © 2025 – Portfolio Anass AGDIM • Dernière mise à jour : 13/02/2026
+      © 2025–2026 Portfolio Anass AGDIM • Dernière mise à jour : 16/09/2026
     </footer>
   </main>
 
   <script>
-    // Highlight nav item on scroll (simple + léger)
+    // Surligne l'onglet de la section visible
     const links = [...document.querySelectorAll(".navlink")];
     const sections = links
       .map(a => document.querySelector(a.getAttribute("href")))
@@ -724,6 +820,7 @@
       for (let i = 0; i < sections.length; i++){
         if (sections[i].offsetTop <= fromTop) idx = i;
       }
+      if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4) idx = sections.length - 1;
       links.forEach(l => l.classList.remove("active"));
       if (links[idx]) links[idx].classList.add("active");
     };
