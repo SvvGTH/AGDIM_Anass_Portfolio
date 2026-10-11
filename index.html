@@ -231,7 +231,25 @@
     ol.chain b{ font-weight: 650; }
     ol.chain span{ grid-column: 2; color: var(--muted); }
 
-    .pull{ border-left: 4px solid var(--tag); padding: 4px 0 4px 18px; font-size: 1.15rem; font-stretch: 92%; max-width: 56ch; }
+    .gauge{ margin: 16px 0 18px; max-width: 640px; }
+    .gauge-track{ position: relative; height: 14px; border-radius: 7px; background: var(--rule); margin: 84px 0 6px; }
+    .gauge-fill{ position: absolute; inset: 0 auto 0 0; border-radius: 7px; background: var(--tag); }
+    .gauge-mark{ position: absolute; top: 0; transform: translateX(-50%); }
+    .gauge-mark i{ position: absolute; left: 50%; top: -6px; width: 2px; height: 26px; margin-left: -1px; background: var(--ink); }
+    .gauge-mark b, .gauge-mark em{ position: absolute; left: 50%; transform: translateX(-50%); white-space: nowrap; font-style: normal; }
+    .gauge-mark b{ font-weight: 800; font-stretch: 75%; font-size: 1.15rem; }
+    .gauge-mark em{ font-size: .875rem; color: var(--muted); }
+    .m-goal b, .m-base b{ bottom: 26px; } .m-goal em, .m-base em{ bottom: 46px; }
+    .m-base b, .m-base em{ transform: translateX(-100%); left: -6px; }
+    .m-goal b, .m-goal em{ transform: translateX(-50%); left: 50%; }
+    .m-ours b{ top: 24px; } .m-ours em{ top: 46px; }
+    .m-ours i{ background: var(--tag-edge); }
+    .m-goal i{ background: var(--good); }
+    .gauge-scale{ display: flex; justify-content: space-between; color: var(--muted); font-size: .875rem; margin-top: 52px; }
+    .gauge figcaption{ margin-top: 8px; color: var(--muted); font-size: .93rem; max-width: 60ch; }
+    .story .gauge + p{ margin-top: 0; }
+    .story p + ul{ margin-top: 10px; }
+    .scoreboard td.target small{ white-space: nowrap; }
 
     /* ---------- Other work ---------- */
     .rows{ list-style: none; padding: 0; margin-top: 8px; }
@@ -366,7 +384,7 @@
             <div class="cands" id="v-cands"></div>
           </div>
 
-          <p class="reader-foot">Sur un Galaxy S24, la vraie lecture prend entre 0,3 et 0,7 seconde, sans connexion.</p>
+          <p class="reader-foot">Sur un téléphone Android, la vraie lecture prend entre 0,3 et 0,7 seconde, sans connexion.</p>
         </aside>
       </div>
     </section>
@@ -404,12 +422,32 @@
                 <caption>Les contraintes fixées au départ, et ce que le lecteur livré atteint.</caption>
                 <thead><tr><th scope="col">Critère</th><th scope="col">Visé</th><th scope="col">Obtenu</th></tr></thead>
                 <tbody>
-                  <tr><th scope="row">Temps de lecture</th><td class="target num">&lt; 3 s</td><td class="met num">0,3 à 0,7 s<small>mesuré sur Galaxy S24</small></td></tr>
+                  <tr><th scope="row">Temps de lecture</th><td class="target num">&lt; 3 s</td><td class="met num">0,3 à 0,7 s<small>mesuré sur téléphone Android</small></td></tr>
                   <tr><th scope="row">Taille du modèle</th><td class="target num">&lt; 50 Mo</td><td class="met num">30 Mo<small>après export ONNX et quantification</small></td></tr>
                   <tr><th scope="row">Connexion</th><td class="target">aucune</td><td class="met">aucune</td></tr>
-                  <tr><th scope="row">Lectures exactes</th><td class="target num">&gt; 90 %</td><td class="missed num">74 %<span class="mark">non atteint</span><small>voir les limites plus bas</small></td></tr>
+                  <tr><th scope="row">Lectures exactes</th><td class="target num">0,90<small>soit 90 %</small></td><td class="missed num">0,74<span class="mark">non atteint</span><small>soit 74 %, écart expliqué ci-dessous</small></td></tr>
                 </tbody>
               </table>
+            </div>
+
+            <div>
+              <h3>Pourquoi 0,74 et pas 0,90</h3>
+              <figure class="gauge" aria-labelledby="gauge-cap">
+                <div class="gauge-track" aria-hidden="true">
+                  <span class="gauge-fill" style="width:74%"></span>
+                  <span class="gauge-mark m-base" style="left:78%"><i></i><b>0,78</b><em>gros modèle, trop lourd</em></span>
+                  <span class="gauge-mark m-goal" style="left:90%"><i></i><b>0,90</b><em>objectif</em></span>
+                  <span class="gauge-mark m-ours" style="left:74%"><i></i><b>0,74</b><em>modèle livré</em></span>
+                </div>
+                <div class="gauge-scale num" aria-hidden="true"><span>0</span><span>0,5</span><span>1</span></div>
+                <figcaption id="gauge-cap">Part des boucles lues sans erreur sur le jeu de test. Même le gros modèle de 230 à 280 Mo reste à 12 points de l’objectif.</figcaption>
+              </figure>
+              <p><strong>0,90 est l’objectif fixé au lancement du projet</strong>, avant d’avoir vu les photos : 90 boucles sur 100 lues sans aucune erreur. <strong>0,74 est ce que le modèle livré atteint</strong> sur le jeu de test : 74 boucles sur 100. Les 16 points d’écart s’expliquent ainsi :</p>
+              <ul>
+                <li><strong>Les images, pas la taille du modèle.</strong> Le gros modèle (TrOCR-base) ne monte qu’à 0,78. Un modèle plus lourd ne comble donc pas l’écart, et il ne tient de toute façon pas dans les 50 Mo du téléphone.</li>
+                <li><strong>Des erreurs impossibles à écarter à l’avance.</strong> Quatre erreurs sur cinq viennent de photos nettes. Un simple tri sur la netteté ne suffit pas à repérer les boucles qui seront mal lues.</li>
+                <li><strong>Ce que ça change sur le terrain.</strong> Quand il doute, le lecteur rend la main à l’agent au lieu d’écrire un numéro. Une bonne partie de l’écart se traduit donc en saisies manuelles, pas en numéros faux dans la base.</li>
+              </ul>
             </div>
 
             <div>
@@ -437,16 +475,14 @@
               <ul>
                 <li><strong>Des seuils qui ne filtraient rien.</strong> L’application comparait la confiance du modèle à des seuils de 0,3, 0,5 et 0,85. Or nos confiances vont de 0,89 à 0,99 : une lecture fausse passait avec deux coches vertes. J’ai remplacé ces seuils par un critère propre à notre lecteur, couvert par 169 tests.</li>
                 <li><strong>La boucle à l’envers.</strong> Lue à 180°, une boucle donne les deux lignes permutées, avec la même confiance que la bonne lecture. Le premier chiffre suit le plan de numérotation : en tenant compte de sa fréquence réelle, le lecteur choisit le bon ordre.</li>
-                <li><strong>Le test final</strong> sur Galaxy S24 : quatre boucles de deux couleurs, dont deux tenues à l’envers et une tournée de 90°, toutes lues correctement.</li>
+                <li><strong>Le test final</strong> sur téléphone Android : quatre boucles de deux couleurs, dont deux tenues à l’envers et une tournée de 90°, toutes lues correctement.</li>
               </ul>
             </div>
 
             <div>
               <h3>Limites et suite</h3>
-              <p class="pull">74 % de lectures exactes, c’est en dessous des 90 % visés. Je l’assume et je sais d’où ça vient.</p>
-              <ul style="margin-top:14px">
-                <li>Quatre erreurs sur cinq viennent d’images nettes : on ne peut pas écarter les photos illisibles à l’avance avec un simple tri sur la netteté.</li>
-                <li>Une erreur sur un seul chiffre peut encore passer tous les critères de confiance.</li>
+              <ul>
+                <li>Une erreur sur un seul chiffre peut encore passer tous les critères de confiance : c’est le risque principal qui reste.</li>
                 <li>Suite prévue : un détecteur léger (type YOLO nano) pour isoler la boucle avant la lecture, plus d’images étiquetées, et l’essai de modèles d’OCR plus récents.</li>
               </ul>
             </div>
