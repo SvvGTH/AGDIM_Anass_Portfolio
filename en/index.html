@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anass Agdim | AI &amp; Data engineering student, looking for a final-year internship</title>
+  <meta name="description" content="Anass Agdim, AI and Data engineering student at ESIEA Paris, on a double degree with SKEMA’s MSc AIBT. Case study: an offline OCR that reads sheep and goat ear tags on a phone. Looking for a 6-month final-year internship from May 2027." />
+  <meta name="author" content="Anass Agdim" />
+  <link rel="canonical" href="https://svvgth.github.io/AGDIM_Anass_Portfolio/en/" />
+  <link rel="alternate" hreflang="fr" href="https://svvgth.github.io/AGDIM_Anass_Portfolio/" />
+  <link rel="alternate" hreflang="en" href="https://svvgth.github.io/AGDIM_Anass_Portfolio/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://svvgth.github.io/AGDIM_Anass_Portfolio/" />
+
+  <meta property="og:type" content="profile" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:site_name" content="Anass Agdim" />
+  <meta property="og:title" content="Anass Agdim, AI &amp; Data engineering student" />
+  <meta property="og:description" content="An OCR that reads sheep ear tags on a phone, with no network. Looking for a final-year AI / Data internship in Paris." />
+  <meta property="og:url" content="https://svvgth.github.io/AGDIM_Anass_Portfolio/en/" />
+  <meta property="og:image" content="https://svvgth.github.io/AGDIM_Anass_Portfolio/assets/og-en.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Anass Agdim, AI and Data engineering student. An orange ear tag whose number is read by the OCR." />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <meta name="theme-color" content="#edf0ea" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#121815" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+  <link rel="preload" href="../assets/fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../assets/site.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Anass Agdim",
+    "jobTitle": "AI & Data engineering student",
+    "url": "https://svvgth.github.io/AGDIM_Anass_Portfolio/en/",
+    "email": "mailto:anassproagdim@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Paris", "addressCountry": "FR" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "ESIEA" },
+      { "@type": "CollegeOrUniversity", "name": "SKEMA Business School" }
+    ],
+    "knowsAbout": ["Machine learning", "Computer vision", "OCR", "PyTorch", "ONNX", "Data engineering", "SQL"],
+    "sameAs": ["https://www.linkedin.com/in/anass-agdim/", "https://github.com/SvvGTH"]
+  }
+  </script>
+
+  <script>
+    // Apply the saved theme before first paint (avoids a flash).
+    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+  </script>
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <div class="wrap">
+      <a class="me" href="#top">Anass Agdim</a>
+      <nav aria-label="Main navigation">
+        <a href="#case-study">Case study</a>
+        <a href="#projects">Projects</a>
+        <a href="#background">Background</a>
+        <a href="#contact">Contact</a>
+        <a href="../assets/cv/CV_Anass_AGDIM_EN.pdf">CV (PDF)</a>
+      </nav>
+      <a class="lang" href="../" hreflang="fr" lang="fr" aria-label="FR, version française">FR</a>
+      <button class="theme" type="button" id="theme" aria-label="Switch to dark theme"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top" aria-labelledby="hero-name">
+      <div class="wrap">
+        <div>
+          <p class="avail">Looking for a final-year AI / Data internship in Paris, from May 2027</p>
+          <h1 id="hero-name">Anass Agdim</h1>
+          <p class="lede">AI &amp; Data engineering student at ESIEA, on a double degree with SKEMA’s MSc AIBT.</p>
+          <p class="sub">During my 4th-year internship, I built a reader that recognises the number on a sheep’s ear tag from a photo, directly on the field agent’s phone, with no network. <a href="#reader">Try the demo</a>.</p>
+          <div class="actions">
+            <a class="btn solid" href="#case-study">Read the case study</a>
+            <a class="btn" href="../assets/cv/CV_Anass_AGDIM_EN.pdf">Download the CV</a>
+            <span class="quiet">
+              <a href="https://www.linkedin.com/in/anass-agdim/" rel="noopener">LinkedIn</a>
+              <a href="https://github.com/SvvGTH" rel="noopener">GitHub</a>
+            </span>
+          </div>
+        </div>
+
+        <!-- Demo -->
+        <aside class="reader" id="reader" data-state="upright" aria-labelledby="reader-title">
+          <div class="reader-head">
+            <h2 id="reader-title">Hold the tag like an agent would</h2>
+            <p>A simulation of the reasoning, not the model</p>
+          </div>
+
+          <div class="stage">
+            <svg viewBox="-45 -20 390 420" role="img" aria-labelledby="tag-alt">
+              <title id="tag-alt">Orange ear tag showing 1062 on the first line and 3917 on the second</title>
+              <g class="tagbody" id="tagbody">
+                <path d="M150 14c60 0 104 24 104 64v156c0 52-46 86-104 86S46 286 46 234V78c0-40 44-64 104-64z" fill="var(--tag)" />
+                <path d="M150 14c60 0 104 24 104 64v156c0 52-46 86-104 86S46 286 46 234V78c0-40 44-64 104-64z" fill="none" stroke="var(--tag-edge)" stroke-width="3" />
+                <circle cx="150" cy="62" r="17" fill="var(--ground)" stroke="var(--tag-edge)" stroke-width="3" />
+                <text class="tagdigits" x="150" y="176" font-size="66" text-anchor="middle" letter-spacing="3">1062</text>
+                <text class="tagdigits" x="150" y="252" font-size="66" text-anchor="middle" letter-spacing="3">3917</text>
+                <g class="grime" aria-hidden="true">
+                  <ellipse cx="160" cy="156" rx="19" ry="30" fill="#4a3a1e" opacity=".82" />
+                  <ellipse cx="199" cy="232" rx="19" ry="30" fill="#4a3a1e" opacity=".78" />
+                  <ellipse cx="130" cy="205" rx="64" ry="12" fill="#fff" opacity=".3" />
+                </g>
+              </g>
+              <rect class="scanbox" x="60" y="112" width="180" height="160" rx="10" />
+            </svg>
+          </div>
+
+          <div class="poses" role="group" aria-label="Tag position">
+            <button type="button" data-pose="upright" aria-pressed="true">Upright</button>
+            <button type="button" data-pose="flipped" aria-pressed="false">Upside down</button>
+            <button type="button" data-pose="turned" aria-pressed="false">Turned</button>
+            <button type="button" data-pose="dirty" aria-pressed="false">Dirty</button>
+          </div>
+
+          <div class="verdict" aria-live="polite">
+            <div class="out">
+              <span class="read num" id="v-read">10623917</span>
+              <span class="status ok" id="v-status">Written to the record</span>
+            </div>
+            <p class="why" id="v-why">Easy case: only one plausible reading, with high confidence.</p>
+            <div class="cands" id="v-cands"></div>
+          </div>
+
+          <p class="reader-foot">On an Android phone, the real reading takes 0.3 to 0.7 seconds, with no connection.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CASE STUDY -->
+    <section class="sec" id="case-study" aria-labelledby="case-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="case-title">Case study</h2>
+          <p>Reading an ear tag in under a second, with no network. Four months of internship, from the database to the phone.</p>
+        </div>
+
+        <div class="case">
+          <aside class="fiche" aria-label="Project summary">
+            <dl>
+              <div><dt>Company</dt><dd>TechElevate <span>(Marrakech, Morocco)</span></dd></div>
+              <div><dt>Client</dt><dd>ANOC<span>, Morocco’s national association of sheep and goat breeders</span></dd></div>
+              <div><dt>Dates</dt><dd>April to August 2026</dd></div>
+              <div><dt>Users</dt><dd>~450 field agents</dd></div>
+              <div><dt>My role</dt><dd>AI and computer vision engineering intern<span>. I owned the reader end to end: data, model, compression, integration into the app.</span></dd></div>
+            </dl>
+            <p class="stack">Python, PyTorch, Hugging Face (TrOCR), ONNX Runtime, PostgreSQL, Azure Blob Storage, React Native, Git and CI.</p>
+          </aside>
+
+          <div class="story">
+            <div>
+              <h3>The problem</h3>
+              <p>Every sheep and goat wears an ear tag with an 8-digit number on two lines. Agents copy it by hand into their phone, often in areas with no network. Typing mistakes end up in a database of 2.7 million records.</p>
+              <p>The photos are small (375 × 500 pixels on median), taken in harsh sunlight, of dirty or faded tags held at every angle.</p>
+            </div>
+
+            <div>
+              <h3>Target and result</h3>
+              <table class="scoreboard">
+                <caption>The constraints set at the start, and what the delivered reader achieves.</caption>
+                <thead><tr><th scope="col">Criterion</th><th scope="col">Target</th><th scope="col">Result</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Reading time</th><td class="target num">&lt; 3 s</td><td class="met num">0.3 to 0.7 s<small>measured on an Android phone</small></td></tr>
+                  <tr><th scope="row">Model size</th><td class="target num">&lt; 50 MB</td><td class="met num">30 MB<small>after ONNX export and quantization</small></td></tr>
+                  <tr><th scope="row">Connection</th><td class="target">none</td><td class="met">none</td></tr>
+                  <tr><th scope="row">Exact reads</th><td class="target num">0.90<small>i.e. 90 %</small></td><td class="missed num">0.74<span class="mark">missed</span><small>i.e. 74 %, gap explained below</small></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div>
+              <h3>Why 0.74 and not 0.90</h3>
+              <figure class="gauge" aria-labelledby="gauge-cap">
+                <div class="gauge-track" aria-hidden="true">
+                  <span class="gauge-fill" style="width:74%"></span>
+                  <span class="gauge-mark m-base" style="left:78%"><i></i><b>0.78</b><em>large model, too heavy</em></span>
+                  <span class="gauge-mark m-goal" style="left:90%"><i></i><b>0.90</b><em>target</em></span>
+                  <span class="gauge-mark m-ours" style="left:74%"><i></i><b>0.74</b><em>delivered model</em></span>
+                </div>
+                <div class="gauge-scale num" aria-hidden="true"><span>0</span><span>0.5</span><span>1</span></div>
+                <figcaption id="gauge-cap">Share of tags read with no error on the test set. Even the 230 to 280 MB model stays 12 points short of the target.</figcaption>
+              </figure>
+              <p><strong>0.90 is the target set at kick-off</strong>, before anyone had looked at the photos: 90 tags out of 100 read with no error at all. <strong>0.74 is what the delivered model reaches</strong> on the test set: 74 tags out of 100. The 16-point gap comes from three things:</p>
+              <ul>
+                <li><strong>The images, not the model size.</strong> The large model (TrOCR-base) only gets to 0.78. A heavier model does not close the gap, and it would not fit in the phone’s 50 MB budget anyway.</li>
+                <li><strong>Errors you cannot screen out in advance.</strong> Four errors out of five come from sharp photos. Filtering on sharpness is not enough to spot the tags that will be misread.</li>
+                <li><strong>What it means in the field.</strong> When it is unsure, the reader hands control back to the agent instead of writing a number. Much of the gap therefore turns into manual entries, not wrong numbers in the database.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>What I built</h3>
+              <ol class="chain">
+                <li><b>Data</b><span>Extracted the images and the typed numbers from PostgreSQL and Azure Blob Storage, then cleaned them.</span></li>
+                <li><b>Model</b><span>Fine-tuned TrOCR with PyTorch, with the vocabulary cut down to the digits 0 to 9 so a 0 can never become an O.</span></li>
+                <li><b>Orientation</b><span>A small classifier straightens the photo before reading.</span></li>
+                <li><b>Compression</b><span>ONNX export, vocabulary pruning and INT8 quantization to fit in 30 MB.</span></li>
+                <li><b>Integration</b><span>Reading module inside the company’s React Native app, tested on a phone.</span></li>
+              </ol>
+            </div>
+
+            <div>
+              <h3>The decisions that mattered</h3>
+              <ul>
+                <li><strong>The small model over the large one.</strong> TrOCR-base read 6 points better than TrOCR-small, but weighed 230 to 280 MB once quantized. I kept the small one (30 MB) to stay under the 50 MB limit.</li>
+                <li><strong>No horizontal flips</strong> during data augmentation, so the model never learns to reverse the digit order.</li>
+                <li><strong>Write only when the reader is sure.</strong> A doubtful reading goes back to the agent instead of being saved, because a wrong number in the database costs more than a manual entry.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>What only the field revealed</h3>
+              <ul>
+                <li><strong>Thresholds that filtered nothing.</strong> The app compared the model’s confidence to thresholds of 0.3, 0.5 and 0.85. Our confidences range from 0.89 to 0.99, so a wrong reading passed with two green ticks. I replaced those thresholds with a criterion built for our reader, covered by 169 tests.</li>
+                <li><strong>The upside-down tag.</strong> Read at 180°, a tag gives the two lines swapped, with the same confidence as the right reading. The first digit follows the national numbering plan: by taking its real frequency into account, the reader picks the right order.</li>
+                <li><strong>The final test</strong> on an Android phone: four tags in two colours, two held upside down and one turned 90°, all read correctly.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Limits and next steps</h3>
+              <ul>
+                <li>A single wrong digit can still pass every confidence check: that is the main remaining risk.</li>
+                <li>Next: a lightweight detector (YOLO nano type) to isolate the tag before reading, more labelled images, and trying more recent OCR models.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Making the code reliable</h3>
+              <ul>
+                <li>Nine different metric calculations merged into a single module, with an equality check on 40,000 real rows.</li>
+                <li>An undeclared INTERNET permission removed: it came from a third-party dependency, found in the Android logs.</li>
+                <li>A slow test suite fixed, CI widened, and the project’s invariants written down.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="sec" id="projects" aria-labelledby="proj-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="proj-title">Other projects</h2>
+          <p>School projects, most recent first.</p>
+        </div>
+        <ul class="rows">
+          <li class="row">
+            <p class="when"><b>2025 to 2026</b>4th-year CAP project, ESIEA</p>
+            <div>
+              <h3>A street lamp powered by people’s footsteps</h3>
+              <p>Twenty piezoelectric sensors harvest energy from footsteps to power an LED street lamp with presence detection. I wrote the ESP32 firmware that measures and reports the energy produced, then the monitoring platform with a dashboard, alerts and history. The measurements were used to tune when the light switches on.</p>
+              <p class="tools">ESP32 (C/Arduino), ESP-NOW, Node.js, Express, MySQL, Jira</p>
+            </div>
+          </li>
+          <li class="row">
+            <p class="when"><b>January 2025</b>Design sprint</p>
+            <div>
+              <h3>Teach Up: a prototype tested with the client in one week</h3>
+              <p>Workshops to pin down the need, an interactive prototype in Figma, then short iterations based on the client’s feedback.</p>
+              <p class="tools">Figma, client workshops</p>
+            </div>
+          </li>
+          <li class="row">
+            <p class="when"><b>2023 to 2024</b>Science and engineering project</p>
+            <div>
+              <h3>An escape-game puzzle you solve with your voice</h3>
+              <p>A voice-analysis challenge in Python on a Raspberry Pi, integrated with the rest of the hardware in the game’s set.</p>
+              <p class="tools">Python, Raspberry Pi, audio processing</p>
+            </div>
+          </li>
+          <li class="row">
+            <p class="when"><b>2022 to 2023</b>Science and engineering project</p>
+            <div>
+              <h3>A collar to track your pet in real time</h3>
+              <p>A connected collar and a Java mobile app to locate a pet.</p>
+              <p class="tools">Java, Android, IoT</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- BACKGROUND & SKILLS -->
+    <section class="sec" id="background" aria-labelledby="path-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="path-title">Background</h2>
+          <p>Embedded electronics first, then applied AI, and now what AI changes inside companies.</p>
+        </div>
+
+        <div class="two">
+          <div>
+            <h3>Education and experience</h3>
+            <ol class="path">
+              <li><time>2026 to 2027</time><div><b>MSc AI for Business Transformation, SKEMA × ESIEA</b><p>Double degree in Paris.</p></div></li>
+              <li><time>2021 to 2027</time><div><b>Engineering degree (Diplôme d’ingénieur), ESIEA Paris</b><p>Major in Artificial Intelligence &amp; Data Science.</p></div></li>
+              <li><time>2026</time><div><b>AI and computer vision engineering intern, TechElevate</b><p>4 months in Morocco. <a href="#case-study">See the case study</a>.</p></div></li>
+              <li><time>2024</time><div><b>Crew member, McDonald’s</b><p>Kitchen service, hygiene and quality procedures.</p></div></li>
+              <li><time>2021 to 2023</time><div><b>Vice-president, Huma’Népal association</b><p>Schooling and IT equipment in Nepal. Winner of the 2022 Trophées du Bénévolat Associatif.</p></div></li>
+            </ol>
+          </div>
+
+          <div id="skills">
+            <h3>Skills</h3>
+            <dl class="skills">
+              <div><dt>Languages</dt><dd>Python (advanced), SQL, C, JavaScript / TypeScript (intermediate), R, Java (basic)</dd></div>
+              <div><dt>AI and vision</dt><dd>PyTorch, Hugging Face Transformers, TrOCR, ONNX, OpenCV, quantization<small>Used during the internship, from training to mobile export.</small></dd></div>
+              <div><dt>Data</dt><dd>PostgreSQL, MySQL, pandas, NumPy, Matplotlib<small>2.7 M records during the internship, energy measurements for the CAP project.</small></dd></div>
+              <div><dt>Deployment and cloud</dt><dd>Docker, Azure Blob Storage, Google Cloud Platform, REST APIs, Git / GitHub, React Native</dd></div>
+              <div><dt>Spoken languages</dt><dd>French C1, English C1 (TOEIC 915), Arabic native</dd></div>
+            </dl>
+            <div class="fcc">
+              <b>Data Analysis with Python certification</b>, freeCodeCamp, December 2025. The five projects:
+              <ul>
+                <li><a href="https://github.com/SvvGTH/mean-variance-standard-deviation-calculator" rel="noopener">Mean-Variance-SD Calculator</a></li>
+                <li><a href="https://github.com/SvvGTH/demographic-data-analyzer" rel="noopener">Demographic Data Analyzer</a></li>
+                <li><a href="https://github.com/SvvGTH/Medical-Data-Visualizer" rel="noopener">Medical Data Visualizer</a></li>
+                <li><a href="https://github.com/SvvGTH/Page-View-Time-Series-Visualizer" rel="noopener">Page View Time Series</a></li>
+                <li><a href="https://github.com/SvvGTH/Sea-Level-Predictor" rel="noopener">Sea Level Predictor</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <h2 id="contact-title">Have an AI or Data internship?</h2>
+        <p>I am looking for a 6-month final-year internship in Paris, starting May 2027, on projects where the model has to work in real conditions.</p>
+        <a class="mail" href="mailto:anassproagdim@gmail.com">anassproagdim@gmail.com</a>
+        <div class="actions">
+          <button class="btn solid" type="button" id="copy" data-email="anassproagdim@gmail.com">Copy address</button>
+          <a class="btn" href="../assets/cv/CV_Anass_AGDIM_EN.pdf">CV in English</a>
+          <a class="btn" href="../assets/cv/CV_Anass_AGDIM_FR.pdf" hreflang="fr" lang="fr">CV en français</a>
+          <span class="quiet">
+            <a href="tel:+33758220505">+33 7 58 22 05 05</a>
+            <a href="https://www.linkedin.com/in/anass-agdim/" rel="noopener">LinkedIn</a>
+          </span>
+        </div>
+        <p class="copied" id="copied" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>Anass Agdim, Paris. Updated 11 October 2026.</span>
+      <a href="https://github.com/SvvGTH/AGDIM_Anass_Portfolio" rel="noopener">Site source code</a>
+    </div>
+  </footer>
+
+  <script src="../assets/site.js" defer></script>
+</body>
+</html>
