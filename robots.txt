@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://svvgth.github.io/AGDIM_Anass_Portfolio/sitemap.xml

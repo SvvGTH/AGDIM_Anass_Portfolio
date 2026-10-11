@@ -3,29 +3,35 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Anass AGDIM | Élève ingénieur IA &amp; Data Science</title>
-  <meta name="description" content="Anass AGDIM, élève ingénieur IA et Data Science (ESIEA Paris) et étudiant du MSc AIBT (SKEMA x ESIEA). Projet phare : un OCR hors ligne sur smartphone pour les agents de terrain de l'ANOC. Recherche un stage de fin d'études en IA / Data." />
-  <meta name="author" content="Anass AGDIM" />
+  <title>Anass Agdim | Élève ingénieur IA &amp; Data, recherche stage de fin d’études</title>
+  <meta name="description" content="Anass Agdim, élève ingénieur IA et Data à l’ESIEA Paris, en double diplôme avec le MSc AIBT de SKEMA. Étude de cas : un OCR hors ligne qui lit les boucles d’identification des moutons et des chèvres sur téléphone. Recherche un stage de fin d’études à partir de mai 2027." />
+  <meta name="author" content="Anass Agdim" />
   <link rel="canonical" href="https://svvgth.github.io/AGDIM_Anass_Portfolio/" />
+
   <meta property="og:type" content="profile" />
   <meta property="og:locale" content="fr_FR" />
-  <meta property="og:title" content="Anass AGDIM | Élève ingénieur IA &amp; Data Science" />
-  <meta property="og:description" content="OCR hors ligne sur smartphone, de la base de données à l'application. Recherche un stage de fin d'études en IA / Data à Paris." />
+  <meta property="og:site_name" content="Anass Agdim" />
+  <meta property="og:title" content="Anass Agdim, élève ingénieur IA &amp; Data" />
+  <meta property="og:description" content="Un OCR qui lit les boucles d’oreille des moutons sur téléphone, sans réseau. Recherche un stage de fin d’études IA / Data à Paris." />
   <meta property="og:url" content="https://svvgth.github.io/AGDIM_Anass_Portfolio/" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="theme-color" content="#f3f5f7" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#0f1720" media="(prefers-color-scheme: dark)" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect x=%2214%22 y=%2210%22 width=%2272%22 height=%2282%22 rx=%2222%22 fill=%22%23f28c28%22/><circle cx=%2250%22 cy=%2228%22 r=%228%22 fill=%22white%22/><text x=%2250%22 y=%2272%22 font-size=%2230%22 text-anchor=%22middle%22 font-family=%22monospace%22 font-weight=%22700%22>AA</text></svg>" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <meta property="og:image" content="https://svvgth.github.io/AGDIM_Anass_Portfolio/assets/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Anass Agdim, élève ingénieur IA et Data. Une boucle d’oreille orange dont le numéro est lu par l’OCR." />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <meta name="theme-color" content="#edf0ea" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#121815" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="preload" href="assets/fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin />
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Anass AGDIM",
-    "jobTitle": "Élève ingénieur IA & Data Science",
+    "name": "Anass Agdim",
+    "jobTitle": "Élève ingénieur IA & Data",
     "url": "https://svvgth.github.io/AGDIM_Anass_Portfolio/",
     "email": "mailto:anassproagdim@gmail.com",
     "address": { "@type": "PostalAddress", "addressLocality": "Paris", "addressCountry": "FR" },
@@ -33,248 +39,252 @@
       { "@type": "CollegeOrUniversity", "name": "ESIEA" },
       { "@type": "CollegeOrUniversity", "name": "SKEMA Business School" }
     ],
-    "knowsAbout": ["Machine Learning", "Computer Vision", "OCR", "PyTorch", "ONNX", "Data Science", "SQL"],
+    "knowsAbout": ["Machine learning", "Computer vision", "OCR", "PyTorch", "ONNX", "Data engineering", "SQL"],
     "sameAs": ["https://www.linkedin.com/in/anass-agdim/", "https://github.com/SvvGTH"]
   }
   </script>
 
+  <script>
+    // Applique le thème mémorisé avant le premier rendu (évite le flash).
+    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+  </script>
+
   <style>
+    @font-face{
+      font-family: "Archivo";
+      src: url("assets/fonts/archivo-wdth.woff2") format("woff2-variations"), url("assets/fonts/archivo-wdth.woff2") format("woff2");
+      font-weight: 100 900;
+      font-stretch: 62% 125%;
+      font-style: normal;
+      font-display: swap;
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
     :root{
-      --paper: #f3f5f7;
-      --surface: #ffffff;
-      --ink: #14202b;
-      --muted: #52606d;
-      --line: #d5dce3;
-      --blue: #1d5fbf;
-      --orange: #f28c28;
-      --orange-ink: #a24c00;
-      --tag-ink: #1b1206;
-      --ok: #1f7a4d;
-      --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-      --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
-      --max: 1120px;
-      --read: 68ch;
+      --ground: #edf0ea;
+      --raised: #f7f8f4;
+      --ink: #18201c;
+      --muted: #4d5851;
+      --rule: #c6cfc3;
+      --tag: #ef8a1f;
+      --tag-edge: #c76b0c;
+      --tag-digits: #2a1600;
+      --tag-blue: #2f6fcb;
+      --link: #18201c;
+      --good: #1d6a44;
+      --bad: #a3381b;
+      --hold: #7a5a00;
+      --sans: "Archivo", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      --page: 1160px;
+      --read: 66ch;
+      --ease: cubic-bezier(.2,.7,.2,1);
     }
     @media (prefers-color-scheme: dark){
       :root:not([data-theme="light"]){
-        --paper: #0f1720; --surface: #16212c; --ink: #e6ebf0; --muted: #a3afbb;
-        --line: #2a3744; --blue: #8ab8ff; --orange: #f59a45; --orange-ink: #ffb36b; --ok: #6fd3a0;
+        --ground: #121815; --raised: #19211d; --ink: #e6ebe5; --muted: #a6b1a9; --rule: #2c3631;
+        --link: #e6ebe5; --good: #6fd09b; --bad: #ff9a7a; --hold: #e7c35a; --tag-edge: #f6a24b;
       }
     }
     :root[data-theme="dark"]{
-      --paper: #0f1720; --surface: #16212c; --ink: #e6ebf0; --muted: #a3afbb;
-      --line: #2a3744; --blue: #8ab8ff; --orange: #f59a45; --orange-ink: #ffb36b; --ok: #6fd3a0;
+      --ground: #121815; --raised: #19211d; --ink: #e6ebe5; --muted: #a6b1a9; --rule: #2c3631;
+      --link: #e6ebe5; --good: #6fd09b; --bad: #ff9a7a; --hold: #e7c35a; --tag-edge: #f6a24b;
     }
 
     *{ box-sizing: border-box; }
-    html{ scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    html{ -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
     body{
-      margin: 0;
-      background: var(--paper);
-      color: var(--ink);
-      font-family: var(--sans);
-      font-size: 1.0625rem;
-      line-height: 1.6;
+      margin: 0; background: var(--ground); color: var(--ink);
+      font-family: var(--sans); font-size: 1.0625rem; line-height: 1.6; font-stretch: 100%;
+      text-rendering: optimizeLegibility;
     }
-    img, svg{ max-width: 100%; }
-    a{ color: var(--blue); text-underline-offset: 3px; text-decoration-thickness: 1px; }
-    a:hover{ text-decoration-thickness: 2px; }
-    :focus-visible{ outline: 3px solid var(--orange); outline-offset: 3px; border-radius: 4px; }
-    h1, h2, h3{ line-height: 1.15; margin: 0; }
-    p{ margin: 0; }
-    .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+    h1, h2, h3, p, ul, ol, dl, figure{ margin: 0; }
+    h1, h2, h3{ line-height: 1.08; text-wrap: balance; }
+    p, li{ text-wrap: pretty; }
+    a{ color: var(--link); text-decoration-color: var(--tag); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    a:hover{ text-decoration-thickness: 3px; }
+    :focus-visible{ outline: 3px solid var(--tag); outline-offset: 3px; border-radius: 3px; }
+    .wrap{ max-width: var(--page); margin: 0 auto; padding: 0 28px; }
+    @media (max-width: 640px){ .wrap{ padding: 0 18px; } }
+    .num{ font-variant-numeric: tabular-nums lining-nums; }
 
-    .skip{ position: absolute; left: -999px; top: 8px; background: var(--ink); color: var(--paper); padding: 10px 14px; border-radius: 8px; z-index: 100; }
+    .skip{ position: absolute; left: -9999px; top: 10px; z-index: 20; background: var(--ink); color: var(--ground); padding: 10px 14px; border-radius: 6px; }
     .skip:focus{ left: 12px; }
 
-    /* Header */
-    .top{
-      position: sticky; top: 0; z-index: 50;
-      background: color-mix(in srgb, var(--paper) 88%, transparent);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--line);
-    }
-    .top .wrap{ display: flex; align-items: center; gap: 20px; min-height: 60px; }
-    .name{ font-weight: 700; color: var(--ink); text-decoration: none; white-space: nowrap; }
-    .top nav{ display: flex; gap: 4px; margin-left: auto; overflow-x: auto; scrollbar-width: none; }
+    /* ---------- Header ---------- */
+    .top{ position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--ground) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--rule); }
+    .top .wrap{ display: flex; align-items: center; gap: 18px; min-height: 58px; }
+    .me{ font-weight: 700; font-stretch: 80%; font-size: 1.15rem; letter-spacing: -.01em; color: var(--ink); text-decoration: none; white-space: nowrap; }
+    .top nav{ margin-left: auto; display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
     .top nav::-webkit-scrollbar{ display: none; }
-    .top nav a{ color: var(--muted); text-decoration: none; padding: 6px 10px; border-radius: 6px; white-space: nowrap; font-size: .95rem; }
-    .top nav a:hover, .top nav a[aria-current="true"]{ color: var(--ink); background: var(--surface); }
-    .theme{ display: grid; place-items: center; border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 8px; width: 36px; height: 36px; cursor: pointer; flex: none; font-size: 1rem; }
-    @media (max-width: 760px){
-      .top .wrap{ flex-wrap: wrap; gap: 4px 12px; padding-top: 8px; padding-bottom: 6px; }
-      .top nav{ order: 3; width: 100%; margin-left: -10px; }
+    .top nav a{ text-decoration: none; color: var(--muted); padding: 8px 10px; border-radius: 6px; white-space: nowrap; font-size: .97rem; }
+    .top nav a:hover, .top nav a[aria-current="true"]{ color: var(--ink); background: var(--raised); }
+    .theme{ flex: none; width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid var(--rule); border-radius: 8px; background: var(--raised); color: var(--ink); cursor: pointer; transition: transform .15s var(--ease); }
+    .theme:active{ transform: scale(.94); }
+    @media (max-width: 780px){
+      .top .wrap{ flex-wrap: wrap; row-gap: 0; padding-top: 6px; }
+      .top nav{ order: 3; width: calc(100% + 20px); margin: 0 -10px; padding-bottom: 4px; }
       .theme{ margin-left: auto; }
     }
 
-    /* Hero */
-    .hero{ padding: 64px 0 40px; }
-    .hero .wrap{ display: grid; grid-template-columns: 1.25fr 1fr; gap: 48px; align-items: center; }
-    @media (max-width: 900px){ .hero .wrap{ grid-template-columns: 1fr; gap: 32px; } .hero{ padding-top: 36px; } }
-    .status{ display: inline-flex; align-items: center; gap: 8px; font-size: .92rem; color: var(--muted); margin-bottom: 18px; }
-    .status i{ width: 9px; height: 9px; border-radius: 50%; background: var(--ok); display: inline-block; }
-    .hero h1{ font-size: clamp(2.3rem, 5.4vw, 3.9rem); letter-spacing: -.025em; font-weight: 700; }
-    .role{ font-size: clamp(1.15rem, 2.2vw, 1.4rem); color: var(--ink); margin-top: 10px; font-weight: 500; max-width: 34ch; }
-    .pitch{ color: var(--muted); margin-top: 18px; max-width: 56ch; }
-    .actions{ display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
-    .btn{
-      display: inline-flex; align-items: center; gap: 8px; min-height: 44px;
-      padding: 10px 16px; border-radius: 8px; font-weight: 600; font-size: .98rem;
-      text-decoration: none; border: 1px solid var(--line); color: var(--ink); background: var(--surface);
+    /* ---------- Hero ---------- */
+    .hero{ padding: 64px 0 72px; }
+    .hero .wrap{ display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 56px; align-items: start; }
+    @media (max-width: 920px){ .hero .wrap{ grid-template-columns: 1fr; gap: 40px; } .hero{ padding: 36px 0 56px; } }
+    .avail{ display: inline-flex; align-items: center; gap: 10px; color: var(--muted); font-size: .98rem; }
+    .avail::before{ content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--good); box-shadow: 0 0 0 4px color-mix(in srgb, var(--good) 22%, transparent); }
+    .hero h1{ margin-top: 22px; font-size: clamp(3.2rem, 9vw, 6.6rem); font-weight: 800; font-stretch: 70%; letter-spacing: -.02em; line-height: .92; }
+    .lede{ margin-top: 24px; font-size: clamp(1.2rem, 2.1vw, 1.45rem); line-height: 1.45; max-width: 30ch; font-stretch: 92%; }
+    .sub{ margin-top: 18px; color: var(--muted); max-width: 52ch; }
+    .actions{ display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin-top: 30px; }
+    .btn{ display: inline-flex; align-items: center; gap: 8px; min-height: 46px; padding: 11px 18px; border-radius: 8px; font: inherit; font-weight: 600; font-size: 1rem; text-decoration: none; cursor: pointer; border: 1.5px solid var(--ink); color: var(--ink); background: transparent; transition: background-color .18s var(--ease), color .18s var(--ease), transform .12s var(--ease); }
+    .btn:hover{ background: var(--raised); }
+    .btn:active{ transform: translateY(1px); }
+    .btn.solid{ background: var(--ink); color: var(--ground); }
+    .btn.solid:hover{ background: color-mix(in srgb, var(--ink) 86%, var(--tag)); }
+    .quiet{ display: flex; gap: 18px; flex-wrap: wrap; }
+    .quiet a{ padding: 10px 0; }
+
+    /* ---------- Tag reader demo ---------- */
+    .reader{ background: var(--raised); border: 1px solid var(--rule); border-radius: 18px; padding: 22px 22px 20px; }
+    .reader-head{ display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+    .reader-head h2{ font-size: 1.05rem; font-weight: 700; font-stretch: 85%; }
+    .reader-head p{ font-size: .88rem; color: var(--muted); }
+    .stage{ margin-top: 10px; aspect-ratio: 16 / 11; display: grid; place-items: center; border-radius: 12px; background:
+      radial-gradient(120% 90% at 30% 20%, color-mix(in srgb, var(--tag) 9%, transparent), transparent 60%),
+      repeating-linear-gradient(115deg, color-mix(in srgb, var(--ink) 4%, transparent) 0 2px, transparent 2px 9px);
+      overflow: hidden; }
+    .stage svg{ width: 74%; max-width: 300px; height: auto; }
+    .tagbody{ transform-box: view-box; transform-origin: 150px 192px; transition: transform .7s var(--ease), filter .4s; }
+    .tagdigits{ font-family: var(--sans); font-weight: 800; font-stretch: 68%; fill: var(--tag-digits); }
+    .grime{ opacity: 0; transition: opacity .4s; }
+    .reader[data-state="dirty"] .grime{ opacity: 1; }
+    .scanbox{ fill: none; stroke: var(--ink); stroke-width: 3; stroke-dasharray: 9 7; opacity: 0; }
+    .reader.reading .scanbox{ animation: scan .55s var(--ease) both; }
+    @keyframes scan{ from{ opacity: 0; transform: scale(1.08); } to{ opacity: .85; transform: none; } }
+    .scanbox{ transform-box: fill-box; transform-origin: center; }
+
+    .poses{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 14px; }
+    .poses button{ font: inherit; font-size: .9rem; font-weight: 600; min-height: 44px; padding: 8px 6px; border-radius: 8px; border: 1px solid var(--rule); background: var(--ground); color: var(--ink); cursor: pointer; transition: border-color .15s, background .15s, transform .12s var(--ease); }
+    .poses button:hover{ border-color: var(--ink); }
+    .poses button:active{ transform: scale(.97); }
+    .poses button[aria-pressed="true"]{ background: var(--ink); color: var(--ground); border-color: var(--ink); }
+    @media (max-width: 420px){ .poses{ grid-template-columns: 1fr 1fr; } }
+
+    .verdict{ margin-top: 14px; min-height: 9.5em; }
+    @media (max-width: 600px){ .verdict{ min-height: 6em; } }
+    .verdict .out{ display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .verdict .read{ font-size: 1.9rem; font-weight: 800; font-stretch: 75%; letter-spacing: .04em; }
+    .verdict .status{ font-weight: 600; font-size: .95rem; }
+    .status.ok{ color: var(--good); } .status.hold{ color: var(--hold); }
+    .verdict .why{ margin-top: 6px; color: var(--muted); font-size: .95rem; }
+    .cands{ margin-top: 10px; display: grid; gap: 6px; font-size: .9rem; }
+    .cand{ display: grid; grid-template-columns: 6.6em 1fr 3.2em; align-items: center; gap: 10px; }
+    .cand .bar{ height: 8px; border-radius: 4px; background: var(--rule); overflow: hidden; }
+    .cand .bar i{ display: block; height: 100%; width: 0; background: var(--muted); border-radius: 4px; transition: width .6s var(--ease); }
+    .cand.win .bar i{ background: var(--good); }
+    .cand.lose span:first-child{ text-decoration: line-through; color: var(--muted); }
+    .reader-foot{ margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--rule); font-size: .9rem; color: var(--muted); }
+
+    /* ---------- Sections ---------- */
+    section[id], #reader{ scroll-margin-top: 76px; }
+    .sec{ padding: 88px 0 0; }
+    .sec-head{ display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 32px; align-items: end; padding-bottom: 22px; border-bottom: 2px solid var(--ink); }
+    .sec-head h2{ font-size: clamp(2rem, 4.4vw, 3.1rem); font-weight: 800; font-stretch: 72%; letter-spacing: -.01em; }
+    .sec-head p{ color: var(--muted); max-width: 54ch; }
+    @media (max-width: 760px){ .sec-head{ grid-template-columns: 1fr; gap: 10px; } .sec{ padding-top: 64px; } }
+
+    /* ---------- Case study ---------- */
+    .case{ display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 32px 48px; margin-top: 34px; }
+    @media (max-width: 920px){ .case{ grid-template-columns: 1fr; } }
+    .fiche{ align-self: start; position: sticky; top: 84px; }
+    @media (max-width: 920px){ .fiche{ position: static; } }
+    .fiche dl{ display: grid; gap: 14px; }
+    .fiche dt{ font-size: .88rem; color: var(--muted); }
+    .fiche dd{ margin: 1px 0 0; font-weight: 600; }
+    .fiche dd span{ font-weight: 400; }
+    .fiche .stack{ margin-top: 20px; color: var(--muted); font-size: .95rem; }
+
+    .story > * + *{ margin-top: 40px; }
+    .story h3{ font-size: 1.45rem; font-weight: 700; font-stretch: 82%; }
+    .story h3 + p, .story h3 + ul, .story h3 + ol, .story h3 + div{ margin-top: 12px; }
+    .story p + p{ margin-top: 12px; }
+    .story p, .story li{ max-width: var(--read); }
+    .story ul{ padding-left: 1.2em; }
+    .story li + li{ margin-top: 8px; }
+    .story strong{ font-weight: 650; }
+
+    .scoreboard{ width: 100%; border-collapse: collapse; margin-top: 14px; }
+    .scoreboard caption{ text-align: left; color: var(--muted); font-size: .93rem; padding-bottom: 8px; caption-side: top; }
+    .scoreboard th, .scoreboard td{ text-align: left; padding: 12px 12px 12px 0; border-bottom: 1px solid var(--rule); vertical-align: baseline; }
+    .scoreboard thead th{ font-size: .88rem; font-weight: 600; color: var(--muted); border-bottom: 1px solid var(--ink); }
+    .scoreboard tbody th{ font-weight: 500; }
+    .scoreboard td{ font-weight: 700; font-stretch: 80%; font-size: 1.3rem; white-space: nowrap; }
+    .scoreboard td.target{ font-weight: 500; color: var(--muted); font-size: 1.05rem; }
+    .scoreboard td small{ display: block; font-size: .88rem; font-weight: 500; font-stretch: 100%; color: var(--muted); white-space: normal; }
+    .met{ color: var(--good); } .missed{ color: var(--bad); }
+    .mark{ font-size: .9rem; font-weight: 600; font-stretch: 100%; margin-left: 6px; }
+    @media (max-width: 560px){ .scoreboard td{ font-size: 1.1rem; } .scoreboard td small{ max-width: 11em; } }
+
+    ol.chain{ list-style: none; padding: 0; display: grid; gap: 0; counter-reset: c; }
+    ol.chain li{ counter-increment: c; display: grid; grid-template-columns: 2.4em 1fr; gap: 4px 14px; padding: 12px 0; border-bottom: 1px solid var(--rule); max-width: none; }
+    ol.chain li::before{ content: counter(c); font-weight: 800; font-stretch: 70%; font-size: 1.5rem; line-height: 1.1; color: var(--tag-edge); }
+    ol.chain b{ font-weight: 650; }
+    ol.chain span{ grid-column: 2; color: var(--muted); }
+
+    .pull{ border-left: 4px solid var(--tag); padding: 4px 0 4px 18px; font-size: 1.15rem; font-stretch: 92%; max-width: 56ch; }
+
+    /* ---------- Other work ---------- */
+    .rows{ list-style: none; padding: 0; margin-top: 8px; }
+    .row{ display: grid; grid-template-columns: 11em minmax(0, 1fr); gap: 6px 32px; padding: 26px 0; border-bottom: 1px solid var(--rule); }
+    .row .when{ color: var(--muted); font-size: .95rem; }
+    .row .when b{ display: block; color: var(--ink); font-weight: 600; }
+    .row h3{ font-size: 1.3rem; font-weight: 700; font-stretch: 82%; }
+    .row p{ margin-top: 6px; max-width: var(--read); }
+    .row .tools{ margin-top: 8px; color: var(--muted); font-size: .93rem; }
+    @media (max-width: 680px){ .row{ grid-template-columns: 1fr; } }
+
+    /* ---------- Path & skills ---------- */
+    .two{ display: grid; grid-template-columns: 1fr 1fr; gap: 24px 56px; margin-top: 30px; }
+    @media (max-width: 800px){ .two{ grid-template-columns: 1fr; } }
+    .two h3{ font-size: 1.15rem; font-weight: 700; font-stretch: 85%; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
+    .path{ list-style: none; padding: 0; }
+    .path li{ display: grid; grid-template-columns: 7.5em 1fr; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
+    .path time{ color: var(--muted); font-size: .93rem; }
+    .path b{ font-weight: 600; }
+    .path p{ color: var(--muted); font-size: .96rem; margin-top: 2px; }
+    @media (max-width: 420px){ .path li{ grid-template-columns: 1fr; gap: 2px; } }
+
+    .skills{ display: grid; gap: 0; }
+    .skills > div{ padding: 14px 0; border-bottom: 1px solid var(--rule); }
+    .skills dt{ font-weight: 600; }
+    .skills dd{ margin: 2px 0 0; }
+    .skills dd small{ display: block; color: var(--muted); font-size: .9rem; margin-top: 2px; }
+    .fcc{ margin-top: 18px; font-size: .96rem; }
+    .fcc ul{ margin-top: 8px; padding-left: 1.2em; columns: 2; column-gap: 24px; }
+    .fcc li{ break-inside: avoid; margin-bottom: 4px; }
+    @media (max-width: 520px){ .fcc ul{ columns: 1; } }
+
+    /* ---------- Contact ---------- */
+    .contact{ margin-top: 96px; padding: 56px 0 64px; border-top: 2px solid var(--ink); }
+    .contact h2{ font-size: clamp(2rem, 4.4vw, 3.1rem); font-weight: 800; font-stretch: 72%; }
+    .contact p{ margin-top: 12px; color: var(--muted); max-width: 52ch; }
+    .mail{ display: inline-block; margin-top: 22px; font-size: clamp(1.4rem, 4vw, 2.3rem); font-weight: 700; font-stretch: 80%; word-break: break-word; }
+    .contact .actions{ margin-top: 22px; }
+    .copied{ min-height: 1.5em; margin-top: 8px; font-size: .95rem; color: var(--good); }
+    footer{ border-top: 1px solid var(--rule); padding: 22px 0 34px; color: var(--muted); font-size: .92rem; }
+    footer .wrap{ display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+    @media (prefers-reduced-motion: reduce){
+      html{ scroll-behavior: auto; }
+      *, *::before, *::after{ transition-duration: .01ms !important; animation-duration: .01ms !important; }
     }
-    .btn.main{ background: var(--ink); color: var(--paper); border-color: var(--ink); }
-    .btn:hover{ border-color: var(--ink); }
-
-    /* Ear tag visual */
-    .tagfig{ margin: 0; }
-    .tagfig figcaption{ margin: 14px auto 0; color: var(--muted); font-size: .95rem; max-width: 44ch; }
-    .earTag{ width: 100%; max-width: 420px; display: block; margin: 0 auto; }
-    @media (max-width: 600px){ .earTag{ max-width: 280px; } .tagfig figcaption{ text-align: center; } }
-    .earTag .digits{ font-family: var(--mono); font-weight: 600; fill: var(--tag-ink); }
-    .scan{ fill: none; stroke: var(--blue); stroke-width: 3; stroke-dasharray: 8 6; }
-    .readout rect{ fill: var(--surface); stroke: var(--line); }
-    .readout text{ font-family: var(--mono); fill: var(--ink); }
-    .readout .ok{ fill: var(--ok); }
-    @media (prefers-reduced-motion: no-preference){
-      .scan{ animation: box 1.1s ease-out .3s both; }
-      .readout{ animation: show .5s ease-out 1.3s both; }
-      @keyframes box{ from{ opacity: 0; transform: scale(1.12); transform-origin: 210px 250px; } to{ opacity: 1; transform: scale(1); transform-origin: 210px 250px; } }
-      @keyframes show{ from{ opacity: 0; transform: translateY(8px); } to{ opacity: 1; transform: none; } }
-    }
-
-    /* Facts */
-    .facts{ border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--surface); }
-    .facts dl{ margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); }
-    .facts dl > div{ padding: 18px 20px 18px 0; }
-    .facts dl > div + div{ padding-left: 20px; border-left: 1px solid var(--line); }
-    .facts dt{ font-size: .85rem; color: var(--muted); }
-    .facts dd{ margin: 2px 0 0; font-weight: 600; }
-    @media (max-width: 860px){
-      .facts dl{ grid-template-columns: 1fr 1fr; }
-      .facts dl > div, .facts dl > div + div{ padding: 14px 12px 14px 0; border-left: 0; }
-      .facts dl > div:nth-child(even){ padding-left: 16px; border-left: 1px solid var(--line); }
-      .facts dl > div:nth-child(n+3){ border-top: 1px solid var(--line); }
-    }
-
-    /* Sections */
-    section{ scroll-margin-top: 80px; }
-    .block{ padding: 72px 0 0; }
-    .block > .wrap > h2{ font-size: clamp(1.6rem, 3vw, 2.1rem); letter-spacing: -.015em; }
-    .lead{ color: var(--muted); margin-top: 8px; max-width: var(--read); }
-
-    /* Case study */
-    .case{ margin-top: 28px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
-    .case-head{ padding: 28px 28px 24px; border-bottom: 1px solid var(--line); border-top: 6px solid var(--orange); }
-    .case-head h3{ font-size: clamp(1.3rem, 2.4vw, 1.65rem); max-width: 30ch; }
-    .case-head .summary{ margin-top: 12px; max-width: var(--read); }
-    .meta{ display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 16px; font-size: .92rem; color: var(--muted); }
-    .meta b{ color: var(--ink); font-weight: 600; }
-    .case-body{ display: grid; grid-template-columns: 1fr 1fr; }
-    .case-body > div{ padding: 26px 28px; }
-    .case-body > div:nth-child(odd){ border-right: 1px solid var(--line); }
-    .case-body > div + div + div{ border-top: 1px solid var(--line); }
-    .case-body .full{ grid-column: 1 / -1; border-right: 0 !important; }
-    @media (max-width: 820px){
-      .case-body{ grid-template-columns: 1fr; }
-      .case-body > div{ border-right: 0 !important; padding: 22px 20px; }
-      .case-body > div + div{ border-top: 1px solid var(--line); }
-      .case-head{ padding: 22px 20px; }
-    }
-    .case h4{ font-size: 1rem; margin: 0 0 10px; }
-    .case ul{ margin: 0; padding-left: 20px; }
-    .case li + li{ margin-top: 6px; }
-
-    table.targets{ width: 100%; border-collapse: collapse; font-size: .96rem; }
-    .targets th, .targets td{ text-align: left; padding: 8px 10px 8px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
-    .targets th{ font-weight: 600; color: var(--muted); font-size: .85rem; }
-    .targets td:last-child{ font-family: var(--mono); font-weight: 500; white-space: nowrap; }
-    .tablewrap{ overflow-x: auto; }
-
-    ol.steps{ list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; counter-reset: s; }
-    ol.steps li{ counter-increment: s; padding: 0 16px 0 0; margin: 0; position: relative; }
-    ol.steps li::before{
-      content: counter(s); display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%;
-      background: var(--paper); border: 1px solid var(--line); font-family: var(--mono); font-weight: 600; font-size: .85rem; margin-bottom: 10px;
-    }
-    ol.steps li::after{ content: ""; position: absolute; top: 15px; left: 38px; right: 8px; height: 1px; background: var(--line); }
-    ol.steps li:last-child::after{ display: none; }
-    ol.steps strong{ display: block; }
-    ol.steps span{ display: block; margin-top: 2px; color: var(--muted); font-size: .94rem; line-height: 1.5; }
-    @media (max-width: 900px){
-      ol.steps{ grid-template-columns: 1fr; gap: 16px; }
-      ol.steps li{ padding: 0 0 0 44px; }
-      ol.steps li::before{ position: absolute; left: 0; top: 0; margin: 0; }
-      ol.steps li::after{ display: none; }
-    }
-
-    .figures{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 4px 0 14px; }
-    .figures p{ font-size: .92rem; color: var(--muted); }
-    .figures strong{ display: block; font-size: 1.5rem; color: var(--ink); font-family: var(--mono); font-weight: 600; line-height: 1.2; }
-    @media (max-width: 520px){ .figures{ grid-template-columns: 1fr 1fr; } }
-
-    .chips{ display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0 !important; margin: 0; }
-    .chips li{ margin: 0 !important; font-size: .85rem; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--paper); }
-
-    /* Other projects */
-    .projects{ margin-top: 28px; border-top: 1px solid var(--line); }
-    .proj{ display: grid; grid-template-columns: 170px 1fr; gap: 8px 32px; padding: 26px 0; border-bottom: 1px solid var(--line); }
-    .proj .when{ color: var(--muted); font-size: .92rem; }
-    .proj .when b{ display: block; color: var(--ink); font-weight: 600; }
-    .proj h3{ font-size: 1.2rem; }
-    .proj p{ margin-top: 6px; max-width: var(--read); }
-    .proj .chips{ margin-top: 12px; }
-    .proj details{ margin-top: 10px; }
-    .proj summary{ cursor: pointer; color: var(--blue); font-weight: 500; width: fit-content; }
-    .proj details ul{ margin: 8px 0 0; padding-left: 20px; max-width: var(--read); }
-    @media (max-width: 700px){ .proj{ grid-template-columns: 1fr; } }
-
-    /* Timeline */
-    .timeline{ list-style: none; margin: 28px 0 0; padding: 0; border-left: 2px solid var(--line); }
-    .timeline li{ position: relative; padding: 0 0 26px 26px; max-width: 76ch; }
-    .timeline li::before{ content: ""; position: absolute; left: -7px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid var(--muted); }
-    .timeline li.now::before{ background: var(--orange); border-color: var(--orange); }
-    .timeline time{ font-family: var(--mono); font-size: .88rem; color: var(--muted); }
-    .timeline h3{ font-size: 1.08rem; margin-top: 2px; }
-    .timeline p{ color: var(--muted); margin-top: 4px; }
-
-    /* Skills */
-    .skills{ margin-top: 28px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-    .skill{ background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; }
-    .skill h3{ font-size: 1.05rem; }
-    .skill .chips{ margin-top: 12px; }
-    .skill p{ margin-top: 12px; font-size: .94rem; color: var(--muted); }
-    @media (max-width: 760px){ .skills{ grid-template-columns: 1fr; } }
-    .levels{ list-style: none; margin: 12px 0 0; padding: 0; }
-    .levels li{ display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px dashed var(--line); }
-    .levels li:last-child{ border-bottom: 0; }
-    .levels span{ color: var(--muted); font-size: .92rem; text-align: right; }
-
-    .certs{ margin-top: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; }
-    .certs h3{ font-size: 1.05rem; }
-    .certs p{ color: var(--muted); margin-top: 6px; max-width: var(--read); }
-    .certs ul{ margin: 10px 0 0; padding-left: 20px; columns: 2; column-gap: 32px; }
-    .certs li{ break-inside: avoid; margin-bottom: 4px; }
-    @media (max-width: 700px){ .certs ul{ columns: 1; } }
-
-    /* Contact */
-    .contact{ margin: 72px 0 0; background: var(--ink); color: var(--paper); padding: 56px 0; }
-    .contact h2{ font-size: clamp(1.6rem, 3vw, 2.1rem); }
-    .contact p{ color: color-mix(in srgb, var(--paper) 78%, var(--ink)); margin-top: 10px; max-width: 60ch; }
-    .contact .actions .btn{ background: transparent; color: var(--paper); border-color: color-mix(in srgb, var(--paper) 40%, var(--ink)); }
-    .contact .actions .btn.main{ background: var(--paper); color: var(--ink); border-color: var(--paper); }
-    .contact a{ color: inherit; }
-    .copied{ min-height: 1.4em; font-size: .92rem; margin-top: 10px; }
-    footer{ padding: 22px 0 32px; color: var(--muted); font-size: .9rem; }
-
     @media print{
-      .top, .theme, .actions, .skip{ display: none !important; }
-      body{ background: #fff; color: #000; font-size: 11pt; }
-      .contact{ background: #fff; color: #000; padding: 0; }
-      .block{ padding-top: 24px; }
-      .case, .skill, .certs{ break-inside: avoid; }
-      details > *{ display: block; }
+      .top, .theme, .skip, .reader .poses, .actions, .copied{ display: none !important; }
+      body{ background: #fff; color: #000; font-size: 10.5pt; }
+      .sec{ padding-top: 28px; } .fiche{ position: static; }
+      .reader{ break-inside: avoid; }
+      a{ text-decoration: none; }
     }
-    @media (prefers-reduced-motion: reduce){ html{ scroll-behavior: auto; } }
   </style>
 </head>
 
@@ -283,321 +293,261 @@
 
   <header class="top">
     <div class="wrap">
-      <a class="name" href="#top">Anass AGDIM</a>
+      <a class="me" href="#top">Anass Agdim</a>
       <nav aria-label="Navigation principale">
-        <a href="#projet-phare">Projet phare</a>
-        <a href="#projets">Autres projets</a>
+        <a href="#etude-de-cas">Étude de cas</a>
+        <a href="#projets">Projets</a>
         <a href="#parcours">Parcours</a>
-        <a href="#competences">Compétences</a>
         <a href="#contact">Contact</a>
+        <a href="assets/cv/CV_Anass_AGDIM_FR.pdf">CV (PDF)</a>
       </nav>
-      <button class="theme" type="button" id="theme" aria-label="Changer le thème clair ou sombre"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
+      <button class="theme" type="button" id="theme" aria-label="Passer en thème sombre"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero" id="top" aria-labelledby="hero-title">
+    <!-- HERO -->
+    <section class="hero" id="top" aria-labelledby="hero-name">
       <div class="wrap">
         <div>
-          <p class="status"><i aria-hidden="true"></i>Recherche un stage de fin d’études en IA / Data, Paris</p>
-          <h1 id="hero-title">Anass Agdim</h1>
-          <p class="role">Élève ingénieur IA &amp; Data Science, ESIEA Paris. En double diplôme avec le MSc AIBT de SKEMA.</p>
-          <p class="pitch">
-            J’entraîne des modèles et je les fais tourner là où ils servent. Pendant mon stage, j’ai livré un OCR qui lit les boucles d’identification des moutons et des chèvres directement sur le téléphone des agents de terrain, sans réseau.
-          </p>
+          <p class="avail">Recherche un stage de fin d’études IA / Data à Paris, dès mai 2027</p>
+          <h1 id="hero-name">Anass Agdim</h1>
+          <p class="lede">Élève ingénieur IA &amp; Data à l’ESIEA, en double diplôme avec le MSc AIBT de SKEMA.</p>
+          <p class="sub">Pendant mon stage de 4e année, j’ai construit un lecteur qui reconnaît le numéro d’une boucle d’oreille de mouton sur une photo, directement dans le téléphone de l’agent, sans réseau. <a href="#reader">Essayez la démonstration</a>.</p>
           <div class="actions">
-            <a class="btn main" href="#projet-phare">Voir le projet phare</a>
-            <a class="btn" href="#contact">Me contacter</a>
-            <a class="btn" href="https://www.linkedin.com/in/anass-agdim/" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="btn" href="https://github.com/SvvGTH" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn solid" href="#etude-de-cas">Lire l’étude de cas</a>
+            <a class="btn" href="assets/cv/CV_Anass_AGDIM_FR.pdf">Télécharger le CV</a>
+            <span class="quiet">
+              <a href="https://www.linkedin.com/in/anass-agdim/" rel="noopener">LinkedIn</a>
+              <a href="https://github.com/SvvGTH" rel="noopener">GitHub</a>
+            </span>
           </div>
         </div>
 
-        <figure class="tagfig">
-          <svg class="earTag" viewBox="0 0 420 420" role="img" aria-labelledby="tag-title tag-desc">
-            <title id="tag-title">Boucle d’identification lue par l’OCR</title>
-            <desc id="tag-desc">Une boucle orange portant le numéro 4071 2958 sur deux lignes, encadrée par la détection, et le résultat lu : 40712958.</desc>
-            <path d="M210 18c60 0 118 22 118 70v196c0 56-52 96-118 96S92 340 92 284V88c0-48 58-70 118-70z" fill="var(--orange)" />
-            <path d="M210 18c60 0 118 22 118 70v196c0 56-52 96-118 96S92 340 92 284V88c0-48 58-70 118-70z" fill="none" stroke="#000" stroke-opacity=".12" stroke-width="2" />
-            <circle cx="210" cy="72" r="20" fill="var(--paper)" stroke="#000" stroke-opacity=".15" stroke-width="2" />
-            <text class="digits" x="210" y="222" font-size="62" text-anchor="middle" letter-spacing="4">4071</text>
-            <text class="digits" x="210" y="296" font-size="62" text-anchor="middle" letter-spacing="4">2958</text>
-            <rect class="scan" x="112" y="160" width="196" height="156" rx="8" />
-            <g class="readout">
-              <rect x="96" y="344" width="296" height="52" rx="10" />
-              <text x="116" y="377" font-size="21" font-weight="600">40712958</text>
-              <text class="ok" x="270" y="377" font-size="17">hors ligne</text>
-            </g>
-          </svg>
-          <figcaption>Le problème de mon stage : lire ce numéro sur une photo prise au champ, en moins de 3 secondes, sans connexion.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="facts" aria-label="En bref">
-      <div class="wrap">
-        <dl>
-          <div><dt>Formation</dt><dd>ESIEA, 5e année, majeure IA &amp; Data</dd></div>
-          <div><dt>Double diplôme</dt><dd>MSc AIBT, SKEMA × ESIEA (2026–2027)</dd></div>
-          <div><dt>Dernière expérience</dt><dd>Stage IA, TECH ELEVATE (4&nbsp;mois)</dd></div>
-          <div><dt>Langues</dt><dd>Français courant, anglais C1 (TOEIC 915)</dd></div>
-        </dl>
-      </div>
-    </section>
-
-    <!-- PROJET PHARE -->
-    <section class="block" id="projet-phare" aria-labelledby="pp-title">
-      <div class="wrap">
-        <h2 id="pp-title">Projet phare</h2>
-        <p class="lead">Mon stage de 4A, présenté comme une étude de cas : le problème, mes choix, les résultats et ce qu’il reste à faire.</p>
-
-        <article class="case">
-          <div class="case-head">
-            <h3>OCR hors ligne des boucles d’identification ovines et caprines</h3>
-            <p class="summary">
-              Les agents de l’ANOC, l’association nationale marocaine des éleveurs ovins et caprins, saisissent à la main les numéros à 8 chiffres des boucles d’oreille des animaux, souvent là où il n’y a pas de réseau. J’ai construit la chaîne qui remplace cette saisie par une photo : des données en base jusqu’au modèle embarqué dans l’application Android.
-            </p>
-            <p class="meta">
-              <span><b>Entreprise</b> TECH ELEVATE, Maroc</span>
-              <span><b>Période</b> avril à août 2026</span>
-              <span><b>Utilisateurs visés</b> ~450 agents de terrain</span>
-              <span><b>Mon rôle</b> données, modèle, export, intégration mobile, audit du code</span>
-            </p>
+        <!-- Démonstration -->
+        <aside class="reader" id="reader" data-state="upright" aria-labelledby="reader-title">
+          <div class="reader-head">
+            <h2 id="reader-title">Tenez la boucle comme un agent</h2>
+            <p>Simulation du raisonnement, pas le modèle</p>
           </div>
 
-          <div class="case-body">
+          <div class="stage">
+            <svg viewBox="-45 -20 390 420" role="img" aria-labelledby="tag-alt">
+              <title id="tag-alt">Boucle d’oreille orange portant le numéro 1062 sur la première ligne et 3917 sur la seconde</title>
+              <g class="tagbody" id="tagbody">
+                <path d="M150 14c60 0 104 24 104 64v156c0 52-46 86-104 86S46 286 46 234V78c0-40 44-64 104-64z" fill="var(--tag)" />
+                <path d="M150 14c60 0 104 24 104 64v156c0 52-46 86-104 86S46 286 46 234V78c0-40 44-64 104-64z" fill="none" stroke="var(--tag-edge)" stroke-width="3" />
+                <circle cx="150" cy="62" r="17" fill="var(--ground)" stroke="var(--tag-edge)" stroke-width="3" />
+                <text class="tagdigits" x="150" y="176" font-size="66" text-anchor="middle" letter-spacing="3">1062</text>
+                <text class="tagdigits" x="150" y="252" font-size="66" text-anchor="middle" letter-spacing="3">3917</text>
+                <g class="grime" aria-hidden="true">
+                  <ellipse cx="160" cy="156" rx="19" ry="30" fill="#4a3a1e" opacity=".82" />
+                  <ellipse cx="199" cy="232" rx="19" ry="30" fill="#4a3a1e" opacity=".78" />
+                  <ellipse cx="130" cy="205" rx="64" ry="12" fill="#fff" opacity=".3" />
+                </g>
+              </g>
+              <rect class="scanbox" x="60" y="112" width="180" height="160" rx="10" />
+            </svg>
+          </div>
+
+          <div class="poses" role="group" aria-label="Position de la boucle">
+            <button type="button" data-pose="upright" aria-pressed="true">Droite</button>
+            <button type="button" data-pose="flipped" aria-pressed="false">À l’envers</button>
+            <button type="button" data-pose="turned" aria-pressed="false">Tournée</button>
+            <button type="button" data-pose="dirty" aria-pressed="false">Sale</button>
+          </div>
+
+          <div class="verdict" aria-live="polite">
+            <div class="out">
+              <span class="read num" id="v-read">10623917</span>
+              <span class="status ok" id="v-status">Écrit dans la fiche</span>
+            </div>
+            <p class="why" id="v-why">Cas simple : une seule lecture plausible, avec une confiance élevée.</p>
+            <div class="cands" id="v-cands"></div>
+          </div>
+
+          <p class="reader-foot">Sur un Galaxy S24, la vraie lecture prend entre 0,3 et 0,7 seconde, sans connexion.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ETUDE DE CAS -->
+    <section class="sec" id="etude-de-cas" aria-labelledby="case-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="case-title">Étude de cas</h2>
+          <p>Lire une boucle d’oreille en moins d’une seconde, sans réseau. Quatre mois de stage, des données jusqu’au téléphone.</p>
+        </div>
+
+        <div class="case">
+          <aside class="fiche" aria-label="Fiche du projet">
+            <dl>
+              <div><dt>Entreprise</dt><dd>TechElevate <span>(Marrakech)</span></dd></div>
+              <div><dt>Client</dt><dd>ANOC<span>, association nationale des éleveurs ovins et caprins du Maroc</span></dd></div>
+              <div><dt>Période</dt><dd>Avril à août 2026</dd></div>
+              <div><dt>Utilisateurs</dt><dd>~450 agents de terrain</dd></div>
+              <div><dt>Mon rôle</dt><dd>Stagiaire ingénieur IA et vision par ordinateur<span>. J’ai porté le lecteur de bout en bout : données, modèle, compression, intégration dans l’app.</span></dd></div>
+            </dl>
+            <p class="stack">Python, PyTorch, Hugging Face (TrOCR), ONNX Runtime, PostgreSQL, Azure Blob Storage, React Native, Git et CI.</p>
+          </aside>
+
+          <div class="story">
             <div>
-              <h4>Les contraintes du terrain</h4>
-              <div class="tablewrap">
-                <table class="targets">
-                  <thead><tr><th scope="col">Critère</th><th scope="col">Cible</th></tr></thead>
-                  <tbody>
-                    <tr><td>Précision de lecture</td><td>&gt; 90 %</td></tr>
-                    <tr><td>Taux d’erreur caractère (CER)</td><td>&lt; 5 %</td></tr>
-                    <tr><td>Temps d’inférence</td><td>&lt; 3 s</td></tr>
-                    <tr><td>Taille du modèle</td><td>&lt; 50 Mo</td></tr>
-                    <tr><td>Connexion requise</td><td>aucune</td></tr>
-                  </tbody>
-                </table>
-              </div>
-              <p style="margin-top:12px; color:var(--muted); font-size:.94rem;">Difficulté principale : des photos de faible résolution (médiane 375×500 px), prises en conditions réelles.</p>
+              <h3>Le problème</h3>
+              <p>Chaque mouton et chaque chèvre porte une boucle d’oreille avec un numéro à 8 chiffres sur deux lignes. Les agents le recopient à la main sur leur téléphone, souvent dans des zones sans réseau. Les erreurs de saisie se retrouvent dans une base de 2,7 millions d’enregistrements.</p>
+              <p>Les photos sont petites (375 × 500 pixels en médiane), prises en plein soleil, sur des boucles sales ou délavées, tenues dans tous les sens.</p>
             </div>
 
             <div>
-              <h4>Les décisions qui comptent</h4>
-              <ul>
-                <li><strong>Vocabulaire réduit aux chiffres 0 à 9</strong> : le modèle ne peut plus confondre un 0 avec un O.</li>
-                <li><strong>Pas de retournement horizontal</strong> en augmentation de données, pour ne jamais inverser l’ordre des chiffres.</li>
-                <li><strong>Un plus gros modèle n’a rien apporté</strong> : TrOCR-base a fait jeu égal avec TrOCR-small. La limite venait des données, pas de l’architecture, donc j’ai gardé le petit modèle.</li>
-                <li><strong>Un classifieur d’orientation avant l’OCR</strong> pour redresser les photos, qui atteint au moins 95 % de la performance obtenue avec une orientation parfaite.</li>
-              </ul>
+              <h3>Visé et obtenu</h3>
+              <table class="scoreboard">
+                <caption>Les contraintes fixées au départ, et ce que le lecteur livré atteint.</caption>
+                <thead><tr><th scope="col">Critère</th><th scope="col">Visé</th><th scope="col">Obtenu</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Temps de lecture</th><td class="target num">&lt; 3 s</td><td class="met num">0,3 à 0,7 s<small>mesuré sur Galaxy S24</small></td></tr>
+                  <tr><th scope="row">Taille du modèle</th><td class="target num">&lt; 50 Mo</td><td class="met num">30 Mo<small>après export ONNX et quantification</small></td></tr>
+                  <tr><th scope="row">Connexion</th><td class="target">aucune</td><td class="met">aucune</td></tr>
+                  <tr><th scope="row">Lectures exactes</th><td class="target num">&gt; 90 %</td><td class="missed num">74 %<span class="mark">non atteint</span><small>voir les limites plus bas</small></td></tr>
+                </tbody>
+              </table>
             </div>
 
-            <div class="full">
-              <h4>La chaîne complète</h4>
-              <ol class="steps">
-                <li><strong>Données</strong><span>Extraction depuis PostgreSQL (~2,7 M d’enregistrements) et Azure Blob Storage</span></li>
-                <li><strong>Entraînement</strong><span>Fine-tuning de TrOCR avec PyTorch et Hugging Face</span></li>
-                <li><strong>Compression</strong><span>Export ONNX, élagage du vocabulaire, quantification</span></li>
-                <li><strong>Application</strong><span>Intégration dans l’app React Native, 100 % hors ligne</span></li>
-                <li><strong>Fiabilisation</strong><span>Audit du code, tests, CI, invariants documentés</span></li>
+            <div>
+              <h3>Ce que j’ai construit</h3>
+              <ol class="chain">
+                <li><b>Les données</b><span>Extraction des images et des numéros saisis depuis PostgreSQL et Azure Blob Storage, puis nettoyage.</span></li>
+                <li><b>Le modèle</b><span>Fine-tuning de TrOCR avec PyTorch, vocabulaire réduit aux chiffres 0 à 9 pour qu’un 0 ne devienne jamais un O.</span></li>
+                <li><b>L’orientation</b><span>Un petit classifieur redresse la photo avant la lecture.</span></li>
+                <li><b>La compression</b><span>Export ONNX, élagage du vocabulaire et quantification INT8 pour tenir dans 30 Mo.</span></li>
+                <li><b>L’intégration</b><span>Module de lecture dans l’application React Native de l’entreprise, testé sur téléphone.</span></li>
               </ol>
             </div>
 
             <div>
-              <h4>Résultats</h4>
-              <div class="figures">
-                <p><strong>~30 Mo</strong>modèle final, sous la limite de 50 Mo</p>
-                <p><strong>≥ 95 %</strong>de la performance « orientation parfaite »</p>
-                <p><strong>0</strong>appel réseau nécessaire</p>
-              </div>
+              <h3>Les choix qui comptent</h3>
               <ul>
-                <li>Audit en sept lots : une suite de tests qui dépassait le délai imparti corrigée, couverture CI élargie.</li>
-                <li>Neuf calculs de métriques différents fusionnés en un seul module, avec une preuve d’égalité sur 40 000 lignes réelles.</li>
-                <li>Une permission INTERNET non déclarée supprimée : elle venait d’une dépendance tierce, repérée dans les logs Android.</li>
-                <li>Aucun secret exposé sur 265 commits.</li>
+                <li><strong>Le petit modèle plutôt que le gros.</strong> TrOCR-base lisait 6 points de mieux que TrOCR-small, mais pesait 230 à 280 Mo une fois quantifié. J’ai gardé le small (30 Mo) pour tenir la limite de 50 Mo.</li>
+                <li><strong>Jamais de retournement horizontal</strong> pendant l’augmentation des données, pour ne pas apprendre au modèle à inverser l’ordre des chiffres.</li>
+                <li><strong>Écrire seulement quand le lecteur est sûr.</strong> Une lecture douteuse est rendue à l’agent au lieu d’être enregistrée, parce qu’un numéro faux dans la base coûte plus cher qu’une saisie manuelle.</li>
               </ul>
             </div>
 
             <div>
-              <h4>Limites et suite</h4>
+              <h3>Ce que seul le terrain a montré</h3>
               <ul>
-                <li>La précision reste en dessous de la cible : le volume et la qualité des images étiquetées sont le vrai frein.</li>
-                <li>Piste prioritaire : un détecteur léger (type YOLO nano) pour isoler la boucle avant la lecture, vu la faible résolution des photos.</li>
-                <li>À évaluer : des modèles d’OCR plus récents que TrOCR, qui obtiennent de meilleurs scores sur les benchmarks.</li>
+                <li><strong>Des seuils qui ne filtraient rien.</strong> L’application comparait la confiance du modèle à des seuils de 0,3, 0,5 et 0,85. Or nos confiances vont de 0,89 à 0,99 : une lecture fausse passait avec deux coches vertes. J’ai remplacé ces seuils par un critère propre à notre lecteur, couvert par 169 tests.</li>
+                <li><strong>La boucle à l’envers.</strong> Lue à 180°, une boucle donne les deux lignes permutées, avec la même confiance que la bonne lecture. Le premier chiffre suit le plan de numérotation : en tenant compte de sa fréquence réelle, le lecteur choisit le bon ordre.</li>
+                <li><strong>Le test final</strong> sur Galaxy S24 : quatre boucles de deux couleurs, dont deux tenues à l’envers et une tournée de 90°, toutes lues correctement.</li>
               </ul>
-              <h4 style="margin-top:20px;">Stack</h4>
-              <ul class="chips" aria-label="Technologies">
-                <li>Python</li><li>PyTorch</li><li>Transformers (TrOCR)</li><li>ONNX</li><li>PostgreSQL</li><li>Azure Blob Storage</li><li>React Native</li><li>Jupyter</li><li>Git / CI</li>
+            </div>
+
+            <div>
+              <h3>Limites et suite</h3>
+              <p class="pull">74 % de lectures exactes, c’est en dessous des 90 % visés. Je l’assume et je sais d’où ça vient.</p>
+              <ul style="margin-top:14px">
+                <li>Quatre erreurs sur cinq viennent d’images nettes : on ne peut pas écarter les photos illisibles à l’avance avec un simple tri sur la netteté.</li>
+                <li>Une erreur sur un seul chiffre peut encore passer tous les critères de confiance.</li>
+                <li>Suite prévue : un détecteur léger (type YOLO nano) pour isoler la boucle avant la lecture, plus d’images étiquetées, et l’essai de modèles d’OCR plus récents.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Fiabiliser le code</h3>
+              <ul>
+                <li>Neuf calculs de métriques différents réunis en un seul module, avec une preuve d’égalité sur 40 000 lignes réelles.</li>
+                <li>Une permission INTERNET non déclarée supprimée : elle venait d’une dépendance tierce, repérée dans les journaux Android.</li>
+                <li>Une suite de tests trop lente corrigée, une CI élargie, des invariants du projet écrits noir sur blanc.</li>
               </ul>
             </div>
           </div>
-        </article>
+        </div>
       </div>
     </section>
 
-    <!-- AUTRES PROJETS -->
-    <section class="block" id="projets" aria-labelledby="proj-title">
+    <!-- PROJETS -->
+    <section class="sec" id="projets" aria-labelledby="proj-title">
       <div class="wrap">
-        <h2 id="proj-title">Autres projets</h2>
-        <p class="lead">Projets d’école et associatifs, du plus récent au plus ancien.</p>
-
-        <div class="projects">
-          <article class="proj">
-            <p class="when"><b>2025 à 2026</b>Projet CAP 4A, NOVA / ESIEA</p>
+        <div class="sec-head">
+          <h2 id="proj-title">Autres projets</h2>
+          <p>Projets d’école, du plus récent au plus ancien.</p>
+        </div>
+        <ul class="rows">
+          <li class="row">
+            <p class="when"><b>2025 à 2026</b>Projet CAP 4A, ESIEA</p>
             <div>
-              <h3>Lampadaire urbain autonome alimenté par les pas</h3>
-              <p>Vingt capteurs piézoélectriques récupèrent l’énergie des passants pour alimenter un lampadaire LED qui s’allume à la détection de présence. Projet d’équipe couvrant l’électronique, le firmware, le back-end et le front-end.</p>
-              <ul class="chips" aria-label="Technologies"><li>ESP32</li><li>C / Arduino</li><li>ESP-NOW</li><li>Node.js</li><li>MySQL</li><li>Jira</li></ul>
-              <details>
-                <summary>Détails techniques</summary>
-                <ul>
-                  <li>Mesure tension et courant par ADC 12 bits, calcul de l’énergie produite et consommée.</li>
-                  <li>Remontée des mesures en ESP-NOW vers une passerelle ESP32.</li>
-                  <li>Tableau de bord web avec alertes et gestion des rôles (Node.js, Express, MySQL).</li>
-                  <li>Organisation agile : backlog, sprints hebdomadaires, revues régulières.</li>
-                </ul>
-              </details>
+              <h3>Un lampadaire qui s’éclaire avec les pas des passants</h3>
+              <p>Vingt capteurs piézoélectriques récupèrent l’énergie des pas pour alimenter un lampadaire LED à détection de présence. J’ai écrit le firmware ESP32 qui mesure et remonte l’énergie produite, puis la plateforme de suivi avec tableau de bord, alertes et historique. Les mesures ont servi à régler les seuils d’allumage.</p>
+              <p class="tools">ESP32 (C/Arduino), ESP-NOW, Node.js, Express, MySQL, Jira</p>
             </div>
-          </article>
-
-          <article class="proj">
-            <p class="when"><b>Janv. 2025</b>Design Sprint</p>
+          </li>
+          <li class="row">
+            <p class="when"><b>Janvier 2025</b>Design sprint</p>
             <div>
-              <h3>Teach Up : prototype UX/UI en sprint de conception</h3>
-              <p>Ateliers avec le client pour clarifier le besoin, puis prototype interactif sous Figma, testé et itéré en cycles courts.</p>
-              <ul class="chips" aria-label="Outils"><li>Figma</li><li>Ateliers client</li><li>Prototypage</li></ul>
+              <h3>Teach Up : un prototype testé avec le client en une semaine</h3>
+              <p>Ateliers pour clarifier le besoin, prototype interactif sous Figma, puis itérations courtes à partir des retours du client.</p>
+              <p class="tools">Figma, ateliers client</p>
             </div>
-          </article>
-
-          <article class="proj">
+          </li>
+          <li class="row">
             <p class="when"><b>2023 à 2024</b>Projet scientifique et technique</p>
             <div>
-              <h3>Escape game numérique : épreuve d’analyse vocale</h3>
-              <p>Une énigme qui se résout à la voix : acquisition, traitement et décision en Python sur Raspberry Pi, intégrée au reste du jeu.</p>
-              <ul class="chips" aria-label="Technologies"><li>Python</li><li>Raspberry Pi</li><li>Traitement audio</li></ul>
+              <h3>Une énigme d’escape game qui se résout à la voix</h3>
+              <p>Épreuve d’analyse vocale en Python sur Raspberry Pi, intégrée avec le reste du matériel dans le décor du jeu.</p>
+              <p class="tools">Python, Raspberry Pi, traitement audio</p>
             </div>
-          </article>
-
-          <article class="proj">
+          </li>
+          <li class="row">
             <p class="when"><b>2022 à 2023</b>Projet scientifique et technique</p>
             <div>
-              <h3>Collier connecté pour animaux de compagnie</h3>
-              <p>Un collier et son application mobile en Java pour localiser son animal en temps réel.</p>
-              <ul class="chips" aria-label="Technologies"><li>Java</li><li>Android</li><li>IoT</li></ul>
+              <h3>Un collier pour suivre son animal en temps réel</h3>
+              <p>Collier connecté et application mobile en Java pour localiser un animal de compagnie.</p>
+              <p class="tools">Java, Android, IoT</p>
             </div>
-          </article>
-
-          <article class="proj">
-            <p class="when"><b>2021 à 2023</b>Association Huma’Népal</p>
-            <div>
-              <h3>Vice-président d’un projet solidaire au Népal</h3>
-              <p>Scolarisation, informatisation et enseignement, avec des échanges culturels franco-népalais. Coordination de l’équipe sur deux ans.</p>
-              <ul class="chips" aria-label="Distinction"><li>Trophées du Bénévolat Associatif, prix Esprit d’équipe 2022</li></ul>
-            </div>
-          </article>
-        </div>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <!-- PARCOURS -->
-    <section class="block" id="parcours" aria-labelledby="parcours-title">
+    <!-- PARCOURS & COMPETENCES -->
+    <section class="sec" id="parcours" aria-labelledby="path-title">
       <div class="wrap">
-        <h2 id="parcours-title">Parcours</h2>
-        <p class="lead">De l’électronique embarquée vers l’IA appliquée, puis vers les enjeux business de l’IA.</p>
-
-        <ol class="timeline">
-          <li class="now">
-            <time>2026 à 2027</time>
-            <h3>MSc Artificial Intelligence for Business Transformation, SKEMA × ESIEA</h3>
-            <p>Double diplôme à Paris : machine learning, deep learning et MLOps d’un côté, management de l’IA, stratégie digitale et gestion de projet de l’autre.</p>
-          </li>
-          <li>
-            <time>Avril à août 2026</time>
-            <h3>Stagiaire ingénieur IA / Computer Vision, TECH ELEVATE (Maroc)</h3>
-            <p>OCR hors ligne des boucles d’identification pour l’ANOC. <a href="#projet-phare">Voir l’étude de cas</a>.</p>
-          </li>
-          <li>
-            <time>Décembre 2025</time>
-            <h3>Certification Data Analysis with Python, freeCodeCamp</h3>
-            <p>NumPy, Pandas, visualisation et régression linéaire, validés par cinq projets.</p>
-          </li>
-          <li>
-            <time>Depuis 2021</time>
-            <h3>Cycle ingénieur, ESIEA Paris</h3>
-            <p>Aujourd’hui en 5e année, majeure Intelligence Artificielle &amp; Data Science.</p>
-          </li>
-          <li>
-            <time>En parallèle</time>
-            <h3>Équipier polyvalent, McDonald’s Laval</h3>
-            <p>Travail en équipe, respect des protocoles qualité, gestion des flux.</p>
-          </li>
-          <li>
-            <time>2020 à 2021</time>
-            <h3>Baccalauréat Sciences Mathématiques, LSS Rabat</h3>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- COMPETENCES -->
-    <section class="block" id="competences" aria-labelledby="comp-title">
-      <div class="wrap">
-        <h2 id="comp-title">Compétences</h2>
-        <p class="lead">Chaque groupe renvoie à l’endroit où je m’en suis servi.</p>
-
-        <div class="skills">
-          <div class="skill">
-            <h3>Langages</h3>
-            <ul class="levels">
-              <li>Python<span>avancé</span></li>
-              <li>SQL<span>intermédiaire</span></li>
-              <li>C, JavaScript / TypeScript<span>intermédiaire</span></li>
-              <li>R, Java<span>notions</span></li>
-            </ul>
-          </div>
-
-          <div class="skill">
-            <h3>IA &amp; Computer Vision</h3>
-            <ul class="chips"><li>PyTorch</li><li>Hugging Face Transformers</li><li>TrOCR</li><li>ONNX</li><li>Quantification</li><li>Scikit-learn</li></ul>
-            <p>Utilisé pour : le stage OCR (entraînement, évaluation, compression).</p>
-          </div>
-
-          <div class="skill">
-            <h3>Data &amp; analyse</h3>
-            <ul class="chips"><li>PostgreSQL</li><li>MySQL</li><li>Pandas</li><li>NumPy</li><li>Matplotlib</li><li>Seaborn</li><li>Statistiques</li><li>Séries temporelles</li></ul>
-            <p>Utilisé pour : le stage (2,7 M d’enregistrements), les projets freeCodeCamp, le projet CAP 4A.</p>
-          </div>
-
-          <div class="skill">
-            <h3>Cloud, déploiement &amp; qualité</h3>
-            <ul class="chips"><li>Azure Blob Storage</li><li>Google Cloud Platform</li><li>API REST / JSON</li><li>OAuth</li><li>React Native</li><li>Node.js / Express</li><li>Docker</li><li>Git / CI</li></ul>
-            <p>Utilisé pour : l’application mobile du stage et la plateforme de supervision du CAP 4A.</p>
-          </div>
-
-          <div class="skill">
-            <h3>Embarqué</h3>
-            <ul class="chips"><li>ESP32</li><li>Raspberry Pi</li><li>Arduino</li><li>ESP-NOW</li><li>MATLAB / Simulink</li></ul>
-            <p>Utilisé pour : le lampadaire autonome, l’escape game, le collier connecté.</p>
-          </div>
-
-          <div class="skill">
-            <h3>Méthodes &amp; outils</h3>
-            <ul class="chips"><li>Agile / Jira</li><li>Notion</li><li>Figma</li><li>Jupyter</li><li>VS Code</li><li>Claude Code</li><li>LaTeX</li></ul>
-            <p>Autonomie sur un projet de 4 mois, travail en équipe sur les projets d’école, passage fréquent du technique au besoin métier.</p>
-          </div>
+        <div class="sec-head">
+          <h2 id="path-title">Parcours</h2>
+          <p>D’abord l’électronique embarquée, puis l’IA appliquée, et maintenant ce que l’IA change dans les entreprises.</p>
         </div>
 
-        <div class="certs">
-          <h3>Data Analysis with Python, freeCodeCamp (décembre 2025)</h3>
-          <p>Les cinq projets de la certification, chacun sur GitHub.</p>
-          <ul>
-            <li><a href="https://github.com/SvvGTH/mean-variance-standard-deviation-calculator" target="_blank" rel="noopener">Mean-Variance-Standard Deviation Calculator</a></li>
-            <li><a href="https://github.com/SvvGTH/demographic-data-analyzer" target="_blank" rel="noopener">Demographic Data Analyzer</a></li>
-            <li><a href="https://github.com/SvvGTH/Medical-Data-Visualizer" target="_blank" rel="noopener">Medical Data Visualizer</a></li>
-            <li><a href="https://github.com/SvvGTH/Page-View-Time-Series-Visualizer" target="_blank" rel="noopener">Page View Time Series Visualizer</a></li>
-            <li><a href="https://github.com/SvvGTH/Sea-Level-Predictor" target="_blank" rel="noopener">Sea Level Predictor</a></li>
-          </ul>
+        <div class="two">
+          <div>
+            <h3>Formation et expériences</h3>
+            <ol class="path">
+              <li><time>2026 à 2027</time><div><b>MSc AI for Business Transformation, SKEMA × ESIEA</b><p>Double diplôme à Paris.</p></div></li>
+              <li><time>2021 à 2027</time><div><b>Diplôme d’ingénieur, ESIEA Paris</b><p>Majeure Intelligence Artificielle &amp; Data Science.</p></div></li>
+              <li><time>2026</time><div><b>Stage ingénieur IA et vision par ordinateur, TechElevate</b><p>4 mois au Maroc. <a href="#etude-de-cas">Voir l’étude de cas</a>.</p></div></li>
+              <li><time>2024</time><div><b>Équipier polyvalent, McDonald’s</b><p>Service en cuisine, procédures d’hygiène et de qualité.</p></div></li>
+              <li><time>2021 à 2023</time><div><b>Vice-président, association Huma’Népal</b><p>Scolarisation et informatisation au Népal. Lauréate des Trophées du Bénévolat Associatif 2022.</p></div></li>
+            </ol>
+          </div>
+
+          <div id="competences">
+            <h3>Compétences</h3>
+            <dl class="skills">
+              <div><dt>Langages</dt><dd>Python (avancé), SQL, C, JavaScript / TypeScript (intermédiaire), R, Java (notions)</dd></div>
+              <div><dt>IA et vision</dt><dd>PyTorch, Hugging Face Transformers, TrOCR, ONNX, OpenCV, quantification<small>Utilisés pendant le stage, de l’entraînement à l’export mobile.</small></dd></div>
+              <div><dt>Data</dt><dd>PostgreSQL, MySQL, pandas, NumPy, Matplotlib<small>2,7 M d’enregistrements en stage, mesures énergétiques du CAP 4A.</small></dd></div>
+              <div><dt>Déploiement et cloud</dt><dd>Docker, Azure Blob Storage, Google Cloud Platform, API REST, Git / GitHub, React Native</dd></div>
+              <div><dt>Langues</dt><dd>Français C1, anglais C1 (TOEIC 915), arabe natif</dd></div>
+            </dl>
+            <div class="fcc">
+              <b>Certification Data Analysis with Python</b>, freeCodeCamp, décembre 2025. Les cinq projets :
+              <ul>
+                <li><a href="https://github.com/SvvGTH/mean-variance-standard-deviation-calculator" rel="noopener">Mean-Variance-SD Calculator</a></li>
+                <li><a href="https://github.com/SvvGTH/demographic-data-analyzer" rel="noopener">Demographic Data Analyzer</a></li>
+                <li><a href="https://github.com/SvvGTH/Medical-Data-Visualizer" rel="noopener">Medical Data Visualizer</a></li>
+                <li><a href="https://github.com/SvvGTH/Page-View-Time-Series-Visualizer" rel="noopener">Page View Time Series</a></li>
+                <li><a href="https://github.com/SvvGTH/Sea-Level-Predictor" rel="noopener">Sea Level Predictor</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -605,13 +555,17 @@
     <!-- CONTACT -->
     <section class="contact" id="contact" aria-labelledby="contact-title">
       <div class="wrap">
-        <h2 id="contact-title">Parlons de votre projet IA ou Data</h2>
-        <p>Je cherche un stage de fin d’études à Paris sur des sujets où le modèle doit tourner en production et servir le métier.</p>
+        <h2 id="contact-title">Un stage IA ou Data à proposer ?</h2>
+        <p>Je cherche un stage de fin d’études de 6 mois à Paris, à partir de mai 2027, sur des sujets où le modèle doit tourner en conditions réelles.</p>
+        <a class="mail" href="mailto:anassproagdim@gmail.com">anassproagdim@gmail.com</a>
         <div class="actions">
-          <a class="btn main" href="mailto:anassproagdim@gmail.com">anassproagdim@gmail.com</a>
-          <button class="btn" type="button" id="copy" data-email="anassproagdim@gmail.com">Copier l’adresse</button>
-          <a class="btn" href="tel:+33758220505">+33 7 58 22 05 05</a>
-          <a class="btn" href="https://www.linkedin.com/in/anass-agdim/" target="_blank" rel="noopener">LinkedIn</a>
+          <button class="btn solid" type="button" id="copy" data-email="anassproagdim@gmail.com">Copier l’adresse</button>
+          <a class="btn" href="assets/cv/CV_Anass_AGDIM_FR.pdf">CV en français</a>
+          <a class="btn" href="assets/cv/CV_Anass_AGDIM_EN.pdf" hreflang="en">CV in English</a>
+          <span class="quiet">
+            <a href="tel:+33758220505">+33 7 58 22 05 05</a>
+            <a href="https://www.linkedin.com/in/anass-agdim/" rel="noopener">LinkedIn</a>
+          </span>
         </div>
         <p class="copied" id="copied" role="status" aria-live="polite"></p>
       </div>
@@ -619,49 +573,113 @@
   </main>
 
   <footer>
-    <div class="wrap">© 2025–2026 Anass AGDIM. Mis à jour le 16 septembre 2026. Paris, Île-de-France.</div>
+    <div class="wrap">
+      <span>Anass Agdim, Paris. Mis à jour le 11 octobre 2026.</span>
+      <a href="https://github.com/SvvGTH/AGDIM_Anass_Portfolio" rel="noopener">Code source du site</a>
+    </div>
   </footer>
 
   <script>
-    // Thème clair / sombre mémorisé
+    // Thème clair / sombre
     (function(){
       var root = document.documentElement, btn = document.getElementById("theme");
-      try { var saved = localStorage.getItem("theme"); if (saved) root.setAttribute("data-theme", saved); } catch(e){}
+      function current(){ return root.getAttribute("data-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"); }
+      function label(){ btn.setAttribute("aria-label", current() === "dark" ? "Passer en thème clair" : "Passer en thème sombre"); }
+      label();
       btn.addEventListener("click", function(){
-        var current = root.getAttribute("data-theme") ||
-          (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-        var next = current === "dark" ? "light" : "dark";
+        var next = current() === "dark" ? "light" : "dark";
         root.setAttribute("data-theme", next);
-        try { localStorage.setItem("theme", next); } catch(e){}
+        try { localStorage.setItem("theme", next); } catch (e) {}
+        label();
       });
     })();
 
-    // Copie de l'adresse mail
+    // Démonstration du lecteur de boucle
+    (function(){
+      var reader = document.getElementById("reader");
+      var body = document.getElementById("tagbody");
+      var out = document.getElementById("v-read"), st = document.getElementById("v-status");
+      var why = document.getElementById("v-why"), cands = document.getElementById("v-cands");
+      var poses = {
+        upright: {
+          rot: "rotate(0deg)", read: "10623917", status: ["ok", "Écrit dans la fiche"],
+          why: "Cas simple : une seule lecture plausible, avec une confiance élevée.",
+          list: []
+        },
+        flipped: {
+          rot: "rotate(180deg)", read: "10623917", status: ["ok", "Écrit dans la fiche, ordre corrigé"],
+          why: "À l’envers, le modèle hésite entre les deux ordres des lignes et préfère même le mauvais. Le plan de numérotation, qui rend un 1 en tête bien plus fréquent qu’un 3, fait pencher la décision du bon côté.",
+          list: [["39171062", 52, "lose"], ["10623917", 48, "win"]], after: [["39171062", 37, "lose"], ["10623917", 63, "win"]]
+        },
+        turned: {
+          rot: "rotate(-90deg)", read: "10623917", status: ["ok", "Écrit dans la fiche"],
+          why: "Le classifieur d’orientation détecte la rotation et redresse la photo avant la lecture.",
+          list: []
+        },
+        dirty: {
+          rot: "rotate(0deg)", read: "10?2391?", status: ["hold", "Rendu à l’agent"],
+          why: "Deux chiffres sont masqués par la boue. Plutôt que deviner, le lecteur laisse l’agent saisir le numéro : une erreur dans la base coûte plus qu’une saisie.",
+          list: []
+        }
+      };
+      function bars(list){
+        cands.innerHTML = "";
+        list.forEach(function(c){
+          var row = document.createElement("div");
+          row.className = "cand " + c[2];
+          row.innerHTML = '<span class="num">' + c[0] + '</span><span class="bar"><i></i></span><span class="num">' + c[1] + ' %</span>';
+          cands.appendChild(row);
+          requestAnimationFrame(function(){ requestAnimationFrame(function(){ row.querySelector("i").style.width = c[1] + "%"; }); });
+        });
+      }
+      function show(name){
+        var p = poses[name];
+        reader.setAttribute("data-state", name);
+        body.style.transform = p.rot;
+        reader.classList.remove("reading"); void reader.offsetWidth; reader.classList.add("reading");
+        document.querySelectorAll(".poses button").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.pose === name ? "true" : "false"); });
+        out.textContent = p.read;
+        st.className = "status " + p.status[0]; st.textContent = p.status[1];
+        why.textContent = p.why;
+        if (p.after){
+          bars(p.list);
+          var hdr = document.createElement("p"); hdr.className = "why"; hdr.textContent = "Score brut, puis après le plan de numérotation :";
+          cands.prepend(hdr);
+          setTimeout(function(){
+            if (reader.getAttribute("data-state") !== name) return;
+            var rows = cands.querySelectorAll(".cand");
+            p.after.forEach(function(c, i){ rows[i].querySelector("i").style.width = c[1] + "%"; rows[i].lastChild.textContent = c[1] + " %"; });
+          }, 1100);
+        } else { bars(p.list); }
+      }
+      document.querySelectorAll(".poses button").forEach(function(b){ b.addEventListener("click", function(){ show(b.dataset.pose); }); });
+    })();
+
+    // Copier l'adresse
     (function(){
       var btn = document.getElementById("copy"), out = document.getElementById("copied");
       btn.addEventListener("click", function(){
         var mail = btn.getAttribute("data-email");
-        var done = function(){ out.textContent = "Adresse copiée."; };
-        var fail = function(){ out.textContent = "Copie impossible, l’adresse est : " + mail; };
-        if (navigator.clipboard) navigator.clipboard.writeText(mail).then(done, fail); else fail();
+        function ok(){ out.textContent = "Adresse copiée."; }
+        function ko(){ out.textContent = "Copie impossible ici. L’adresse : " + mail; }
+        if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(mail).then(ok, ko); else ko();
       });
     })();
 
-    // Onglet actif selon la section visible
+    // Lien actif dans la navigation
     (function(){
-      var links = Array.prototype.slice.call(document.querySelectorAll(".top nav a"));
-      var map = {};
-      links.forEach(function(a){ map[a.getAttribute("href").slice(1)] = a; });
+      var links = [].slice.call(document.querySelectorAll(".top nav a[href^='#']"));
       if (!("IntersectionObserver" in window)) return;
-      var obs = new IntersectionObserver(function(entries){
-        entries.forEach(function(e){
+      var map = {}; links.forEach(function(a){ map[a.getAttribute("href").slice(1)] = a; });
+      var io = new IntersectionObserver(function(es){
+        es.forEach(function(e){
           if (e.isIntersecting && map[e.target.id]){
             links.forEach(function(l){ l.removeAttribute("aria-current"); });
             map[e.target.id].setAttribute("aria-current", "true");
           }
         });
-      }, { rootMargin: "-45% 0px -50% 0px" });
-      Object.keys(map).forEach(function(id){ var s = document.getElementById(id); if (s) obs.observe(s); });
+      }, { rootMargin: "-40% 0px -55% 0px" });
+      Object.keys(map).forEach(function(id){ var s = document.getElementById(id); if (s) io.observe(s); });
     })();
   </script>
 </body>
