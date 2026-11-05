@@ -143,6 +143,11 @@ section[id], #reader{ scroll-margin-top: 76px; }
 @media (max-width: 760px){ .sec-head{ grid-template-columns: 1fr; gap: 10px; } .sec{ padding-top: 64px; } }
 
 /* ---------- Case study ---------- */
+.case-title{ margin-top: 48px; font-size: clamp(1.6rem, 3.2vw, 2.2rem); font-weight: 800; font-stretch: 74%; letter-spacing: -.01em; scroll-margin-top: 76px; }
+.case-title + .case{ margin-top: 20px; }
+.case-kicker{ display: block; font-size: .95rem; font-weight: 500; font-stretch: 100%; color: var(--muted); margin-bottom: 4px; letter-spacing: 0; }
+.case + .case-title{ margin-top: 88px; padding-top: 40px; border-top: 1px solid var(--rule); }
+.sec-head p a{ color: var(--ink); }
 .case{ display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 32px 48px; margin-top: 34px; }
 @media (max-width: 920px){ .case{ grid-template-columns: 1fr; } }
 .fiche{ align-self: start; position: sticky; top: 84px; }
@@ -154,8 +159,8 @@ section[id], #reader{ scroll-margin-top: 76px; }
 .fiche .stack{ margin-top: 20px; color: var(--muted); font-size: .95rem; }
 
 .story > * + *{ margin-top: 40px; }
-.story h3{ font-size: 1.45rem; font-weight: 700; font-stretch: 82%; }
-.story h3 + p, .story h3 + ul, .story h3 + ol, .story h3 + div{ margin-top: 12px; }
+.story h4{ margin: 0; font-size: 1.35rem; font-weight: 700; font-stretch: 82%; line-height: 1.15; text-wrap: balance; }
+.story h4 + p, .story h4 + ul, .story h4 + ol, .story h4 + div, .story h4 + figure{ margin-top: 12px; }
 .story p + p{ margin-top: 12px; }
 .story p, .story li{ max-width: var(--read); }
 .story ul{ padding-left: 1.2em; }
@@ -257,3 +262,22 @@ footer .wrap{ display: flex; justify-content: space-between; gap: 12px; flex-wra
 .lang{ flex: none; font-weight: 600; font-size: .95rem; text-decoration: none; color: var(--ink); padding: 8px 10px; border: 1px solid var(--rule); border-radius: 8px; background: var(--raised); }
 .lang:hover{ border-color: var(--ink); }
 @media (max-width: 780px){ .lang{ margin-left: auto; } .lang + .theme{ margin-left: 0; } }
+
+/* Barres de profit (étude LendSmart) */
+:root{ --bar-hi: #c76b0c; --bar-lo: #77827a; }
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bar-hi: #d9781a; --bar-lo: #76837b; } }
+:root[data-theme="dark"]{ --bar-hi: #d9781a; --bar-lo: #76837b; }
+.profit{ margin: 14px 0 18px; max-width: 720px; }
+.profit figcaption{ color: var(--muted); font-size: .93rem; margin-bottom: 10px; max-width: 62ch; }
+.profit table{ width: 100%; border-collapse: collapse; }
+.profit .sr{ position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.profit tr{ display: grid; grid-template-columns: minmax(0, 15em) minmax(0, 1fr); gap: 4px 18px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+.profit tbody th{ text-align: left; font-weight: 500; line-height: 1.35; }
+.profit tbody th small{ display: block; color: var(--muted); font-size: .875rem; font-weight: 400; }
+.profit td{ display: flex; align-items: center; gap: 10px; min-width: 0; }
+.profit .pbar{ flex: none; height: 16px; width: calc(var(--v) * (100% - 7.5em)); border-radius: 0 4px 4px 0; background: var(--bar-lo); }
+.profit .best .pbar{ background: var(--bar-hi); }
+.profit .pval{ font-weight: 700; font-stretch: 80%; font-size: 1.1rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.profit .pval em{ font-style: normal; font-weight: 500; font-stretch: 100%; font-size: .875rem; color: var(--muted); margin-left: 4px; }
+.profit .best th{ font-weight: 650; }
+@media (max-width: 600px){ .profit tr{ grid-template-columns: 1fr; } }
